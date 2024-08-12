@@ -1,8 +1,14 @@
 import Link from "next/link";
 import { Badge } from "@/components/ui/badge";
-import ResponsiveImageMap from "@/components/ui/responsive-team-map";
+import { TeamMap, TeamMobileMap } from "../../public/team/team-svg-map";
+import LottiePaint from "@/components/ui/lottie-paint";
+import LottieSplash from "@/components/ui/lottie-splash";
+import LottieDownSplash from "@/components/ui/lottie-down-splash";
 
 export default function Home() {
+  const teamMap = TeamMap();
+  const teamMobileMap = TeamMobileMap();
+
   return (
     <div className="flex flex-col min-h-[100dvh]">
       <header className="bg-gradient-to-r from-orange-500 to-yellow-500 py-12 md:py-4">
@@ -57,7 +63,10 @@ export default function Home() {
         <div className="container py-12 px-4 md:px-6 m-auto">
           <div className="grid gap-8 lg:grid-cols-2 lg:gap-16">
             <div className="flex flex-col items-start justify-center space-y-6 z-10">
-              <div className="inline-block rounded-lg bg-[#CD0364] px-3 py-1 text-sm text-white">
+              <div className="inline-block rounded-lg bg-[#CD0364] px-3 py-1 text-sm text-white relative">
+                <div className="absolute -z-10 top-0">
+                  <LottiePaint />
+                </div>
                 Conference Event
               </div>
               <h1 className="text-4xl font-bold tracking-tighter text-black sm:text-4xl md:text-5xl lg:text-6xl">
@@ -99,7 +108,10 @@ export default function Home() {
         </div>
       </header>
       <main className="flex-1" id="speakers">
-        <section className="w-full pt-24">
+        <section className="w-full pt-24 relative">
+          <div className="absolute -z-10 bottom-0 w-full">
+            <LottieSplash />
+          </div>
           <div className="container px-4 md:px-6 m-auto h-full relative">
             <div className="absolute h-full w-full">
               <img
@@ -177,11 +189,14 @@ export default function Home() {
             </div>
           </div>
         </section>
-        <section className="w-full py-12" id="schedule">
+        <section className="w-full py-12 relative" id="schedule">
+          <div className="absolute -z-20 bottom-0 w-full">
+            <LottieSplash />
+          </div>
           <div className="container px-4 md:px-6 m-auto">
             <div className="flex flex-col items-center justify-center space-y-4 text-center">
               <div className="space-y-2">
-                <div className="inline-block rounded-lg bg-[#136493] text-white px-3 py-1 text-sm">
+                <div className="inline-block rounded-lg bg-[#136493] text-white px-3 py-1 text-sm ">
                   Conference Schedule
                 </div>
                 <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">
@@ -263,7 +278,7 @@ export default function Home() {
         </section>
         <section className="w-full bg-muted py-12 md:py-20">
           <div className="container px-4 md:px-6 m-auto">
-            <div className="flex flex-col items-center justify-center space-y-4 text-center">
+            <div className="flex flex-col items-center justify-center space-y-4 text-center ">
               <div className="space-y-2">
                 <div className="inline-block rounded-lg bg-[#EA4129] text-white px-3 py-1 text-sm">
                   Media Lounge
@@ -301,7 +316,7 @@ export default function Home() {
                   </p>
                 </div>
               </div>
-              <div className="rounded-lg bg-muted p-4">
+              <div className="rounded-lg bg-muted p-4 hidden md:block">
                 <div className="aspect-video overflow-hidden rounded-lg">
                   <img
                     src="/placeholder.svg"
@@ -320,7 +335,7 @@ export default function Home() {
                   </p>
                 </div>
               </div>
-              <div className="rounded-lg bg-muted p-4">
+              <div className="rounded-lg bg-muted p-4 hidden lg:block">
                 <div className="aspect-video overflow-hidden rounded-lg">
                   <img
                     src="/placeholder.svg"
@@ -483,8 +498,105 @@ export default function Home() {
             </div>
           </div>
         </section>
-        <ResponsiveImageMap />
-        <section className="w-full bg-muted py-12" />
+        <section className="w-full py-12 md:py-20" id="team">
+          <div className="container px-4 md:px-6 m-auto">
+            <div className="flex flex-col items-center justify-center space-y-4 text-center">
+              <div className="space-y-2">
+                <div className="inline-block rounded-lg bg-[#3d43fe] text-white px-3 py-1 text-sm relative">
+                  <div className="absolute -z-10 -top-52 -left-48">
+                    <LottieDownSplash />
+                  </div>
+                  Team
+                </div>
+                <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">
+                  Who's Behind the Event
+                </h2>
+                <p className="max-w-[900px] m-auto pb-10 text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
+                  Putting an event together can be a daunting task, but with the
+                  right people, anything is possible! The 2024 team is excited
+                  to welcome you to AWS Day!
+                </p>
+                <div className="w-full hidden lg:block">{teamMap}</div>
+                <div className="w-full lg:hidden">{teamMobileMap}</div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section className="w-full bg-muted py-12 md:py-20" id="sponsors">
+          <div className="container px-4 md:px-6 m-auto">
+            <div className="flex flex-col items-center justify-center space-y-4 text-center">
+              <div className="space-y-2">
+                <div className="inline-block rounded-lg bg-[#D30A4F] text-white px-3 py-1 text-sm">
+                  Sponsors
+                </div>
+                <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">
+                  AWS Day 2024 Sponsors
+                </h2>
+                <p className="max-w-[900px] m-auto text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
+                  2024 AWS Day is proudly sponsored by the following
+                  organizations.
+                </p>
+                <div
+                  className="mx-auto grid max-w-5xl gap-6 pt-12 md:grid-cols-2 md:gap-12 lg:grid-cols-3"
+                  id="media"
+                >
+                  <div className="rounded-lg bg-muted p-4">
+                    <div className="aspect-video overflow-hidden rounded-lg">
+                      <img
+                        src="/placeholder.svg"
+                        width="600"
+                        height="400"
+                        alt="Video Thumbnail"
+                        className="object-cover"
+                        style={{ aspectRatio: "600/400", objectFit: "cover" }}
+                      />
+                    </div>
+                    <div className="mt-4">
+                      <h3 className="text-xl font-bold">TBD</h3>
+                      <p className="mt-2 text-muted-foreground">
+                        Platinum Partner
+                      </p>
+                    </div>
+                  </div>
+                  <div className="rounded-lg bg-muted p-4">
+                    <div className="aspect-video overflow-hidden rounded-lg">
+                      <img
+                        src="/placeholder.svg"
+                        width="600"
+                        height="400"
+                        alt="Video Thumbnail"
+                        className="object-cover"
+                        style={{ aspectRatio: "600/400", objectFit: "cover" }}
+                      />
+                    </div>
+                    <div className="mt-4">
+                      <h3 className="text-xl font-bold">TBD</h3>
+                      <p className="mt-2 text-muted-foreground">
+                        Diamond Partner
+                      </p>
+                    </div>
+                  </div>
+                  <div className="rounded-lg bg-muted p-4">
+                    <div className="aspect-video overflow-hidden rounded-lg">
+                      <img
+                        src="/placeholder.svg"
+                        width="600"
+                        height="400"
+                        alt="Video Thumbnail"
+                        className="object-cover"
+                        style={{ aspectRatio: "600/400", objectFit: "cover" }}
+                      />
+                    </div>
+                    <div className="mt-4">
+                      <h3 className="text-xl font-bold">TBD</h3>
+                      <p className="mt-2 text-muted-foreground">Gold Partner</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
         <footer className="flex flex-col gap-2 sm:flex-row py-6 w-full shrink-0 items-center px-4 md:px-6 border-t">
           <p className="text-xs text-muted-foreground">
             Celebrating 11 years of the{" "}
