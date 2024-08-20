@@ -148,7 +148,7 @@ export default function Home() {
               </div>
             </div>
             <div className="mx-auto grid max-w-5xl gap-6 py-12 md:grid-cols-2 md:gap-12 lg:grid-cols-2">
-              <div className="rounded-lg bg-muted p-4">
+              <div className="rounded-lg bg-transparent p-4">
                 <div className="overflow-hidden rounded-lg">
                   <img
                     src="/speakers/MichaelHeyd.png"
@@ -167,7 +167,7 @@ export default function Home() {
                   <p className="mt-2 text-muted-foreground">TBD</p>
                 </div>
               </div>
-              <div className="rounded-lg bg-muted p-4">
+              <div className="rounded-lg bg-transparent p-4">
                 <div className="overflow-hidden rounded-lg">
                   <img
                     src="/speakers/GabrielVelazquezLopez.png"
@@ -287,9 +287,16 @@ export default function Home() {
                   Explore the Media Lounge
                 </h2>
                 <p className="max-w-[900px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-                  Join Kris Krug as he interviews guest speakers and local AWS
-                  professionals live at the event. You might recognize Kris from
-                  his monthly CBC segment on AI with Stephen Quinn.
+                  Join{" "}
+                  <Link
+                    className="font-semibold text-blue-800"
+                    href="https://kriskrug.co/about/"
+                  >
+                    Kris Krüg &nbsp;
+                  </Link>
+                  as he interviews guest speakers and local AWS professionals
+                  live at the event. You might recognize Kris from his monthly
+                  CBC segment on AI with Stephen Quinn.
                 </p>
               </div>
             </div>
@@ -299,58 +306,100 @@ export default function Home() {
             >
               <div className="rounded-lg bg-muted p-4">
                 <div className="aspect-video overflow-hidden rounded-lg">
-                  <img
-                    src="/placeholder.svg"
-                    width="600"
-                    height="400"
-                    alt="Video Thumbnail"
-                    className="object-cover"
-                    style={{ aspectRatio: "600/400", objectFit: "cover" }}
-                  />
+                  <Link
+                    href="https://www.youtube.com/watch?v=rLWbdKg_q0k&t=129s"
+                    target="_blank"
+                    className="relative flex h-full w-full items-center justify-center"
+                  >
+                    <img
+                      src="/kris-krug/play.png"
+                      width="60"
+                      height="60"
+                      alt="play"
+                      className="absolute z-20"
+                    />
+                    <img
+                      src="/kris-krug/1.png"
+                      width="600"
+                      height="400"
+                      alt="Video Thumbnail"
+                      className="object-cover relative opacity-80"
+                      style={{ aspectRatio: "600/400", objectFit: "cover" }}
+                    />
+                    <div className="absolute inset-0 bg-black bg-opacity-40"></div>
+                  </Link>
                 </div>
                 <div className="mt-4">
-                  <h3 className="text-xl font-bold">TBD</h3>
+                  <h3 className="text-xl font-bold">The Future of Music </h3>
                   <p className="mt-2 text-muted-foreground">
-                    Watch the latest on AI by Kris Krug, Founder of Future Proof
-                    Creatives.
+                    CBC Early Edition: AI Sandbox with Kris Krüg, founder of
+                    Future Proof Creatives.
                   </p>
                 </div>
               </div>
               <div className="rounded-lg bg-muted p-4 hidden md:block">
                 <div className="aspect-video overflow-hidden rounded-lg">
-                  <img
-                    src="/placeholder.svg"
-                    width="600"
-                    height="400"
-                    alt="Video Thumbnail"
-                    className="object-cover"
-                    style={{ aspectRatio: "600/400", objectFit: "cover" }}
-                  />
+                  <Link
+                    href="https://www.cbc.ca/player/play/video/9.4228529"
+                    target="_blank"
+                    className="relative flex h-full w-full items-center justify-center"
+                  >
+                    <img
+                      src="/kris-krug/play.png"
+                      width="60"
+                      height="60"
+                      alt="play"
+                      className="absolute z-20"
+                    />
+                    <img
+                      src="/kris-krug/2.png"
+                      width="600"
+                      height="400"
+                      alt="Video Thumbnail"
+                      className="object-cover relative opacity-80"
+                      style={{ aspectRatio: "600/400", objectFit: "cover" }}
+                    />
+                    <div className="absolute inset-0 bg-black bg-opacity-40"></div>
+                  </Link>
                 </div>
                 <div className="mt-4">
-                  <h3 className="text-xl font-bold">TBD</h3>
+                  <h3 className="text-xl font-bold">AI Companions</h3>
                   <p className="mt-2 text-muted-foreground">
-                    Watch the latest on AI by Kris Krug, Founder of Future Proof
-                    Creatives.
+                    AI chatbots and companionship tools are becoming more
+                    sophisticated.
                   </p>
                 </div>
               </div>
               <div className="rounded-lg bg-muted p-4 hidden lg:block">
                 <div className="aspect-video overflow-hidden rounded-lg">
-                  <img
-                    src="/placeholder.svg"
-                    width="600"
-                    height="400"
-                    alt="Video Thumbnail"
-                    className="object-cover"
-                    style={{ aspectRatio: "600/400", objectFit: "cover" }}
-                  />
+                  <Link
+                    href="https://www.cbc.ca/player/play/video/9.4228529"
+                    target="_blank"
+                    className="relative flex h-full w-full items-center justify-center"
+                  >
+                    <img
+                      src="/kris-krug/play.png"
+                      width="60"
+                      height="60"
+                      alt="play"
+                      className="absolute z-20"
+                    />
+                    <img
+                      src="/kris-krug/3.png"
+                      width="600"
+                      height="400"
+                      alt="Video Thumbnail"
+                      className="object-cover relative opacity-80"
+                      style={{ aspectRatio: "600/400", objectFit: "cover" }}
+                    />
+                    <div className="absolute inset-0 bg-black bg-opacity-40"></div>
+                  </Link>
                 </div>
                 <div className="mt-4">
-                  <h3 className="text-xl font-bold">TBD</h3>
+                  <h3 className="text-xl font-bold">Web Summit in 2025</h3>
                   <p className="mt-2 text-muted-foreground">
-                    Watch the latest on AI by Kris Krug, Founder of Future Proof
-                    Creatives.
+                    One of the bigger tech events in the world is coming to
+                    Vancouver.
                   </p>
                 </div>
               </div>
@@ -537,45 +586,9 @@ export default function Home() {
                   organizations.
                 </p>
                 <div
-                  className="mx-auto grid max-w-5xl gap-6 pt-12 md:grid-cols-2 md:gap-12 lg:grid-cols-3"
+                  className="mx-auto grid max-w-5xl gap-6 pt-12 md:grid-cols-2 md:gap-12 lg:grid-cols-2"
                   id="media"
                 >
-                  <div className="rounded-lg bg-muted p-4">
-                    <div className="aspect-video overflow-hidden rounded-lg">
-                      <img
-                        src="/placeholder.svg"
-                        width="600"
-                        height="400"
-                        alt="Video Thumbnail"
-                        className="object-cover"
-                        style={{ aspectRatio: "600/400", objectFit: "cover" }}
-                      />
-                    </div>
-                    <div className="mt-4">
-                      <h3 className="text-xl font-bold">TBD</h3>
-                      <p className="mt-2 text-muted-foreground">
-                        Platinum Partner
-                      </p>
-                    </div>
-                  </div>
-                  <div className="rounded-lg bg-muted p-4">
-                    <div className="aspect-video overflow-hidden rounded-lg">
-                      <img
-                        src="/placeholder.svg"
-                        width="600"
-                        height="400"
-                        alt="Video Thumbnail"
-                        className="object-cover"
-                        style={{ aspectRatio: "600/400", objectFit: "cover" }}
-                      />
-                    </div>
-                    <div className="mt-4">
-                      <h3 className="text-xl font-bold">TBD</h3>
-                      <p className="mt-2 text-muted-foreground">
-                        Diamond Partner
-                      </p>
-                    </div>
-                  </div>
                   <div className="rounded-lg bg-muted p-4">
                     <div className="aspect-video overflow-hidden rounded-lg">
                       <img
@@ -592,32 +605,34 @@ export default function Home() {
                       <p className="mt-2 text-muted-foreground">Gold Partner</p>
                     </div>
                   </div>
+                  <div className="rounded-lg bg-muted p-4">
+                    <div className="aspect-video overflow-hidden rounded-lg">
+                      <img
+                        src="/placeholder.svg"
+                        width="600"
+                        height="400"
+                        alt="Video Thumbnail"
+                        className="object-cover"
+                        style={{ aspectRatio: "600/400", objectFit: "cover" }}
+                      />
+                    </div>
+                    <div className="mt-4">
+                      <h3 className="text-xl font-bold">TBD</h3>
+                      <p className="mt-2 text-muted-foreground">
+                        Silver Partner
+                      </p>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
         </section>
         <footer className="flex flex-col gap-2 sm:flex-row py-6 w-full shrink-0 items-center px-4 md:px-6 border-t">
-          <p className="text-xs text-muted-foreground">
+          <p className="text-xs text-muted-foreground m-auto">
             Celebrating 11 years of the{" "}
             <a href="http://www.awsusergroups.com/">Vancouver AWS Usergroup</a>
           </p>
-          <nav className="sm:ml-auto flex gap-4 sm:gap-6">
-            <Link
-              href="https://forms.gle/yRk6rQ6RyaRjgcL96"
-              className="text-xs hover:underline underline-offset-4"
-              prefetch={false}
-            >
-              Sponsors Info Package
-            </Link>
-            <Link
-              href="https://forms.gle/9JmDVgRPJWdfj9ih9"
-              className="text-xs hover:underline underline-offset-4"
-              prefetch={false}
-            >
-              Volunteer With Us
-            </Link>
-          </nav>
         </footer>
       </main>
     </div>
