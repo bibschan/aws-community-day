@@ -108,8 +108,11 @@ export default function Home() {
         </div>
       </header>
       <main className="flex-1" id="speakers">
-        <section className="w-full pt-24 relative">
+        <section className="w-full pt-24 relative overflow-hidden">
           <div className="absolute -z-10 bottom-0 w-full">
+            <LottieSplash />
+          </div>
+          <div className="absolute -z-10 top-0 w-full">
             <LottieSplash />
           </div>
           <div className="container px-4 md:px-6 m-auto h-full relative">
@@ -136,7 +139,7 @@ export default function Home() {
                 <div className="inline-block rounded-lg bg-[#4E1479] text-white px-3 py-1 text-sm">
                   Featured Speakers
                 </div>
-                <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">
+                <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl drop-shadow-[2px_3px_3px_rgba(255,255,255,0.75)]">
                   Meet Our Speakers
                 </h2>
                 <p className="max-w-[900px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
@@ -147,8 +150,8 @@ export default function Home() {
                 </p>
               </div>
             </div>
-            <div className="mx-auto grid max-w-5xl gap-6 py-12 md:grid-cols-2 md:gap-12 lg:grid-cols-2">
-              <div className="rounded-lg bg-transparent p-4">
+            <div className="mx-auto grid max-w-5xl gap-6 py-12 md:gap-2 grid-cols-2">
+              <div className="rounded-lg bg-transparent p-4 mx-auto">
                 <div className="overflow-hidden rounded-lg">
                   <img
                     src="/speakers/MichaelHeyd.png"
@@ -156,7 +159,6 @@ export default function Home() {
                     height="400"
                     alt="Speaker"
                     className="object-cover"
-                    // style={{ aspectRatio: "300/300", objectFit: "cover" }}
                   />
                 </div>
                 <div className="mt-4">
@@ -167,7 +169,7 @@ export default function Home() {
                   <p className="mt-2 text-muted-foreground">TBD</p>
                 </div>
               </div>
-              <div className="rounded-lg bg-transparent p-4">
+              <div className="rounded-lg bg-transparent p-4 mx-auto">
                 <div className="overflow-hidden rounded-lg">
                   <img
                     src="/speakers/GabrielVelazquezLopez.png"
@@ -175,7 +177,6 @@ export default function Home() {
                     height="400"
                     alt="Speaker"
                     className="object-cover"
-                    // style={{ aspectRatio: "300/300", objectFit: "cover" }}
                   />
                 </div>
                 <div className="mt-4">
@@ -191,7 +192,10 @@ export default function Home() {
         </section>
         <section className="w-full py-12 relative" id="schedule">
           <div className="absolute -z-20 bottom-0 w-full">
-            <LottieSplash />
+            <LottieSplash color="purple" />
+          </div>
+          <div className="absolute -z-20 top-0 w-full">
+            <LottieSplash color="purple" />
           </div>
           <div className="container px-4 md:px-6 m-auto">
             <div className="flex flex-col items-center justify-center space-y-4 text-center">
@@ -199,10 +203,10 @@ export default function Home() {
                 <div className="inline-block rounded-lg bg-[#136493] text-white px-3 py-1 text-sm ">
                   Conference Schedule
                 </div>
-                <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">
+                <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl drop-shadow-[2px_3px_3px_rgba(255,255,255,0.75)]">
                   Explore the Agenda
                 </h2>
-                <p className="max-w-[900px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
+                <p className="max-w-[900px] text-black md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
                   Discover a diverse lineup of talks, workshops, and networking
                   opportunities that will inspire and empower you.
                 </p>
@@ -463,83 +467,32 @@ export default function Home() {
                   on the main stage, as well as 2 levels of demo's, workshops
                   and sponsor booths in the lobby area.
                 </p>
-                <div className="grid md:grid-cols-2 gap-4">
-                  <div
-                    className="w-full max-w-2xl relative"
-                    style={{ paddingBottom: "56.25%" /* 16:9 aspect ratio */ }}
-                  >
-                    <iframe
-                      src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d10411.11571062209!2d-123.1125296!3d49.2805861!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x548671794dd5e7ad%3A0x4989c22727f0f00b!2sVancouver%20Playhouse!5e0!3m2!1sen!2sca!4v1723214446419!5m2!1sen!2sca"
-                      style={{
-                        border: 0,
-                        position: "absolute",
-                        top: 0,
-                        left: 0,
-                        width: "100%",
-                        height: "100%",
-                      }}
-                      allowFullScreen=""
-                      loading="lazy"
-                      referrerPolicy="no-referrer-when-downgrade"
-                    ></iframe>
-                  </div>
 
-                  <div className="grid sm:grid-cols-2 gap-2">
-                    <div>
-                      <img
-                        src="/location/transit.jpg"
-                        width={90}
-                        height={90}
-                        alt="Transit"
-                        className="rounded-lg m-auto"
-                        style={{ aspectRatio: "90/90", objectFit: "cover" }}
-                      />
-                      <p className="mt-2 text-muted-foreground">
-                        Public Transit: Stadium-Chinatown station and Vancouver
-                        City Centre station are close by.
-                      </p>
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-12">
+                  <div className="relative overflow-hidden rounded-lg shadow-lg h-fit max-w-[400px]">
+                    <img
+                      src="/maps/level-1.png"
+                      alt="Level 1"
+                      width={400}
+                      height={400}
+                      className="object-cover w-full "
+                      style={{ objectFit: "contain" }}
+                    />
+                    <div className="absolute bottom-0 left-0 bg-primary px-4 py-2 text-primary-foreground font-medium">
+                      Level 1
                     </div>
-                    <div>
-                      <img
-                        src="/location/handicap.jpg"
-                        width={80}
-                        height={80}
-                        alt="Handicap"
-                        className="rounded-lg m-auto"
-                        style={{ aspectRatio: "80/80", objectFit: "cover" }}
-                      />
-                      <p className="mt-2 text-muted-foreground">
-                        Accessible: Wheelchair seating is on the orchestra
-                        level. There are 5 wheelchair spaces in the theatre.
-                      </p>
-                    </div>
-                    <div>
-                      <img
-                        src="/location/parking.jpg"
-                        width={80}
-                        height={80}
-                        alt="Parking"
-                        className="rounded-lg m-auto"
-                        style={{ aspectRatio: "80/80", objectFit: "cover" }}
-                      />
-                      <p className="mt-2 text-muted-foreground">
-                        Parking: EasyPark can be found beneath the theatre
-                        itself.
-                      </p>
-                    </div>
-                    <div>
-                      <img
-                        src="/location/bikeshare.png"
-                        width={80}
-                        height={80}
-                        alt="Bikeshare"
-                        className="rounded-lg m-auto"
-                        style={{ aspectRatio: "80/80", objectFit: "cover" }}
-                      />
-                      <p className="mt-2 text-muted-foreground">
-                        Bike Share: Mobi bike-share station can be found nearby
-                        the venues.
-                      </p>
+                  </div>
+                  <div className="relative overflow-hidden rounded-lg shadow-lg h-fit max-w-[400px]">
+                    <img
+                      src="/maps/level-2.png"
+                      alt="Level 2"
+                      width={400}
+                      height={400}
+                      className="object-cover w-full "
+                      style={{ objectFit: "contain" }}
+                    />
+                    <div className="absolute bottom-0 left-0 bg-primary px-4 py-2 text-primary-foreground font-medium">
+                      Level 2
                     </div>
                   </div>
                 </div>
@@ -547,7 +500,13 @@ export default function Home() {
             </div>
           </div>
         </section>
-        <section className="w-full py-12 md:py-20" id="team">
+        <section className="w-full py-12 md:py-20 relative" id="team">
+          <div className="absolute -z-20 bottom-0 w-full">
+            <LottieSplash color="pink" />
+          </div>
+          <div className="absolute -z-20 top-0 w-full">
+            <LottieSplash color="pink" />
+          </div>
           <div className="container px-4 md:px-6 m-auto">
             <div className="flex flex-col items-center justify-center space-y-4 text-center">
               <div className="space-y-2">
@@ -565,7 +524,11 @@ export default function Home() {
                   right people, anything is possible! The 2024 team is excited
                   to welcome you to AWS Day!
                 </p>
-                <div className="w-full hidden lg:block">{teamMap}</div>
+                <div className="w-full hidden relative lg:flex flex-row flex-wrap justify-center">
+                  <div className="w-screen h-[50%] bg-black absolute -z-10"></div>
+                  <div className="w-screen h-[50%] bg-white absolute -z-10 bottom-0"></div>
+                  {teamMap}
+                </div>
                 <div className="w-full lg:hidden">{teamMobileMap}</div>
               </div>
             </div>
