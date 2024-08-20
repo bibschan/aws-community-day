@@ -411,24 +411,24 @@ export default function Home() {
           </div>
         </section>
         <section
-          className="w-full py-12 md:py-20"
+          className="w-full py-12 md:py-20 relative overflow-hidden"
           id="community"
-          style={{
-            backgroundImage: 'url("/background/yellow-paint-bg.png")',
-            backgroundSize: "cover",
-            backgroundPosition: "center",
-          }}
         >
+          <img
+            src="/kris-krug/drip.png"
+            alt="logo"
+            className="absolute top-0 min-w-[600px]"
+          />
           <div className="container px-4 md:px-6 m-auto">
             <div className="flex flex-col items-center justify-center space-y-4 text-center">
-              <div className="space-y-2 m-auto">
+              <div className="space-y-2 m-auto z-10">
                 <div className="inline-block rounded-lg bg-[#EB8E06] text-white px-3 py-1 text-sm">
                   Community Hall
                 </div>
-                <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">
+                <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl drop-shadow-[2px_3px_3px_rgba(255,255,255,0.75)]">
                   Join us in the Community Hall
                 </h2>
-                <p className="max-w-[900px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
+                <p className="max-w-[900px] drop-shadow-[2px_3px_3px_rgba(255,255,255,0.75)] text-black md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
                   Live Music by Scott Jacobs, booths and demos run by local
                   companies and usergroups! You can find Scott{" "}
                   <a
@@ -453,14 +453,14 @@ export default function Home() {
         <section className="w-full bg-muted py-12 md:py-20" id="location">
           <div className="container px-4 md:px-6 m-auto">
             <div className="flex flex-col items-center justify-center space-y-4 text-center">
-              <div className="space-y-2">
+              <div className="space-y-2 z-10">
                 <div className="inline-block rounded-lg bg-[#0E6A65] text-white px-3 py-1 text-sm">
                   Location
                 </div>
                 <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">
                   Venue Information
                 </h2>
-                <p className="max-w-[900px] m-auto pb-10 text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
+                <p className="max-w-[900px] m-auto pb-10 drop-shadow-[2px_3px_3px_rgba(255,255,255,0.75)] text-black md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
                   The Playhouse is a polished, cozy and intimate venue, located
                   directly across the road from Amazon AWS's new amazing office
                   at "The Post". It can accommodate up to 700 guests for talks
@@ -524,12 +524,12 @@ export default function Home() {
                   right people, anything is possible! The 2024 team is excited
                   to welcome you to AWS Day!
                 </p>
-                <div className="w-full hidden relative lg:flex flex-row flex-wrap justify-center">
+                <div className="w-full hidden relative md:flex flex-row flex-wrap justify-center">
                   <div className="w-screen h-[50%] bg-black absolute -z-10"></div>
                   <div className="w-screen h-[50%] bg-white absolute -z-10 bottom-0"></div>
                   {teamMap}
                 </div>
-                <div className="w-full lg:hidden">{teamMobileMap}</div>
+                <div className="w-screen md:hidden">{teamMobileMap}</div>
               </div>
             </div>
           </div>
