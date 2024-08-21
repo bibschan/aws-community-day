@@ -13,8 +13,6 @@ export default function LottieDownSplash() {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
             playerRef.current.play(); // Play animation when in view
-          } else {
-            playerRef.current.pause(); // Pause animation when out of view
           }
         });
       },

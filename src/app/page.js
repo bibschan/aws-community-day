@@ -4,6 +4,7 @@ import { TeamMap, TeamMobileMap } from "../../public/team/team-svg-map";
 import LottiePaint from "@/components/ui/lottie-paint";
 import LottieSplash from "@/components/ui/lottie-splash";
 import LottieDownSplash from "@/components/ui/lottie-down-splash";
+import ZoomableImage from "@/components/ui/zoomable-image";
 
 export default function Home() {
   const teamMap = TeamMap();
@@ -470,27 +471,13 @@ export default function Home() {
 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-12">
                   <div className="relative overflow-hidden rounded-lg shadow-lg h-fit max-w-[400px]">
-                    <img
-                      src="/maps/level-1.png"
-                      alt="Level 1"
-                      width={400}
-                      height={400}
-                      className="object-cover w-full "
-                      style={{ objectFit: "contain" }}
-                    />
+                    <ZoomableImage url="/maps/level-1.png" />
                     <div className="absolute bottom-0 left-0 bg-primary px-4 py-2 text-primary-foreground font-medium">
                       Level 1
                     </div>
                   </div>
                   <div className="relative overflow-hidden rounded-lg shadow-lg h-fit max-w-[400px]">
-                    <img
-                      src="/maps/level-2.png"
-                      alt="Level 2"
-                      width={400}
-                      height={400}
-                      className="object-cover w-full "
-                      style={{ objectFit: "contain" }}
-                    />
+                    <ZoomableImage url="/maps/level-2.png" />
                     <div className="absolute bottom-0 left-0 bg-primary px-4 py-2 text-primary-foreground font-medium">
                       Level 2
                     </div>
@@ -502,9 +489,6 @@ export default function Home() {
         </section>
         <section className="w-full py-12 md:py-20 relative" id="team">
           <div className="absolute -z-20 bottom-0 w-full">
-            <LottieSplash color="pink" />
-          </div>
-          <div className="absolute -z-20 top-0 w-full">
             <LottieSplash color="pink" />
           </div>
           <div className="container px-4 md:px-6 m-auto">
