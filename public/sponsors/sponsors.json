@@ -1,56 +1,47 @@
 [
   {
     "type": "Main",
-    "title": "AWS",
     "alt": "Main Sponsor Video Thumbnail",
     "imgSrc": "/sponsors/aws.png",
     "span": "md:col-span-2 lg:col-span-4"
   },
   {
     "type": "Gold",
-    "title": "Couchbase",
     "alt": "Gold Sponsor Video Thumbnail",
     "imgSrc": "/sponsors/couchbase.png"
   },
   {
     "type": "Gold",
-    "title": "Fortinet",
     "alt": "Gold Sponsor Video Thumbnail",
     "imgSrc": "/sponsors/fortinet.webp"
   },
   {
     "type": "Gold",
-    "title": "Atono",
     "alt": "Gold Sponsor Video Thumbnail",
     "imgSrc": "/sponsors/atono.svg"
   },
   {
     "type": "Silver",
-    "title": "Autimo",
     "alt": "Silver Sponsor Video Thumbnail 1",
     "imgSrc": "/sponsors/autimo.png"
   },
   {
     "type": "Silver",
-    "title": "Future Proof Creatives",
     "alt": "Future Proof Creatives",
     "imgSrc": "/sponsors/futureproof.png"
   },
   {
     "type": "Silver",
-    "title": "Convergence",
     "alt": "Convergence",
     "imgSrc": "/sponsors/convergence.png"
   },
   {
     "type": "Silver",
-    "title": "SUSE",
     "alt": "SUSE",
     "imgSrc": "/sponsors/suse.png"
   },
   {
     "type": "Silver",
-    "title": "Speedyrails",
     "alt": "Speedyrails",
     "imgSrc": "/sponsors/speedyrails.png"
   }

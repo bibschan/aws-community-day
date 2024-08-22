@@ -6,6 +6,7 @@ import LottieSplash from "@/components/ui/lottie-splash";
 import LottieDownSplash from "@/components/ui/lottie-down-splash";
 import ZoomableImage from "@/components/ui/zoomable-image";
 import sponsors from "/public/sponsors/sponsors.json";
+import SponsorSection from "@/components/ui/sponsors";
 
 export default function Home() {
   const teamMap = TeamMap();
@@ -278,7 +279,7 @@ export default function Home() {
                     <Badge variant="secondary"></Badge>
                   </div>
                   <h3 className="mt-2 text-xl font-bold">
-                    Leverage AWS Gen AI to build & simplify Gen BI{" "}
+                    Leverage AWS Gen AI to build & simplify Gen BI
                   </h3>
                   <p className="mt-2 text-muted-foreground">
                     Speaker: Amit Bajaj
@@ -577,35 +578,7 @@ export default function Home() {
                   2024 AWS Day is proudly sponsored by the following
                   organizations.
                 </p>
-                <div
-                  className="mx-auto grid max-w-5xl gap-6 pt-12 grid-cols-1 md:grid-cols-2 lg:grid-cols-4"
-                  id="media"
-                >
-                  {sponsors.map((sponsor, index) => (
-                    <div
-                      key={index}
-                      className={`rounded-lg bg-muted p-4 ${
-                        sponsor.span || ""
-                      } ${
-                        sponsor.type === "Main"
-                          ? "col-span-2 lg:col-span-4 justify-self-center"
-                          : ""
-                      }`}
-                    >
-                      <div className="overflow-hidden rounded-lg ">
-                        <img
-                          src={sponsor.imgSrc}
-                          alt={sponsor.alt}
-                          className="object-contain mx-auto"
-                          style={{
-                            objectFit: "contain",
-                            height: sponsor.type === "Main" ? "200px" : "100px",
-                          }}
-                        />
-                      </div>
-                    </div>
-                  ))}
-                </div>
+                <SponsorSection />
               </div>
             </div>
           </div>
