@@ -228,45 +228,89 @@ export default function Home() {
                 </div>
                 <div className="rounded-lg bg-muted p-4">
                   <div className="flex items-center justify-between">
-                    <div className="text-lg font-bold">2PM</div>
-                    <Badge variant="secondary">Keynote</Badge>
+                    <div className="text-lg font-bold">2 PM</div>
+                    <Badge variant="secondary">Couchbase</Badge>
                   </div>
-                  <h3 className="mt-2 text-xl font-bold">TBD</h3>
+                  <h3 className="mt-2 text-xl font-bold">
+                    The Right Stuff For Really Remote Edge Computing
+                  </h3>
                   <p className="mt-2 text-muted-foreground">
-                    Speaker: Gabriel Lopez
+                    Speaker: Mark Gamble
                   </p>
                 </div>
-              </div>
-              <div className="grid gap-4">
                 <div className="rounded-lg bg-muted p-4">
                   <div className="flex items-center justify-between">
                     <div className="text-lg font-bold">2:30 PM</div>
-                    <Badge variant="secondary">Keynote</Badge>
+                    <Badge variant="secondary"></Badge>
                   </div>
                   <h3 className="mt-2 text-xl font-bold">TBD</h3>
                   <p className="mt-2 text-muted-foreground">
                     Speaker: Michael Heyd
                   </p>
                 </div>
+              </div>
+              <div className="grid gap-4">
                 <div className="rounded-lg bg-muted p-4">
                   <div className="flex items-center justify-between">
-                    <div className="text-lg font-bold">2PM ~ 6PM</div>
-                    <Badge variant="secondary">Panel</Badge>
+                    <div className="text-lg font-bold">3 PM</div>
+                    <Badge variant="secondary">Atono</Badge>
+                  </div>
+                  <h3 className="mt-2 text-xl font-bold">
+                    Startup Velocity at Enterprise Scale
+                  </h3>
+                  <p className="mt-2 text-muted-foreground">
+                    Speaker: Lex Vorona
+                  </p>
+                </div>
+                <div className="rounded-lg bg-muted p-4">
+                  <div className="flex items-center justify-between">
+                    <div className="text-lg font-bold">3:30 PM</div>
+                    <Badge variant="secondary"></Badge>
                   </div>
                   <h3 className="mt-2 text-xl font-bold">TBD</h3>
-                  <p className="mt-2 text-muted-foreground">Moderator: TBD</p>
+                  <p className="mt-2 text-muted-foreground">
+                    Speaker: Gabriel Velazquez
+                  </p>
+                </div>
+                <div className="rounded-lg bg-muted p-4">
+                  <div className="flex items-center justify-between">
+                    <div className="text-lg font-bold">4 PM</div>
+                    <Badge variant="secondary"></Badge>
+                  </div>
+                  <h3 className="mt-2 text-xl font-bold">
+                    Leverage AWS Gen AI to build & simplify Gen BI{" "}
+                  </h3>
+                  <p className="mt-2 text-muted-foreground">
+                    Speaker: Amit Bajaj
+                  </p>
+                </div>
+                <div className="rounded-lg bg-muted p-4">
+                  <div className="flex items-center justify-between">
+                    <div className="text-lg font-bold">4:30 PM</div>
+                    <Badge variant="secondary"></Badge>
+                  </div>
+                  <h3 className="mt-2 text-xl font-bold">TBD</h3>
+                  <p className="mt-2 text-muted-foreground">
+                    Speaker: Warren Uniewski
+                  </p>
                 </div>
               </div>
               <div className="grid gap-4">
                 <div className="rounded-lg bg-muted p-4">
                   <div className="flex items-center justify-between">
-                    <div className="text-lg font-bold">6PM</div>
-                    <Badge variant="secondary">Event</Badge>
+                    <div className="text-lg font-bold">5 PM</div>
+                    <Badge variant="secondary">Fortinet</Badge>
                   </div>
-                  <h3 className="mt-2 text-xl font-bold">Wrap Up</h3>
-                  <p className="mt-2 text-muted-foreground">
-                    Closing comments by Matt Carolan
-                  </p>
+                  <h3 className="mt-2 text-xl font-bold">TBD</h3>
+                  <p className="mt-2 text-muted-foreground">Speaker: TBD</p>
+                </div>
+                <div className="rounded-lg bg-muted p-4">
+                  <div className="flex items-center justify-between">
+                    <div className="text-lg font-bold">5:30 PM</div>
+                    <Badge variant="secondary">TBD</Badge>
+                  </div>
+                  <h3 className="mt-2 text-xl font-bold">TBD</h3>
+                  <p className="mt-2 text-muted-foreground">Speaker: TBD</p>
                 </div>
                 <div className="rounded-lg bg-muted p-4">
                   <div className="flex items-center justify-between">

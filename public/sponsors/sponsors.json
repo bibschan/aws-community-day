@@ -22,7 +22,7 @@
     "type": "Gold",
     "title": "Atono",
     "alt": "Gold Sponsor Video Thumbnail",
-    "imgSrc": "/sponsors/atono.png"
+    "imgSrc": "/sponsors/atono.svg"
   },
   {
     "type": "Silver",
@@ -40,7 +40,7 @@
     "type": "Silver",
     "title": "Convergence",
     "alt": "Convergence",
-    "imgSrc": "/sponsors/"
+    "imgSrc": "/sponsors/convergence.png"
   },
   {
     "type": "Silver",
