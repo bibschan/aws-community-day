@@ -5,6 +5,7 @@ import LottiePaint from "@/components/ui/lottie-paint";
 import LottieSplash from "@/components/ui/lottie-splash";
 import LottieDownSplash from "@/components/ui/lottie-down-splash";
 import ZoomableImage from "@/components/ui/zoomable-image";
+import sponsors from "/public/sponsors/sponsors.json";
 
 export default function Home() {
   const teamMap = TeamMap();
@@ -533,43 +534,33 @@ export default function Home() {
                   organizations.
                 </p>
                 <div
-                  className="mx-auto grid max-w-5xl gap-6 pt-12 md:grid-cols-2 md:gap-12 lg:grid-cols-2"
+                  className="mx-auto grid max-w-5xl gap-6 pt-12 grid-cols-1 md:grid-cols-2 lg:grid-cols-4"
                   id="media"
                 >
-                  <div className="rounded-lg bg-muted p-4">
-                    <div className="aspect-video overflow-hidden rounded-lg">
-                      <img
-                        src="/placeholder.svg"
-                        width="600"
-                        height="400"
-                        alt="Video Thumbnail"
-                        className="object-cover"
-                        style={{ aspectRatio: "600/400", objectFit: "cover" }}
-                      />
+                  {sponsors.map((sponsor, index) => (
+                    <div
+                      key={index}
+                      className={`rounded-lg bg-muted p-4 ${
+                        sponsor.span || ""
+                      } ${
+                        sponsor.type === "Main"
+                          ? "col-span-2 lg:col-span-4 justify-self-center"
+                          : ""
+                      }`}
+                    >
+                      <div className="overflow-hidden rounded-lg ">
+                        <img
+                          src={sponsor.imgSrc}
+                          alt={sponsor.alt}
+                          className="object-contain mx-auto"
+                          style={{
+                            objectFit: "contain",
+                            height: sponsor.type === "Main" ? "200px" : "100px",
+                          }}
+                        />
+                      </div>
                     </div>
-                    <div className="mt-4">
-                      <h3 className="text-xl font-bold">TBD</h3>
-                      <p className="mt-2 text-muted-foreground">Gold Partner</p>
-                    </div>
-                  </div>
-                  <div className="rounded-lg bg-muted p-4">
-                    <div className="aspect-video overflow-hidden rounded-lg">
-                      <img
-                        src="/placeholder.svg"
-                        width="600"
-                        height="400"
-                        alt="Video Thumbnail"
-                        className="object-cover"
-                        style={{ aspectRatio: "600/400", objectFit: "cover" }}
-                      />
-                    </div>
-                    <div className="mt-4">
-                      <h3 className="text-xl font-bold">TBD</h3>
-                      <p className="mt-2 text-muted-foreground">
-                        Silver Partner
-                      </p>
-                    </div>
-                  </div>
+                  ))}
                 </div>
               </div>
             </div>
