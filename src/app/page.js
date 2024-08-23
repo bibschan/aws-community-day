@@ -1,11 +1,10 @@
 import Link from "next/link";
 import { Badge } from "@/components/ui/badge";
-import { TeamMap, TeamMobileMap } from "../../public/team/team-svg-map";
+import { TeamMap, TeamMobileMap } from "/public/team/team-svg-map";
 import LottiePaint from "@/components/ui/lottie-paint";
 import LottieSplash from "@/components/ui/lottie-splash";
 import LottieDownSplash from "@/components/ui/lottie-down-splash";
 import ZoomableImage from "@/components/ui/zoomable-image";
-import sponsors from "/public/sponsors/sponsors.json";
 import SponsorSection from "@/components/ui/sponsors";
 
 export default function Home() {
