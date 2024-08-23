@@ -193,7 +193,10 @@ export default function Home() {
             </div>
           </div>
         </section>
-        <section className="w-full py-12 relative" id="schedule">
+        <section
+          className="w-full py-12 relative overflow-hidden"
+          id="schedule"
+        >
           <div className="absolute -z-20 bottom-0 w-full">
             <LottieSplash color="purple" />
           </div>
@@ -458,18 +461,18 @@ export default function Home() {
           </div>
         </section>
         <section
-          className="w-full py-12 md:py-20 relative overflow-hidden"
+          className="w-full py-12 md:py-20 relative bg-white"
           id="community"
         >
           <img
             src="/kris-krug/drip.png"
             alt="logo"
-            className="absolute top-0 min-w-[600px]"
+            className="absolute top-0 max-h-[1266px] left-1/2 transform -translate-x-1/2 overflow-visible"
           />
           <div className="container px-4 md:px-6 m-auto">
             <div className="flex flex-col items-center justify-center space-y-4 text-center">
               <div className="space-y-2 m-auto z-10">
-                <div className="inline-block rounded-lg bg-[#EB8E06] text-white px-3 py-1 text-sm">
+                <div className="inline-block rounded-lg bg-[#6e136f] text-white px-3 py-1 text-sm">
                   Community Hall
                 </div>
                 <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl drop-shadow-[2px_3px_3px_rgba(255,255,255,0.75)]">
@@ -564,21 +567,29 @@ export default function Home() {
             </div>
           </div>
         </section>
-        <section className="w-full bg-muted py-12 md:py-20" id="sponsors">
+        <section
+          className="w-full bg-muted py-12 md:py-20 bg-gradient-to-r from-orange-500 to-yellow-500"
+          id="sponsors"
+        >
           <div className="container px-4 md:px-6 m-auto">
             <div className="flex flex-col items-center justify-center space-y-4 text-center">
-              <div className="space-y-2">
-                <div className="inline-block rounded-lg bg-[#D30A4F] text-white px-3 py-1 text-sm">
-                  Sponsors
+              <div className="relative">
+                <div className="relative space-y-2 z-10">
+                  <div className="inline-block rounded-lg bg-[#D30A4F] text-white px-3 py-1 text-sm">
+                    Sponsors
+                  </div>
+                  <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">
+                    AWS Day 2024 Sponsors
+                  </h2>
+                  <p className="max-w-[900px] m-auto text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
+                    2024 AWS Day is proudly sponsored by the following
+                    organizations.
+                  </p>
+                  <SponsorSection />
                 </div>
-                <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">
-                  AWS Day 2024 Sponsors
-                </h2>
-                <p className="max-w-[900px] m-auto text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-                  2024 AWS Day is proudly sponsored by the following
-                  organizations.
-                </p>
-                <SponsorSection />
+                <div className="absolute inset-0 flex justify-center items-center z-0">
+                  <div className="w-1/2 h-2/4 bg-[#FFE177] opacity-50 rounded-full blur-3xl"></div>
+                </div>
               </div>
             </div>
           </div>
