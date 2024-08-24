@@ -6,6 +6,7 @@ import LottieSplash from "@/components/ui/lottie-splash";
 import LottieDownSplash from "@/components/ui/lottie-down-splash";
 import ZoomableImage from "@/components/ui/zoomable-image";
 import SponsorSection from "@/components/ui/sponsors";
+import Menu from "@/components/ui/menu";
 
 export default function Home() {
   const teamMap = TeamMap();
@@ -14,54 +15,7 @@ export default function Home() {
   return (
     <div className="flex flex-col min-h-[100dvh]">
       <header className="bg-gradient-to-r from-orange-500 to-yellow-500 py-12 md:py-4">
-        <nav className="text-black bg-gradient-to-r from-orange-500 to-yellow-500 flex justify-between gap-4 sm:gap-6 fixed top-0 right-0 py-2 px-4 z-30 w-full background-blur backdrop-blur-lg">
-          <Link
-            href="https://www.meetup.com/vanawsug/"
-            className="text-sm font-medium hover:underline underline-offset-4"
-            prefetch={false}
-          >
-            <img src="/usergroup.png" alt="Logo" width={50} height="auto" />
-          </Link>
-          <div className="flex justify-between items-center gap-4 sm:gap-6">
-            <Link
-              href="#speakers"
-              className="text-sm font-medium hover:underline underline-offset-4"
-              prefetch={false}
-            >
-              Speakers
-            </Link>
-            <Link
-              href="#schedule"
-              className="text-sm font-medium hover:underline underline-offset-4"
-              prefetch={false}
-            >
-              Schedule
-            </Link>
-
-            <Link
-              href="#media"
-              className="text-sm font-medium hover:underline underline-offset-4"
-              prefetch={false}
-            >
-              Media
-            </Link>
-            <Link
-              href="#community"
-              className="text-sm font-medium hover:underline underline-offset-4"
-              prefetch={false}
-            >
-              Community
-            </Link>
-
-            <Link
-              href="#location"
-              className="text-sm font-medium hover:underline underline-offset-4"
-              prefetch={false}
-            >
-              Location
-            </Link>
-          </div>
-        </nav>
+        <Menu />
         <div className="container py-12 px-4 md:px-6 m-auto">
           <div className="grid gap-8 lg:grid-cols-2 lg:gap-16">
             <div className="flex flex-col items-start justify-center space-y-6 z-10">
@@ -83,6 +37,7 @@ export default function Home() {
               <div className="flex flex-col gap-2 sm:flex-row">
                 <Link
                   href="https://www.vtixonline.com/aws-community-day-2024-vancouver/4471/"
+                  target="_blank"
                   className="inline-flex h-10 items-center justify-center rounded-md border border-input bg-background px-8 text-sm font-medium shadow-sm transition-colors hover:bg-accent hover:text-accent-foreground focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50"
                   prefetch={false}
                 >
@@ -93,8 +48,8 @@ export default function Home() {
 
             <div className="relative">
               <img src="/main-banner.svg" alt="Conference" className="" />
-              <div className="absolute bottom-0 left-0 flex w-full justify-between px-6 pb-6">
-                <div className="rounded-lg bg-background/50 px-4 py-2 backdrop-blur-md flex flex-col items-center">
+              <div className="absolute bottom-0 left-0 flex w-full justify-between">
+                <div className="rounded-lg bg-background/50 mr-2 px-4 py-2 backdrop-blur-md flex flex-col items-center">
                   <div className="text-2xl font-bold">September 17</div>
                   <div className="text-sm text-muted-foreground">2~6PM</div>
                 </div>
@@ -118,22 +73,22 @@ export default function Home() {
             <LottieSplash />
           </div>
           <div className="container px-4 md:px-6 m-auto h-full relative">
-            <div className="absolute h-full w-full">
+            <div className="absolute h-full w-full ">
               <img
                 src="/background/1.png"
-                className="absolute -top-10 -left-[90px] -z-10"
+                className="absolute -top-10 -left-[90px] -z-10 hidden md:block"
               />
               <img
                 src="/background/2.png"
-                className="absolute top-20 right-0  -z-10"
+                className="absolute top-20 right-0 -z-10 hidden md:block"
               />
               <img
                 src="/background/3.png"
-                className="absolute -bottom-36 -left-10 -z-10"
+                className="absolute -bottom-36 -left-10 -z-10 hidden md:block"
               />
               <img
                 src="/background/4.png"
-                className="absolute bottom-0 -right-[58px] -z-10"
+                className="absolute bottom-0 -right-[58px] -z-10 hidden md:block"
               />
             </div>
             <div className="flex flex-col items-center justify-center space-y-4 text-center">
@@ -144,7 +99,7 @@ export default function Home() {
                 <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl drop-shadow-[2px_3px_3px_rgba(255,255,255,0.75)]">
                   Meet Our Speakers
                 </h2>
-                <p className="max-w-[900px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
+                <p className="max-w-[900px] bg-[#ffffff89] rounded-lg text-black md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
                   Hear from industry leaders and experts who will share their
                   insights and experiences. We have a full afternoon of speakers
                   lined up for you covering topics on AWS around AI, Costs,
@@ -163,12 +118,11 @@ export default function Home() {
                     className="object-cover"
                   />
                 </div>
-                <div className="mt-4">
+                <div className="mt-4 text-center">
                   <h3 className="text-xl font-bold">Michael Heyd</h3>
                   <p className="mt-2 text-muted-foreground">
                     Principal Solutions Architect @ AWS
                   </p>
-                  <p className="mt-2 text-muted-foreground">TBD</p>
                 </div>
               </div>
               <div className="rounded-lg bg-transparent p-4 mx-auto">
@@ -181,19 +135,18 @@ export default function Home() {
                     className="object-cover"
                   />
                 </div>
-                <div className="mt-4">
+                <div className="mt-4 text-center">
                   <h3 className="text-xl font-bold">Gabriel Lopez</h3>
                   <p className="mt-2 text-muted-foreground">
                     Generative AI GTM & Strategy
                   </p>
-                  <p className="mt-2 text-muted-foreground">TBD</p>
                 </div>
               </div>
             </div>
           </div>
         </section>
         <section
-          className="w-full py-12 relative overflow-hidden"
+          className="w-full py-12 relative overflow-hidden  bg-[#8645FF] md:bg-transparent"
           id="schedule"
         >
           <div className="absolute -z-20 bottom-0 w-full">
@@ -211,7 +164,7 @@ export default function Home() {
                 <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl drop-shadow-[2px_3px_3px_rgba(255,255,255,0.75)]">
                   Explore the Agenda
                 </h2>
-                <p className="max-w-[900px] text-black md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
+                <p className="max-w-[900px] bg-[#ffffff89] rounded-lg text-black md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
                   Discover a diverse lineup of talks, workshops, and networking
                   opportunities that will inspire and empower you.
                 </p>
@@ -226,7 +179,27 @@ export default function Home() {
                   </div>
                   <h3 className="mt-2 text-xl font-bold">Doors Open</h3>
                   <p className="mt-2 text-muted-foreground">
-                    Networking time, 1-on-1 meetings, and more.
+                    Networking time, 1-on-1 meetings, and more
+                  </p>
+                </div>
+                <div className="rounded-lg bg-muted p-4">
+                  <div className="flex items-center justify-between">
+                    <div className="text-lg font-bold">2 PM ~ 6 PM</div>
+                    <Badge variant="secondary">Event</Badge>
+                  </div>
+                  <h3 className="mt-2 text-xl font-bold">Community Hall</h3>
+                  <p className="mt-2 text-muted-foreground">
+                    Join our sponsors and community booths on the second level
+                  </p>
+                </div>
+                <div className="rounded-lg bg-muted p-4">
+                  <div className="flex items-center justify-between">
+                    <div className="text-lg font-bold">2 PM ~ 6 PM</div>
+                    <Badge variant="secondary">Event</Badge>
+                  </div>
+                  <h3 className="mt-2 text-xl font-bold">Media Lounge</h3>
+                  <p className="mt-2 text-muted-foreground">
+                    Kris Krug will lead live interviews with our AWS experts
                   </p>
                 </div>
                 <div className="rounded-lg bg-muted p-4">
@@ -241,18 +214,20 @@ export default function Home() {
                     Speaker: Mark Gamble
                   </p>
                 </div>
+              </div>
+              <div className="grid gap-4">
                 <div className="rounded-lg bg-muted p-4">
                   <div className="flex items-center justify-between">
                     <div className="text-lg font-bold">2:30 PM</div>
-                    <Badge variant="secondary"></Badge>
+                    <Badge variant="secondary">AWS</Badge>
                   </div>
-                  <h3 className="mt-2 text-xl font-bold">TBD</h3>
+                  <h3 className="mt-2 text-xl font-bold">
+                    Best Practice Architecture on AWS
+                  </h3>
                   <p className="mt-2 text-muted-foreground">
                     Speaker: Michael Heyd
                   </p>
                 </div>
-              </div>
-              <div className="grid gap-4">
                 <div className="rounded-lg bg-muted p-4">
                   <div className="flex items-center justify-between">
                     <div className="text-lg font-bold">3 PM</div>
@@ -262,15 +237,15 @@ export default function Home() {
                     Startup Velocity at Enterprise Scale
                   </h3>
                   <p className="mt-2 text-muted-foreground">
-                    Speaker: Lex Vorona
+                    Speaker: Tobias Dunn-Krahn
                   </p>
                 </div>
                 <div className="rounded-lg bg-muted p-4">
                   <div className="flex items-center justify-between">
                     <div className="text-lg font-bold">3:30 PM</div>
-                    <Badge variant="secondary"></Badge>
+                    <Badge variant="secondary">AWS</Badge>
                   </div>
-                  <h3 className="mt-2 text-xl font-bold">TBD</h3>
+                  <h3 className="mt-2 text-xl font-bold">Anthropics on AWS</h3>
                   <p className="mt-2 text-muted-foreground">
                     Speaker: Gabriel Velazquez
                   </p>
@@ -281,48 +256,60 @@ export default function Home() {
                     <Badge variant="secondary"></Badge>
                   </div>
                   <h3 className="mt-2 text-xl font-bold">
-                    Leverage AWS Gen AI to build & simplify Gen BI
+                    Leverage AWS Gen AI to Build & Simplify Gen BI
                   </h3>
                   <p className="mt-2 text-muted-foreground">
                     Speaker: Amit Bajaj
-                  </p>
-                </div>
-                <div className="rounded-lg bg-muted p-4">
-                  <div className="flex items-center justify-between">
-                    <div className="text-lg font-bold">4:30 PM</div>
-                    <Badge variant="secondary"></Badge>
-                  </div>
-                  <h3 className="mt-2 text-xl font-bold">TBD</h3>
-                  <p className="mt-2 text-muted-foreground">
-                    Speaker: Warren Uniewski
                   </p>
                 </div>
               </div>
               <div className="grid gap-4">
                 <div className="rounded-lg bg-muted p-4">
                   <div className="flex items-center justify-between">
+                    <div className="text-lg font-bold">4:30 PM</div>
+                    <Badge variant="secondary">Autimo</Badge>
+                  </div>
+                  <h3 className="mt-2 text-xl font-bold">
+                    From AWS Alerts to Actionable Insights with Generative AI
+                  </h3>
+                  <p className="mt-2 text-muted-foreground">
+                    Speaker: Warren Uniewski
+                  </p>
+                </div>
+                <div className="rounded-lg bg-muted p-4">
+                  <div className="flex items-center justify-between">
                     <div className="text-lg font-bold">5 PM</div>
                     <Badge variant="secondary">Fortinet</Badge>
                   </div>
-                  <h3 className="mt-2 text-xl font-bold">TBD</h3>
-                  <p className="mt-2 text-muted-foreground">Speaker: TBD</p>
+                  <h3 className="mt-2 text-xl font-bold">
+                    Cloud Security Trends: How Do You Stack Up?
+                  </h3>
+                  <p className="mt-2 text-muted-foreground">
+                    Speaker: Fortinet
+                  </p>
                 </div>
                 <div className="rounded-lg bg-muted p-4">
                   <div className="flex items-center justify-between">
                     <div className="text-lg font-bold">5:30 PM</div>
-                    <Badge variant="secondary">TBD</Badge>
+                    <Badge variant="secondary">Randoli</Badge>
                   </div>
-                  <h3 className="mt-2 text-xl font-bold">TBD</h3>
-                  <p className="mt-2 text-muted-foreground">Speaker: TBD</p>
+                  <h3 className="mt-2 text-xl font-bold">
+                    Considerations & Best Practices for Building EKS Clusters
+                    for Production
+                  </h3>
+                  <p className="mt-2 text-muted-foreground">Rajith Attapattu</p>
                 </div>
                 <div className="rounded-lg bg-muted p-4">
                   <div className="flex items-center justify-between">
                     <div className="text-lg font-bold">6:15 PM</div>
                     <Badge variant="secondary">Networking</Badge>
                   </div>
-                  <h3 className="mt-2 text-xl font-bold">VIP After Party</h3>
+                  <h3 className="mt-2 text-xl font-bold">
+                    VIP After Party (Invite-only)
+                  </h3>
                   <p className="mt-2 text-muted-foreground">
-                    Connect with fellow attendees and speakers
+                    A private party to connect with other VIP attendees and
+                    speakers.
                   </p>
                 </div>
               </div>
@@ -339,11 +326,12 @@ export default function Home() {
                 <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">
                   Explore the Media Lounge
                 </h2>
-                <p className="max-w-[900px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
+                <p className="max-w-[900px] text-black md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
                   Join{" "}
                   <Link
                     className="font-semibold text-blue-800"
                     href="https://kriskrug.co/about/"
+                    target="_blank"
                   >
                     Kris Krüg &nbsp;
                   </Link>
@@ -477,7 +465,7 @@ export default function Home() {
                 <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl drop-shadow-[2px_3px_3px_rgba(255,255,255,0.75)]">
                   Join us in the Community Hall
                 </h2>
-                <p className="max-w-[900px] drop-shadow-[2px_3px_3px_rgba(255,255,255,0.75)] text-black md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
+                <p className="max-w-[900px] bg-[#ffffff89] rounded-lg text-black md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
                   Live Music by Scott Jacobs, booths and demos run by local
                   companies and usergroups! You can find Scott{" "}
                   <a
@@ -535,15 +523,18 @@ export default function Home() {
             </div>
           </div>
         </section>
-        <section className="w-full py-12 md:py-20 relative" id="team">
+        <section
+          className="w-full py-12 md:py-20 relative overflow-hidden"
+          id="team"
+        >
           <div className="absolute -z-20 bottom-0 w-full">
             <LottieSplash color="pink" />
           </div>
           <div className="container px-4 md:px-6 m-auto">
             <div className="flex flex-col items-center justify-center space-y-4 text-center">
-              <div className="space-y-2">
+              <div className="space-y-2 ">
                 <div className="inline-block rounded-lg bg-[#3d43fe] text-white px-3 py-1 text-sm relative">
-                  <div className="absolute -z-10 -top-52 -left-48">
+                  <div className="absolute -z-10 -top-52 -left-36">
                     <LottieDownSplash />
                   </div>
                   Team
@@ -551,7 +542,7 @@ export default function Home() {
                 <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">
                   Who's Behind the Event
                 </h2>
-                <p className="max-w-[900px] m-auto pb-10 text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
+                <p className="max-w-[900px] m-auto pb-10 text-black md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
                   Putting an event together can be a daunting task, but with the
                   right people, anything is possible! The 2024 team is excited
                   to welcome you to AWS Day!
@@ -580,7 +571,7 @@ export default function Home() {
                   <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">
                     AWS Day 2024 Sponsors
                   </h2>
-                  <p className="max-w-[900px] m-auto text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
+                  <p className="max-w-[900px] m-auto text-black md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
                     2024 AWS Day is proudly sponsored by the following
                     organizations.
                   </p>
@@ -596,7 +587,8 @@ export default function Home() {
         <footer className="flex flex-col gap-2 sm:flex-row py-6 w-full shrink-0 items-center px-4 md:px-6 border-t">
           <p className="text-xs text-muted-foreground m-auto">
             Celebrating 11 years of the{" "}
-            <a href="http://www.awsusergroups.com/">Vancouver AWS Usergroup</a>
+            <a href="http://www.awsusergroups.com/">Vancouver AWS Usergroup</a>.
+            This site is hosted using only AWS S3 and Cloudfront
           </p>
         </footer>
       </main>
