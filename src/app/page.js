@@ -92,14 +92,14 @@ export default function Home() {
               />
             </div>
             <div className="flex flex-col items-center justify-center space-y-4 text-center">
-              <div className="space-y-2">
+              <div className="space-y-2 bg-[#ffffff89] rounded-lg p-2">
                 <div className="inline-block rounded-lg bg-[#4E1479] text-white px-3 py-1 text-sm">
                   Featured Speakers
                 </div>
                 <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl drop-shadow-[2px_3px_3px_rgba(255,255,255,0.75)]">
                   Meet Our Speakers
                 </h2>
-                <p className="max-w-[900px] bg-[#ffffff89] rounded-lg text-black md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
+                <p className="max-w-[900px]  text-black md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
                   Hear from industry leaders and experts who will share their
                   insights and experiences. We have a full afternoon of speakers
                   lined up for you covering topics on AWS around AI, Costs,
@@ -157,14 +157,14 @@ export default function Home() {
           </div>
           <div className="container px-4 md:px-6 m-auto">
             <div className="flex flex-col items-center justify-center space-y-4 text-center">
-              <div className="space-y-2">
+              <div className="space-y-2 bg-[#ffffff89] rounded-lg p-2">
                 <div className="inline-block rounded-lg bg-[#136493] text-white px-3 py-1 text-sm ">
                   Conference Schedule
                 </div>
                 <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl drop-shadow-[2px_3px_3px_rgba(255,255,255,0.75)]">
                   Explore the Agenda
                 </h2>
-                <p className="max-w-[900px] bg-[#ffffff89] rounded-lg text-black md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
+                <p className="max-w-[900px]  text-black md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
                   Discover a diverse lineup of talks, workshops, and networking
                   opportunities that will inspire and empower you.
                 </p>
@@ -458,14 +458,14 @@ export default function Home() {
           />
           <div className="container px-4 md:px-6 m-auto">
             <div className="flex flex-col items-center justify-center space-y-4 text-center">
-              <div className="space-y-2 m-auto z-10">
+              <div className="space-y-2 m-auto z-10 bg-[#ffffff89] rounded-lg p-2">
                 <div className="inline-block rounded-lg bg-[#6e136f] text-white px-3 py-1 text-sm">
                   Community Hall
                 </div>
                 <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl drop-shadow-[2px_3px_3px_rgba(255,255,255,0.75)]">
                   Join us in the Community Hall
                 </h2>
-                <p className="max-w-[900px] bg-[#ffffff89] rounded-lg text-black md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
+                <p className="max-w-[900px]  text-black md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
                   Live Music by Scott Jacobs, booths and demos run by local
                   companies and usergroups! You can find Scott{" "}
                   <a
