@@ -5,7 +5,8 @@ import "./globals.css";
 
 export const metadata = {
   title: "AWS Day",
-  description: "AWS Day",
+  description:
+    "The AWS Community Day in Vancouver Canada features expert-led talks, technical workshops, hands-on labs, and networking opportunities with industry leaders and fellow enthusiasts. Whether you're an experienced professional or a newcomer in the world of AWS, come join us. Be part of the movement to create a better, smarter, and more connected world.",
 };
 
 const fontHeading = Inter({
