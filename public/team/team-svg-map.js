@@ -7,7 +7,7 @@ export function TeamMap() {
       viewBox="0 0 1150 500"
     >
       <image width="1150" height="500" xlinkHref="/team/the-gang.png" />
-      <a xlinkHref="https://www.linkedin.com/in/bibschan">
+      <a xlinkHref="https://www.linkedin.com/in/bibschan" target="_blank">
         <rect
           x="0"
           y="0"
@@ -17,7 +17,7 @@ export function TeamMap() {
           height="250"
         ></rect>
       </a>
-      <a xlinkHref="https://www.linkedin.com/in/fstoelting">
+      <a xlinkHref="https://www.linkedin.com/in/fstoelting" target="_blank">
         <rect
           x="211"
           y="0"
@@ -27,7 +27,7 @@ export function TeamMap() {
           height="246"
         ></rect>
       </a>
-      <a xlinkHref="https://www.linkedin.com/in/matthewcarolan">
+      <a xlinkHref="https://www.linkedin.com/in/matthewcarolan" target="_blank">
         <rect
           x="414"
           y="0"
@@ -37,7 +37,7 @@ export function TeamMap() {
           height="249"
         ></rect>
       </a>
-      <a xlinkHref="https://www.linkedin.com/in/luisnjuarez">
+      <a xlinkHref="https://www.linkedin.com/in/luisnjuarez" target="_blank">
         <rect
           x="604"
           y="0"
@@ -47,7 +47,10 @@ export function TeamMap() {
           height="252"
         ></rect>
       </a>
-      <a xlinkHref="https://www.linkedin.com/in/mattias-andersson">
+      <a
+        xlinkHref="https://www.linkedin.com/in/mattias-andersson"
+        target="_blank"
+      >
         <rect
           x="772"
           y="0"
@@ -57,7 +60,7 @@ export function TeamMap() {
           height="250"
         ></rect>
       </a>
-      <a xlinkHref="https://www.linkedin.com/in/kriskrug">
+      <a xlinkHref="https://www.linkedin.com/in/kriskrug" target="_blank">
         <rect
           x="964"
           y="0"
@@ -67,7 +70,7 @@ export function TeamMap() {
           height="248"
         ></rect>
       </a>
-      <a xlinkHref="https://www.linkedin.com/in/mikehoff321">
+      <a xlinkHref="https://www.linkedin.com/in/mikehoff321" target="_blank">
         <rect
           x="0"
           y="252"
@@ -77,7 +80,10 @@ export function TeamMap() {
           height="248"
         ></rect>
       </a>
-      <a xlinkHref="https://www.linkedin.com/in/mohsen-akhavan-2020moh2022">
+      <a
+        xlinkHref="https://www.linkedin.com/in/mohsen-akhavan-2020moh2022"
+        target="_blank"
+      >
         <rect
           x="207"
           y="251"
@@ -87,7 +93,7 @@ export function TeamMap() {
           height="249"
         ></rect>
       </a>
-      <a xlinkHref="https://www.linkedin.com/in/shankyjs">
+      <a xlinkHref="https://www.linkedin.com/in/shankyjs" target="_blank">
         <rect
           x="423"
           y="251"
@@ -97,7 +103,7 @@ export function TeamMap() {
           height="249"
         ></rect>
       </a>
-      <a xlinkHref="https://www.linkedin.com/in/wills">
+      <a xlinkHref="https://www.linkedin.com/in/wills" target="_blank">
         <rect
           x="758"
           y="324"
@@ -107,7 +113,10 @@ export function TeamMap() {
           height="176"
         ></rect>
       </a>
-      <a xlinkHref="https://www.linkedin.com/in/vihana-sagarika">
+      <a
+        xlinkHref="https://www.linkedin.com/in/vihana-sagarika"
+        target="_blank"
+      >
         <rect
           x="554"
           y="253"
@@ -117,7 +126,10 @@ export function TeamMap() {
           height="247"
         ></rect>
       </a>
-      <a xlinkHref="https://www.linkedin.com/in/vihana-sagarika">
+      <a
+        xlinkHref="https://www.linkedin.com/in/vihana-sagarika"
+        target="_blank"
+      >
         <rect
           x="754"
           y="253"
@@ -127,7 +139,10 @@ export function TeamMap() {
           height="67"
         ></rect>
       </a>
-      <a xlinkHref="https://www.linkedin.com/in/shivanshu-bansal">
+      <a
+        xlinkHref="https://www.linkedin.com/in/shivanshu-bansal"
+        target="_blank"
+      >
         <rect
           x="990"
           y="248"
@@ -137,7 +152,10 @@ export function TeamMap() {
           height="252"
         ></rect>
       </a>
-      <a xlinkHref="https://www.linkedin.com/in/shivanshu-bansal">
+      <a
+        xlinkHref="https://www.linkedin.com/in/shivanshu-bansal"
+        target="_blank"
+      >
         <rect
           x="940"
           y="250"
@@ -164,7 +182,7 @@ export function TeamMobileMap() {
         height="750"
         xlinkHref="/team/the-gang-mobile.png"
       ></image>
-      <a xlinkHref="https://www.linkedin.com/in/matthewcarolan">
+      <a xlinkHref="https://www.linkedin.com/in/matthewcarolan" target="_blank">
         <rect
           x="0"
           y="0"
@@ -174,7 +192,7 @@ export function TeamMobileMap() {
           height="250"
         ></rect>
       </a>
-      <a xlinkHref="https://www.linkedin.com/in/wills">
+      <a xlinkHref="https://www.linkedin.com/in/wills" target="_blank">
         <rect
           x="201"
           y="0"
@@ -184,7 +202,10 @@ export function TeamMobileMap() {
           height="250"
         ></rect>
       </a>
-      <a xlinkHref="https://www.linkedin.com/in/mattias-andersson">
+      <a
+        xlinkHref="https://www.linkedin.com/in/mattias-andersson"
+        target="_blank"
+      >
         <rect
           x="405"
           y="0"
@@ -194,7 +215,10 @@ export function TeamMobileMap() {
           height="252"
         ></rect>
       </a>
-      <a xlinkHref="https://www.linkedin.com/in/shivanshu-bansal">
+      <a
+        xlinkHref="https://www.linkedin.com/in/shivanshu-bansal"
+        target="_blank"
+      >
         <rect
           x="584"
           y="0"
@@ -204,7 +228,10 @@ export function TeamMobileMap() {
           height="250"
         ></rect>
       </a>
-      <a xlinkHref="https://www.linkedin.com/in/vihana-sagarika">
+      <a
+        xlinkHref="https://www.linkedin.com/in/vihana-sagarika"
+        target="_blank"
+      >
         <rect
           x="566"
           y="498"
@@ -214,7 +241,7 @@ export function TeamMobileMap() {
           height="252"
         ></rect>
       </a>
-      <a xlinkHref="https://www.linkedin.com/in/shankyjs">
+      <a xlinkHref="https://www.linkedin.com/in/shankyjs" target="_blank">
         <rect
           x="397"
           y="581"
@@ -224,7 +251,7 @@ export function TeamMobileMap() {
           height="169"
         ></rect>
       </a>
-      <a xlinkHref="https://www.linkedin.com/in/shankyjs">
+      <a xlinkHref="https://www.linkedin.com/in/shankyjs" target="_blank">
         <rect
           x="440"
           y="500"
@@ -234,7 +261,7 @@ export function TeamMobileMap() {
           height="81"
         ></rect>
       </a>
-      <a xlinkHref="https://www.linkedin.com/in/kriskrug">
+      <a xlinkHref="https://www.linkedin.com/in/kriskrug" target="_blank">
         <rect
           x="400"
           y="256"
@@ -244,7 +271,7 @@ export function TeamMobileMap() {
           height="242"
         ></rect>
       </a>
-      <a xlinkHref="https://www.linkedin.com/in/fstoelting">
+      <a xlinkHref="https://www.linkedin.com/in/fstoelting" target="_blank">
         <rect
           x="203"
           y="256"
@@ -254,7 +281,7 @@ export function TeamMobileMap() {
           height="242"
         ></rect>
       </a>
-      <a xlinkHref="https://www.linkedin.com/in/mikehoff321">
+      <a xlinkHref="https://www.linkedin.com/in/mikehoff321" target="_blank">
         <rect
           x="0"
           y="501"
@@ -264,7 +291,10 @@ export function TeamMobileMap() {
           height="249"
         ></rect>
       </a>
-      <a xlinkHref="https://www.linkedin.com/in/mohsen-akhavan-2020moh2022">
+      <a
+        xlinkHref="https://www.linkedin.com/in/mohsen-akhavan-2020moh2022"
+        target="_blank"
+      >
         <rect
           x="205"
           y="500"
@@ -274,7 +304,10 @@ export function TeamMobileMap() {
           height="250"
         ></rect>
       </a>
-      <a xlinkHref="https://www.linkedin.com/in/mohsen-akhavan-2020moh2022">
+      <a
+        xlinkHref="https://www.linkedin.com/in/mohsen-akhavan-2020moh2022"
+        target="_blank"
+      >
         <rect
           x="355"
           y="528"
@@ -284,7 +317,7 @@ export function TeamMobileMap() {
           height="50"
         ></rect>
       </a>
-      <a xlinkHref="https://www.linkedin.com/in/luisnjuarez">
+      <a xlinkHref="https://www.linkedin.com/in/luisnjuarez" target="_blank">
         <rect
           x="581"
           y="255"
@@ -294,7 +327,7 @@ export function TeamMobileMap() {
           height="240"
         ></rect>
       </a>
-      <a xlinkHref="https://www.linkedin.com/in/bibschan">
+      <a xlinkHref="https://www.linkedin.com/in/bibschan" target="_blank">
         <rect
           x="0"
           y="254"

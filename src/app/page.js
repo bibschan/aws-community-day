@@ -18,17 +18,17 @@ export default function Home() {
         <Menu />
         <div className="container py-12 px-4 md:px-6 m-auto">
           <div className="grid gap-8 lg:grid-cols-2 lg:gap-16">
-            <div className="flex flex-col items-start justify-center space-y-6 z-10">
+            <div className="flex flex-col items-center md:items-start justify-center space-y-6 z-10">
               <div className="inline-block rounded-lg bg-[#CD0364] px-3 py-1 text-sm text-white relative">
                 <div className="absolute -z-10 top-0">
                   <LottiePaint />
                 </div>
                 Conference Event
               </div>
-              <h1 className="text-4xl font-bold tracking-tighter text-black sm:text-4xl md:text-5xl lg:text-6xl">
-                First ever AWS Community Day in Vancouver
+              <h1 className="text-4xl font-bold tracking-tighter text-black sm:text-4xl md:text-5xl lg:text-6xl text-center md:text-left">
+                First ever AWS Community Day in Canada
               </h1>
-              <p className="max-w-[600px] text-black md:text-xl z-20">
+              <p className="max-w-[600px] text-black md:text-xl z-20 text-center md:text-left">
                 AWS Community Day is held every year across the globe and we are
                 excited to be part of it. Join us as we bring together the local
                 community around AWS, while donating any profits to local
@@ -285,7 +285,7 @@ export default function Home() {
                     Cloud Security Trends: How Do You Stack Up?
                   </h3>
                   <p className="mt-2 text-muted-foreground">
-                    Speaker: Fortinet
+                    Speaker: Tyler Germer
                   </p>
                 </div>
                 <div className="rounded-lg bg-muted p-4">
@@ -557,10 +557,7 @@ export default function Home() {
             </div>
           </div>
         </section>
-        <section
-          className="w-full bg-muted py-12 md:py-20 bg-gradient-to-r from-orange-500 to-yellow-500"
-          id="sponsors"
-        >
+        <section className="w-full bg-muted py-12 md:py-20 " id="sponsors">
           <div className="container px-4 md:px-6 m-auto">
             <div className="flex flex-col items-center justify-center space-y-4 text-center">
               <div className="relative">
@@ -576,9 +573,6 @@ export default function Home() {
                     organizations.
                   </p>
                   <SponsorSection />
-                </div>
-                <div className="absolute inset-0 flex justify-center items-center z-0">
-                  <div className="w-1/2 h-2/4 bg-[#FFE177] opacity-50 rounded-full blur-3xl"></div>
                 </div>
               </div>
             </div>

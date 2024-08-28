@@ -3,46 +3,61 @@
     "type": "Main",
     "alt": "Main Sponsor Video Thumbnail",
     "imgSrc": "/sponsors/aws.png",
-    "span": "md:col-span-2 lg:col-span-4"
+    "span": "md:col-span-2 lg:col-span-4",
+    "website": "https://aws.amazon.com/"
   },
   {
     "type": "Gold",
     "alt": "Gold Sponsor Video Thumbnail",
-    "imgSrc": "/sponsors/couchbase.png"
+    "imgSrc": "/sponsors/couchbase.png",
+    "website": "https://www.couchbase.com/"
   },
   {
     "type": "Gold",
     "alt": "Gold Sponsor Video Thumbnail",
-    "imgSrc": "/sponsors/fortinet.webp"
+    "imgSrc": "/sponsors/fortinet.webp",
+    "website": "https://www.fortinet.com/"
   },
   {
     "type": "Gold",
     "alt": "Gold Sponsor Video Thumbnail",
-    "imgSrc": "/sponsors/atono.svg"
+    "imgSrc": "/sponsors/atono.svg",
+    "website": "https://www.atono.io/"
   },
   {
     "type": "Silver",
     "alt": "Silver Sponsor Video Thumbnail 1",
-    "imgSrc": "/sponsors/autimo.png"
+    "imgSrc": "/sponsors/autimo.png",
+    "website": "https://autimo.com/"
   },
   {
     "type": "Silver",
     "alt": "Future Proof Creatives",
-    "imgSrc": "/sponsors/futureproof.png"
+    "imgSrc": "/sponsors/futureproof.png",
+    "website": "https://futureproofcreatives.com/"
   },
   {
     "type": "Silver",
     "alt": "Convergence",
-    "imgSrc": "/sponsors/convergence.png"
+    "imgSrc": "/sponsors/convergence.png",
+    "website": "https://cctech.io/"
   },
   {
     "type": "Silver",
     "alt": "SUSE",
-    "imgSrc": "/sponsors/suse.png"
+    "imgSrc": "/sponsors/suse.png",
+    "website": "https://www.suse.com/"
   },
   {
     "type": "Silver",
     "alt": "Speedyrails",
-    "imgSrc": "/sponsors/speedyrails.png"
+    "imgSrc": "/sponsors/speedyrails.png",
+    "website": "https://www.speedyrails.com/"
+  },
+  {
+    "type": "Silver",
+    "alt": "Inside View",
+    "imgSrc": "/sponsors/inside-view.png",
+    "website": "http://www.insideviewglobal.com/"
   }
 ]

@@ -15,18 +15,24 @@ export default function SponsorSection() {
     <div className="mx-auto max-w-5xl pt-12" id="media">
       {/* Main Sponsor */}
       <div className="grid grid-cols-1 justify-items-center gap-6 mb-6">
-        <div className="rounded-lg  p-4 col-span-1">
+        <div className="rounded-lg p-4 col-span-1">
           <div className="overflow-hidden rounded-lg">
-            <img
-              src={mainSponsor.imgSrc}
-              alt={mainSponsor.alt}
-              className="mx-auto object-contain"
-              style={{
-                objectFit: "contain",
-                height: "200px",
-                paddingBottom: "20px",
-              }}
-            />
+            <a
+              href={mainSponsor.website}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img
+                src={mainSponsor.imgSrc}
+                alt={mainSponsor.alt}
+                className="mx-auto object-contain"
+                style={{
+                  objectFit: "contain",
+                  height: "200px",
+                  paddingBottom: "20px",
+                }}
+              />
+            </a>
             <div className="mt-4 text-center">
               <span className="text-muted-foreground text-sm">
                 {mainSponsor.type} Partner
@@ -41,16 +47,22 @@ export default function SponsorSection() {
         {goldSponsors.map((sponsor, index) => (
           <div key={index} className="rounded-lg p-4 col-span-1 w-min">
             <div className="overflow-hidden rounded-lg w-min">
-              <img
-                src={sponsor.imgSrc}
-                alt={sponsor.alt}
-                className="mx-auto object-contain"
-                style={{
-                  objectFit: "contain",
-                  height: "80px",
-                  maxWidth: "200px",
-                }}
-              />
+              <a
+                href={sponsor.website}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <img
+                  src={sponsor.imgSrc}
+                  alt={sponsor.alt}
+                  className="mx-auto object-contain"
+                  style={{
+                    objectFit: "contain",
+                    height: "80px",
+                    maxWidth: "200px",
+                  }}
+                />
+              </a>
               <div className="mt-4 text-center">
                 <span className="text-muted-foreground text-sm">
                   {sponsor.type} Partner
@@ -62,19 +74,26 @@ export default function SponsorSection() {
       </div>
 
       {/* Silver Sponsors */}
-      <div className="grid grid-cols-1 md:grid-cols-5 justify-items-center gap-6">
+      <div className="grid grid-cols-1 md:grid-cols-3 justify-items-center gap-6">
         {silverSponsors.map((sponsor, index) => (
           <div key={index} className="rounded-lg p-4 col-span-1 w-full">
             <div className="overflow-hidden rounded-lg">
-              <img
-                src={sponsor.imgSrc}
-                alt={sponsor.alt}
-                className="mx-auto object-contain"
-                style={{
-                  objectFit: "contain",
-                  height: "70px",
-                }}
-              />
+              <a
+                href={sponsor.website}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <img
+                  src={sponsor.imgSrc}
+                  alt={sponsor.alt}
+                  className="mx-auto object-contain"
+                  style={{
+                    objectFit: "contain",
+                    height: "70px",
+                    maxWidth: "200px",
+                  }}
+                />
+              </a>
               <div className="mt-4 text-center">
                 <span className="text-muted-foreground text-sm">
                   {sponsor.type} Partner
