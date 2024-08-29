@@ -505,17 +505,24 @@ export default function Home() {
                   and sponsor booths in the lobby area.
                 </p>
 
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-12">
-                  <div className="relative overflow-hidden rounded-lg shadow-lg h-fit max-w-[400px]">
-                    <ZoomableImage url="/maps/level-1.png" />
-                    <div className="absolute bottom-0 left-0 bg-primary px-4 py-2 text-primary-foreground font-medium">
-                      Level 1
+                <div className="flex md:flex-row w-screen flex-col justify-center px-6 ">
+                  <img
+                    src="/location/venue.png"
+                    alt="Venue"
+                    className="rounded-lg shadow-lg md:max-w-[70%] object-cover md:mb-0 mb-6"
+                  />
+                  <div className="flex flex-row md:flex-col justify-center md:justify-between items-center md:ml-5 md:max-w-[30%] md:w-fit w-full">
+                    <div className="relative overflow-hidden rounded-lg shadow-lg h-fit max-w-[200px] mx-3 md:my-1">
+                      <ZoomableImage url="/maps/level-1.png" />
+                      <div className="absolute bottom-0 left-0 bg-primary px-4 py-2 text-primary-foreground font-medium">
+                        Level 1
+                      </div>
                     </div>
-                  </div>
-                  <div className="relative overflow-hidden rounded-lg shadow-lg h-fit max-w-[400px]">
-                    <ZoomableImage url="/maps/level-2.png" />
-                    <div className="absolute bottom-0 left-0 bg-primary px-4 py-2 text-primary-foreground font-medium">
-                      Level 2
+                    <div className="relative overflow-hidden rounded-lg shadow-lg h-fit max-w-[200px] mx-3 md:my-1">
+                      <ZoomableImage url="/maps/level-2.png" />
+                      <div className="absolute bottom-0 left-0 bg-primary px-4 py-2 text-primary-foreground font-medium">
+                        Level 2
+                      </div>
                     </div>
                   </div>
                 </div>
