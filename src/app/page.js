@@ -221,11 +221,9 @@ export default function Home() {
                     <div className="text-lg font-bold">2:30 PM</div>
                     <Badge variant="secondary">AWS</Badge>
                   </div>
-                  <h3 className="mt-2 text-xl font-bold">
-                    Best Practice Architecture on AWS
-                  </h3>
+                  <h3 className="mt-2 text-xl font-bold">Anthropics on AWS</h3>
                   <p className="mt-2 text-muted-foreground">
-                    Speaker: Michael Heyd
+                    Speaker: Gabriel Velazquez
                   </p>
                 </div>
                 <div className="rounded-lg bg-muted p-4">
@@ -240,14 +238,17 @@ export default function Home() {
                     Speaker: Tobias Dunn-Krahn
                   </p>
                 </div>
+
                 <div className="rounded-lg bg-muted p-4">
                   <div className="flex items-center justify-between">
                     <div className="text-lg font-bold">3:30 PM</div>
                     <Badge variant="secondary">AWS</Badge>
                   </div>
-                  <h3 className="mt-2 text-xl font-bold">Anthropics on AWS</h3>
+                  <h3 className="mt-2 text-xl font-bold">
+                    Best Practice Architecture on AWS
+                  </h3>
                   <p className="mt-2 text-muted-foreground">
-                    Speaker: Gabriel Velazquez
+                    Speaker: Michael Heyd
                   </p>
                 </div>
                 <div className="rounded-lg bg-muted p-4">
@@ -282,7 +283,7 @@ export default function Home() {
                     <Badge variant="secondary">Fortinet</Badge>
                   </div>
                   <h3 className="mt-2 text-xl font-bold">
-                    Cloud Security Trends: How Do You Stack Up?
+                    Data-driven Cloud Security at Scale
                   </h3>
                   <p className="mt-2 text-muted-foreground">
                     Speaker: Tyler Germer

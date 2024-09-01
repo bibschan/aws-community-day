@@ -1,5 +1,6 @@
 [
   {
+    "name": "AWS",
     "type": "Main",
     "alt": "Main Sponsor Video Thumbnail",
     "imgSrc": "/sponsors/aws.png",
@@ -8,18 +9,21 @@
   },
   {
     "type": "Gold",
+    "name": "Couchbase",
     "alt": "Gold Sponsor Video Thumbnail",
     "imgSrc": "/sponsors/couchbase.png",
     "website": "https://www.couchbase.com/"
   },
   {
     "type": "Gold",
+    "name": "Fortinet",
     "alt": "Gold Sponsor Video Thumbnail",
     "imgSrc": "/sponsors/fortinet.webp",
     "website": "https://www.fortinet.com/"
   },
   {
     "type": "Gold",
+    "name": "Atono",
     "alt": "Gold Sponsor Video Thumbnail",
     "imgSrc": "/sponsors/atono.svg",
     "website": "https://www.atono.io/"
@@ -43,6 +47,7 @@
     "website": "https://cctech.io/"
   },
   {
+    "name": "SUSE",
     "type": "Silver",
     "alt": "SUSE",
     "imgSrc": "/sponsors/suse.png",
