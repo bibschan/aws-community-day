@@ -64,5 +64,11 @@
     "alt": "Inside View",
     "imgSrc": "/sponsors/inside-view.png",
     "website": "http://www.insideviewglobal.com/"
+  },
+  {
+    "type": "Silver",
+    "alt": "Data Elephant",
+    "imgSrc": "/sponsors/data-elephant.png",
+    "website": "https://www.dataelephant.com/"
   }
 ]

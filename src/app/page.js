@@ -111,23 +111,6 @@ export default function Home() {
               <div className="rounded-lg bg-transparent p-4 mx-auto">
                 <div className="overflow-hidden rounded-lg">
                   <img
-                    src="/speakers/MichaelHeyd.png"
-                    width="400"
-                    height="400"
-                    alt="Speaker"
-                    className="object-cover"
-                  />
-                </div>
-                <div className="mt-4 text-center">
-                  <h3 className="text-xl font-bold">Michael Heyd</h3>
-                  <p className="mt-2 text-muted-foreground">
-                    Principal Solutions Architect @ AWS
-                  </p>
-                </div>
-              </div>
-              <div className="rounded-lg bg-transparent p-4 mx-auto">
-                <div className="overflow-hidden rounded-lg">
-                  <img
                     src="/speakers/GabrielVelazquezLopez.png"
                     width="400"
                     height="400"
@@ -239,18 +222,6 @@ export default function Home() {
                   </p>
                 </div>
 
-                <div className="rounded-lg bg-muted p-4">
-                  <div className="flex items-center justify-between">
-                    <div className="text-lg font-bold">3:30 PM</div>
-                    <Badge variant="secondary">AWS</Badge>
-                  </div>
-                  <h3 className="mt-2 text-xl font-bold">
-                    Best Practice Architecture on AWS
-                  </h3>
-                  <p className="mt-2 text-muted-foreground">
-                    Speaker: Michael Heyd
-                  </p>
-                </div>
                 <div className="rounded-lg bg-muted p-4">
                   <div className="flex items-center justify-between">
                     <div className="text-lg font-bold">4 PM</div>
