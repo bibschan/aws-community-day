@@ -7,6 +7,8 @@ import LottieDownSplash from "@/components/ui/lottie-down-splash";
 import ZoomableImage from "@/components/ui/zoomable-image";
 import SponsorSection from "@/components/ui/sponsors";
 import Menu from "@/components/ui/menu";
+import Speaker from "@/components/ui/speakers";
+import speakers from "/public/speakers/speakers.json";
 
 export default function Home() {
   const teamMap = TeamMap();
@@ -107,24 +109,16 @@ export default function Home() {
                 </p>
               </div>
             </div>
-            <div className="mx-auto grid max-w-5xl gap-6 py-12 md:gap-2 grid-cols-2">
-              <div className="rounded-lg bg-transparent p-4 mx-auto">
-                <div className="overflow-hidden rounded-lg">
-                  <img
-                    src="/speakers/GabrielVelazquezLopez.png"
-                    width="400"
-                    height="400"
-                    alt="Speaker"
-                    className="object-cover"
-                  />
-                </div>
-                <div className="mt-4 text-center">
-                  <h3 className="text-xl font-bold">Gabriel Lopez</h3>
-                  <p className="mt-2 text-muted-foreground">
-                    Generative AI GTM & Strategy
-                  </p>
-                </div>
-              </div>
+            <div className="mx-auto grid max-w-5xl gap-1 py-12 md:gap-1 grid-cols-2 md:grid-cols-4">
+              {speakers.map((speaker, index) => (
+                <Speaker
+                  key={index}
+                  name={speaker.name}
+                  imgSrc={speaker.image}
+                  alt={speaker.alt}
+                  title={speaker.title}
+                />
+              ))}
             </div>
           </div>
         </section>
@@ -187,7 +181,21 @@ export default function Home() {
                 </div>
                 <div className="rounded-lg bg-muted p-4">
                   <div className="flex items-center justify-between">
-                    <div className="text-lg font-bold">2 PM</div>
+                    <div className="text-lg font-bold">2:00 PM</div>
+                    <Badge variant="secondary">AWS</Badge>
+                  </div>
+                  <h3 className="mt-2 text-xl font-bold">
+                    Keynote: Anthropics on AWS
+                  </h3>
+                  <p className="mt-2 text-muted-foreground">
+                    Speaker: Gabriel Velazquez
+                  </p>
+                </div>
+              </div>
+              <div className="grid gap-4">
+                <div className="rounded-lg bg-muted p-4">
+                  <div className="flex items-center justify-between">
+                    <div className="text-lg font-bold">2:3 PM</div>
                     <Badge variant="secondary">Couchbase</Badge>
                   </div>
                   <h3 className="mt-2 text-xl font-bold">
@@ -195,18 +203,6 @@ export default function Home() {
                   </h3>
                   <p className="mt-2 text-muted-foreground">
                     Speaker: Mark Gamble
-                  </p>
-                </div>
-              </div>
-              <div className="grid gap-4">
-                <div className="rounded-lg bg-muted p-4">
-                  <div className="flex items-center justify-between">
-                    <div className="text-lg font-bold">2:30 PM</div>
-                    <Badge variant="secondary">AWS</Badge>
-                  </div>
-                  <h3 className="mt-2 text-xl font-bold">Anthropics on AWS</h3>
-                  <p className="mt-2 text-muted-foreground">
-                    Speaker: Gabriel Velazquez
                   </p>
                 </div>
                 <div className="rounded-lg bg-muted p-4">

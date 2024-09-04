@@ -80,7 +80,15 @@ export default function SponsorSection() {
       {/* Silver Sponsors */}
       <div className="grid grid-cols-1 md:grid-cols-3 justify-items-center gap-0">
         {silverSponsors.map((sponsor, index) => (
-          <div key={index} className="rounded-lg py-2 col-span-1 w-full">
+          <div
+            key={index}
+            className={`rounded-lg py-2 col-span-1 w-full ${
+              index === silverSponsors.length - 1 &&
+              silverSponsors.length % 3 !== 0
+                ? "md:col-span-3"
+                : ""
+            }`}
+          >
             <div className="overflow-hidden rounded-lg">
               <a
                 href={sponsor.website}

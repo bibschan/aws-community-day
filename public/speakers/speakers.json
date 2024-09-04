@@ -1,0 +1,37 @@
+[
+  {
+    "name": "Gabriel Velazquez",
+    "company": "AWS",
+    "image": "/speakers/gabriel.png"
+  },
+  {
+    "name": "Mark Gamble",
+    "company": "Couchbase",
+    "image": "/speakers/mark.png"
+  },
+  {
+    "name": "Tobias Dunn-Krahn",
+    "company": "Atono",
+    "image": "/speakers/tobias.png"
+  },
+  {
+    "name": "Warren Uniewski",
+    "company": "Autimo",
+    "image": "/speakers/warren.png"
+  },
+  {
+    "name": "Tyler Germer",
+    "company": "Fortinet",
+    "image": "/speakers/tyler.png"
+  },
+  {
+    "name": "Amit Bajaj",
+    "company": "ecoVoice",
+    "image": "/speakers/amit.png"
+  },
+  {
+    "name": "Rajith Attapattu",
+    "company": "Randoli",
+    "image": "/speakers/rajith.png"
+  }
+]
