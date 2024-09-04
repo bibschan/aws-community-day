@@ -2,7 +2,8 @@
   {
     "name": "Gabriel Velazquez",
     "company": "AWS",
-    "image": "/speakers/gabriel.png"
+    "image": "/speakers/gabriel.png",
+    "type": "keynote"
   },
   {
     "name": "Mark Gamble",
@@ -15,6 +16,11 @@
     "image": "/speakers/tobias.png"
   },
   {
+    "name": "Amit Bajaj",
+    "company": "ecoVoice",
+    "image": "/speakers/amit.png"
+  },
+  {
     "name": "Warren Uniewski",
     "company": "Autimo",
     "image": "/speakers/warren.png"
@@ -24,11 +30,7 @@
     "company": "Fortinet",
     "image": "/speakers/tyler.png"
   },
-  {
-    "name": "Amit Bajaj",
-    "company": "ecoVoice",
-    "image": "/speakers/amit.png"
-  },
+
   {
     "name": "Rajith Attapattu",
     "company": "Randoli",

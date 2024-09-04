@@ -9,6 +9,7 @@ import SponsorSection from "@/components/ui/sponsors";
 import Menu from "@/components/ui/menu";
 import Speaker from "@/components/ui/speakers";
 import speakers from "/public/speakers/speakers.json";
+import Clouds from "@/components/ui/clouds";
 
 export default function Home() {
   const teamMap = TeamMap();
@@ -16,9 +17,9 @@ export default function Home() {
 
   return (
     <div className="flex flex-col min-h-[100dvh]">
-      <header className="bg-gradient-to-r from-orange-500 to-yellow-500 py-12 md:py-4">
+      <header className="bg-gradient-to-r from-orange-500 to-yellow-500 pt-8 md:py-4">
         <Menu />
-        <div className="container py-12 px-4 md:px-6 m-auto">
+        <div className="container py-8 pb-0 md:py-12 px-4 md:px-6 m-auto">
           <div className="grid gap-8 lg:grid-cols-2 lg:gap-16">
             <div className="flex flex-col items-center md:items-start justify-center space-y-6 z-10">
               <div className="inline-block rounded-lg bg-[#CD0364] px-3 py-1 text-sm text-white relative">
@@ -48,15 +49,19 @@ export default function Home() {
               </div>
             </div>
 
-            <div className="relative">
+            <div className="relative -top-10 md:top-auto">
               <img src="/main-banner.svg" alt="Conference" className="" />
               <div className="absolute bottom-0 left-0 flex w-full justify-between">
-                <div className="rounded-lg bg-background/50 mr-2 px-4 py-2 backdrop-blur-md flex flex-col items-center">
-                  <div className="text-2xl font-bold">September 17</div>
+                <div className="rounded-lg bg-background/50 mr-2 px-4 py-2 backdrop-blur-md flex flex-col items-center text-center">
+                  <div className="text-sm md:text-2xl font-bold">
+                    September 17
+                  </div>
                   <div className="text-sm text-muted-foreground">2~6PM</div>
                 </div>
-                <div className="rounded-lg bg-background/50 px-4 py-2 backdrop-blur-md flex flex-col items-center">
-                  <div className="text-2xl font-bold">Vancouver</div>
+                <div className="rounded-lg bg-background/50 px-4 py-2 backdrop-blur-md flex flex-col items-center text-center">
+                  <div className="text-sm md:text-2xl  font-bold">
+                    Vancouver
+                  </div>
                   <div className="text-sm text-muted-foreground">
                     Vancouver Playhouse
                   </div>
@@ -66,35 +71,25 @@ export default function Home() {
           </div>
         </div>
       </header>
-      <main className="flex-1" id="speakers">
-        <section className="w-full pt-24 relative overflow-hidden">
-          <div className="absolute -z-10 bottom-0 w-full">
+      <main className="flex-1 bg-[#87CEEB]  -z-10" id="speakers">
+        <section className="w-full pt-8 md:pt-24 relative overflow-hidden">
+          {/* <div className="absolute -z-10 bottom-0 w-full">
             <LottieSplash />
           </div>
           <div className="absolute -z-10 top-0 w-full">
             <LottieSplash />
-          </div>
+          </div> */}
           <div className="container px-4 md:px-6 m-auto h-full relative">
-            <div className="absolute h-full w-full ">
-              <img
-                src="/background/1.png"
-                className="absolute -top-10 -left-[90px] -z-10 hidden md:block"
-              />
-              <img
-                src="/background/2.png"
-                className="absolute top-20 right-0 -z-10 hidden md:block"
-              />
-              <img
-                src="/background/3.png"
-                className="absolute -bottom-36 -left-10 -z-10 hidden md:block"
-              />
-              <img
-                src="/background/4.png"
-                className="absolute bottom-0 -right-[58px] -z-10 hidden md:block"
-              />
-            </div>
             <div className="flex flex-col items-center justify-center space-y-4 text-center">
-              <div className="space-y-2 bg-[#ffffff89] rounded-lg p-2">
+              <div className="space-y-2 rounded-lg p-2">
+                <div className="relative w-full mb-4 flex justify-center">
+                  {/* big cloud */}
+                  <img
+                    src="/background/cloud.svg"
+                    className="absolute -z-10 w-[1200px] md:w-[1400px] max-w-screen-2xl -top-10 md:-top-28"
+                  />
+                </div>
+
                 <div className="inline-block rounded-lg bg-[#4E1479] text-white px-3 py-1 text-sm">
                   Featured Speakers
                 </div>
@@ -109,36 +104,63 @@ export default function Home() {
                 </p>
               </div>
             </div>
-            <div className="mx-auto grid max-w-5xl gap-1 py-12 md:gap-1 grid-cols-2 md:grid-cols-4">
-              {speakers.map((speaker, index) => (
-                <Speaker
-                  key={index}
-                  name={speaker.name}
-                  imgSrc={speaker.image}
-                  alt={speaker.alt}
-                  title={speaker.title}
-                />
-              ))}
+
+            <div className="mx-auto max-w-3xl pt-6">
+              {speakers
+                .filter((speaker) => speaker.type === "keynote")
+                .map((speaker, index) => (
+                  <div key={index} className="flex flex-col items-center">
+                    <div className="overflow-hidden rounded-lg w-80 mb-6">
+                      <img
+                        src={speaker.image}
+                        alt={`Keynote Speaker ${speaker.name}`}
+                        className="object-cover w-full h-full"
+                      />
+                    </div>
+                    <h3 className="text-2xl font-bold">{speaker.name}</h3>
+
+                    <p className="mt-1 text-sm font-semibold text-primary">
+                      Keynote Speaker
+                    </p>
+                  </div>
+                ))}
+            </div>
+            <div className="mx-auto grid max-w-lg gap-1 pt-4 pb-12 md:gap-1 grid-cols-3">
+              {speakers
+                .filter((speaker) => speaker.type !== "keynote")
+                .map((speaker, index) => (
+                  <Speaker
+                    key={index}
+                    name={speaker.name}
+                    imgSrc={speaker.image}
+                    alt={speaker.alt}
+                    title={speaker.title}
+                  />
+                ))}
             </div>
           </div>
+          <Clouds />
         </section>
         <section
-          className="w-full py-12 relative overflow-hidden  bg-[#8645FF] md:bg-transparent"
+          className="w-full py-12 relative overflow-hidden bg-[#bd9df8]"
           id="schedule"
+          style={{
+            backgroundImage: "url('/background/yellow-paint-bg.png')",
+          }}
         >
-          <div className="absolute -z-20 bottom-0 w-full">
+          {/* <div className="absolute -z-20 bottom-0 w-full">
             <LottieSplash color="purple" />
           </div>
           <div className="absolute -z-20 top-0 w-full">
             <LottieSplash color="purple" />
-          </div>
+          </div> */}
           <div className="container px-4 md:px-6 m-auto">
             <div className="flex flex-col items-center justify-center space-y-4 text-center">
-              <div className="space-y-2 bg-[#ffffff89] rounded-lg p-2">
+              <div className="space-y-2 rounded-lg p-2">
                 <div className="inline-block rounded-lg bg-[#136493] text-white px-3 py-1 text-sm ">
                   Conference Schedule
                 </div>
-                <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl drop-shadow-[2px_3px_3px_rgba(255,255,255,0.75)]">
+                <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl ">
                   Explore the Agenda
                 </h2>
                 <p className="max-w-[900px]  text-black md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">

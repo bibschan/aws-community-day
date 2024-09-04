@@ -49,3 +49,39 @@
 html {
   scroll-behavior: smooth;
 }
+
+@keyframes slideright {
+  0% {
+    transform: translateX(0);
+  }
+
+  50% {
+    transform: translateX(25vw);
+  }
+
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideleft {
+  0% {
+    transform: translateX(0);
+  }
+
+  50% {
+    transform: translateX(-25vw);
+  }
+
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.animate-slide-1 {
+  animation: slideleft 50s linear infinite;
+}
+
+.animate-slide-2 {
+  animation: slideright 80s linear infinite;
+}
