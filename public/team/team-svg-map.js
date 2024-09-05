@@ -5,6 +5,7 @@ export function TeamMap() {
       xmlns="http://www.w3.org/2000/svg"
       xmlnsXlink="http://www.w3.org/1999/xlink"
       viewBox="0 0 1150 500"
+      className="z-20"
     >
       <image width="1150" height="500" xlinkHref="/team/the-gang.png" />
       <a xlinkHref="https://www.linkedin.com/in/bibschan" target="_blank">

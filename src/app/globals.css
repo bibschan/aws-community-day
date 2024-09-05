@@ -85,3 +85,24 @@ html {
 .animate-slide-2 {
   animation: slideright 80s linear infinite;
 }
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+
+.animate-gradient {
+  background: linear-gradient(-45deg, #ff7e5f, #feb47b, #ff7e5f);
+  background-size: 400% 400%;
+  animation: gradient 5s ease-in-out infinite;
+}

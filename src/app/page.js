@@ -110,13 +110,19 @@ export default function Home() {
               {speakers
                 .filter((speaker) => speaker.type === "keynote")
                 .map((speaker, index) => (
-                  <div key={index} className="flex flex-col items-center">
-                    <div className="overflow-hidden rounded-lg w-80 mb-6">
-                      <img
-                        src={speaker.image}
-                        alt={`Keynote Speaker ${speaker.name}`}
-                        className="object-cover w-full h-full"
-                      />
+                  <div key={index} className="flex flex-col items-center ">
+                    <div className="overflow-hidden rounded-lg w-80 mb-6  z-30">
+                      <a
+                        href={speaker.linkedin}
+                        target="_blank"
+                        className="cursor-pointer"
+                      >
+                        <img
+                          src={speaker.image}
+                          alt={`Keynote Speaker ${speaker.name}`}
+                          className="object-cover w-full h-full"
+                        />
+                      </a>
                     </div>
                     <h3 className="text-2xl font-bold">{speaker.name}</h3>
 
@@ -175,7 +181,7 @@ export default function Home() {
               <div className="grid gap-4">
                 <div className="rounded-lg bg-muted p-4">
                   <div className="flex items-center justify-between">
-                    <div className="text-lg font-bold">1PM</div>
+                    <div className="text-lg font-bold">1 PM</div>
                     <Badge variant="secondary">Event</Badge>
                   </div>
                   <h3 className="mt-2 text-xl font-bold">Doors Open</h3>
@@ -219,7 +225,7 @@ export default function Home() {
               <div className="grid gap-4">
                 <div className="rounded-lg bg-muted p-4">
                   <div className="flex items-center justify-between">
-                    <div className="text-lg font-bold">2:3 PM</div>
+                    <div className="text-lg font-bold">2:30 PM</div>
                     <Badge variant="secondary">Couchbase</Badge>
                   </div>
                   <h3 className="mt-2 text-xl font-bold">
@@ -241,10 +247,16 @@ export default function Home() {
                     Speaker: Tobias Dunn-Krahn
                   </p>
                 </div>
-
                 <div className="rounded-lg bg-muted p-4">
                   <div className="flex items-center justify-between">
-                    <div className="text-lg font-bold">4 PM</div>
+                    <div className="text-lg font-bold">3:30 PM</div>
+                    <Badge variant="secondary">Event</Badge>
+                  </div>
+                  <h3 className="mt-2 text-xl font-bold">Coffee Break</h3>
+                </div>
+                <div className="rounded-lg bg-muted p-4">
+                  <div className="flex items-center justify-between">
+                    <div className="text-lg font-bold">3:45 PM</div>
                     <Badge variant="secondary"></Badge>
                   </div>
                   <h3 className="mt-2 text-xl font-bold">
@@ -258,7 +270,7 @@ export default function Home() {
               <div className="grid gap-4">
                 <div className="rounded-lg bg-muted p-4">
                   <div className="flex items-center justify-between">
-                    <div className="text-lg font-bold">4:30 PM</div>
+                    <div className="text-lg font-bold">4:15 PM</div>
                     <Badge variant="secondary">Autimo</Badge>
                   </div>
                   <h3 className="mt-2 text-xl font-bold">
@@ -270,11 +282,18 @@ export default function Home() {
                 </div>
                 <div className="rounded-lg bg-muted p-4">
                   <div className="flex items-center justify-between">
+                    <div className="text-lg font-bold">4:45 PM</div>
+                    <Badge variant="secondary">Event</Badge>
+                  </div>
+                  <h3 className="mt-2 text-xl font-bold">Coffee Break</h3>
+                </div>
+                <div className="rounded-lg bg-muted p-4">
+                  <div className="flex items-center justify-between">
                     <div className="text-lg font-bold">5 PM</div>
                     <Badge variant="secondary">Fortinet</Badge>
                   </div>
                   <h3 className="mt-2 text-xl font-bold">
-                    Data-driven Cloud Security at Scale
+                    Cloud Security Trends: How Do You Stack Up?
                   </h3>
                   <p className="mt-2 text-muted-foreground">
                     Speaker: Tyler Germer
@@ -308,7 +327,7 @@ export default function Home() {
             </div>
           </div>
         </section>
-        <section className="w-full bg-muted py-12 md:py-20">
+        <section className="w-full bg-muted pt-8 md:py-20">
           <div className="container px-4 md:px-6 m-auto">
             <div className="flex flex-col items-center justify-center space-y-4 text-center ">
               <div className="space-y-2">
@@ -334,7 +353,7 @@ export default function Home() {
               </div>
             </div>
             <div
-              className="mx-auto grid max-w-5xl gap-6 py-12 md:grid-cols-2 md:gap-12 lg:grid-cols-3"
+              className="mx-auto grid max-w-5xl gap-6 py-6 md:py-1 md:grid-cols-2 md:gap-12 lg:grid-cols-3"
               id="media"
             >
               <div className="rounded-lg bg-muted p-4">
@@ -491,7 +510,7 @@ export default function Home() {
                 <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">
                   Venue Information
                 </h2>
-                <p className="max-w-[900px] m-auto pb-10 drop-shadow-[2px_3px_3px_rgba(255,255,255,0.75)] text-black md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
+                <p className="max-w-[900px] px-4 m-auto pb-10 drop-shadow-[2px_3px_3px_rgba(255,255,255,0.75)] text-black md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
                   The Playhouse is a polished, cozy and intimate venue, located
                   directly across the road from Amazon AWS's new amazing office
                   at "The Post". It can accommodate up to 700 guests for talks
@@ -525,8 +544,11 @@ export default function Home() {
           </div>
         </section>
         <section
-          className="w-full py-12 md:py-20 relative overflow-hidden"
+          className="w-full py-12 md:py-20 relative overflow-hidden bg-blue"
           id="team"
+          style={{
+            backgroundImage: "url('/background/yellow-paint-bg.png')",
+          }}
         >
           <div className="absolute -z-20 bottom-0 w-full">
             <LottieSplash color="pink" />
@@ -543,17 +565,17 @@ export default function Home() {
                 <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">
                   Who's Behind the Event
                 </h2>
-                <p className="max-w-[900px] m-auto pb-10 text-black md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
+                <p className="max-w-[900px] m-auto px-4 pb-10  text-black md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
                   Putting an event together can be a daunting task, but with the
                   right people, anything is possible! The 2024 team is excited
                   to welcome you to AWS Day!
                 </p>
-                <div className="w-full hidden relative md:flex flex-row flex-wrap justify-center">
-                  <div className="w-screen h-[50%] bg-black absolute -z-10"></div>
-                  <div className="w-screen h-[50%] bg-white absolute -z-10 bottom-0"></div>
+                <div className="w-full hidden relative md:flex flex-row flex-wrap justify-center z-20">
+                  <div className="w-screen h-[50%] bg-black absolute z-10"></div>
+                  <div className="w-screen h-[50%] bg-white absolute z-10 bottom-0"></div>
                   {teamMap}
                 </div>
-                <div className="w-screen md:hidden">{teamMobileMap}</div>
+                <div className="w-screen md:hidden z-30">{teamMobileMap}</div>
               </div>
             </div>
           </div>
