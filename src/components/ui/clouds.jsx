@@ -2,7 +2,7 @@ import React from "react";
 
 const Clouds = () => {
   return (
-    <div className="relative w-full mb-4 flex justify-center">
+    <div className="relative w-full mb-4 flex justify-center z-10">
       <img
         src="/background/cloud-2.svg"
         className="absolute -z-10 w-[300px] md:bottom-10 bottom-[40rem] left-[14rem]"

@@ -16,7 +16,8 @@ export default function Home() {
   const teamMobileMap = TeamMobileMap();
 
   return (
-    <div className="flex flex-col min-h-[100dvh]">
+    // flex flex-col min-h-[100vh]
+    <div className="">
       <header className="bg-gradient-to-r from-orange-500 to-yellow-500 pt-8 md:py-4">
         <Menu />
         <div className="container py-8 pb-0 md:py-12 px-4 md:px-6 m-auto">
@@ -86,17 +87,17 @@ export default function Home() {
                   {/* big cloud */}
                   <img
                     src="/background/cloud.svg"
-                    className="absolute -z-10 w-[1200px] md:w-[1400px] max-w-screen-2xl -top-10 md:-top-28"
+                    className="absolute w-[1200px] md:w-[1400px] max-w-screen-2xl -top-10 md:-top-28"
                   />
                 </div>
 
-                <div className="inline-block rounded-lg bg-[#4E1479] text-white px-3 py-1 text-sm">
+                <div className="inline-block rounded-lg bg-[#4E1479] text-white px-3 py-1 text-sm z-20 relative">
                   Featured Speakers
                 </div>
-                <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl drop-shadow-[2px_3px_3px_rgba(255,255,255,0.75)]">
+                <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl drop-shadow-[2px_3px_3px_rgba(255,255,255,0.75)] z-20 relative">
                   Meet Our Speakers
                 </h2>
-                <p className="max-w-[900px]  text-black md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
+                <p className="max-w-[900px]  text-black md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed z-20 relative">
                   Hear from industry leaders and experts who will share their
                   insights and experiences. We have a full afternoon of speakers
                   lined up for you covering topics on AWS around AI, Costs,
@@ -135,6 +136,7 @@ export default function Home() {
                     imgSrc={speaker.image}
                     alt={speaker.alt}
                     title={speaker.title}
+                    linkedin={speaker.linkedin}
                   />
                 ))}
             </div>
@@ -465,14 +467,16 @@ export default function Home() {
                     here on Spotify.
                   </a>
                 </p>
-                <img
-                  src="/scottjacobs.jpg"
-                  width={800}
-                  height={500}
-                  alt="Scott Jacobs"
-                  className="rounded-lg mt-4 m-auto"
-                  style={{ aspectRatio: "800/500", objectFit: "cover" }}
-                />
+                <a href="https://scottjacobsmusic.com/" target="_blank">
+                  <img
+                    src="/scottjacobs.jpg"
+                    width={800}
+                    height={500}
+                    alt="Scott Jacobs"
+                    className="rounded-lg mt-4 m-auto"
+                    style={{ aspectRatio: "800/500", objectFit: "cover" }}
+                  />
+                </a>
               </div>
             </div>
           </div>
