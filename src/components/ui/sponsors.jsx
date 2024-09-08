@@ -43,7 +43,7 @@ export default function SponsorSection() {
       </div>
 
       {/* Gold Sponsors */}
-      <div className="grid grid-cols-1 md:grid-cols-3 justify-items-center gap-2 mb-6 w-fit mx-auto">
+      <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 justify-items-center gap-2 mb-6 w-fit mx-auto">
         {goldSponsors.map((sponsor, index) => (
           <div key={index} className="rounded-lg p-4 col-span-1 w-min">
             <div className="overflow-hidden rounded-lg w-min">
@@ -76,19 +76,10 @@ export default function SponsorSection() {
           </div>
         ))}
       </div>
-
       {/* Silver Sponsors */}
-      <div className="grid grid-cols-1 md:grid-cols-3 justify-items-center gap-0">
+      <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 justify-items-center gap-0">
         {silverSponsors.map((sponsor, index) => (
-          <div
-            key={index}
-            className={`rounded-lg py-2 col-span-1 w-full ${
-              index === silverSponsors.length - 1 &&
-              silverSponsors.length % 3 !== 0
-                ? "md:col-span-3"
-                : ""
-            }`}
-          >
+          <div key={index} className={`rounded-lg py-2 col-span-1 w-full`}>
             <div className="overflow-hidden rounded-lg">
               <a
                 href={sponsor.website}

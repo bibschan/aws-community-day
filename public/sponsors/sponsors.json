@@ -29,6 +29,13 @@
     "website": "https://www.atono.io/"
   },
   {
+    "type": "Gold",
+    "name": "Randoli",
+    "alt": "Gold Sponsor Video Thumbnail",
+    "imgSrc": "/sponsors/randoli.png",
+    "website": "https://www.randoli.io/"
+  },
+  {
     "type": "Silver",
     "alt": "Silver Sponsor Video Thumbnail 1",
     "imgSrc": "/sponsors/autimo.png",
@@ -70,5 +77,11 @@
     "alt": "Data Elephant",
     "imgSrc": "/sponsors/data-elephant.png",
     "website": "https://www.dataelephant.com/"
+  },
+  {
+    "type": "Silver",
+    "alt": "Northeastern University",
+    "imgSrc": "/sponsors/northeastern.svg",
+    "website": "https://www.northeastern.edu/"
   }
 ]
