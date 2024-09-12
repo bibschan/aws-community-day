@@ -10,13 +10,13 @@ import Menu from "@/components/ui/menu";
 import Speaker from "@/components/ui/speakers";
 import speakers from "/public/speakers/speakers.json";
 import Clouds from "@/components/ui/clouds";
+import { Button } from "@/components/ui/cloud-button";
 
 export default function Home() {
   const teamMap = TeamMap();
   const teamMobileMap = TeamMobileMap();
 
   return (
-    // flex flex-col min-h-[100vh]
     <div className="">
       <header className="bg-gradient-to-r from-orange-500 to-yellow-500 pt-8 md:py-4">
         <Menu />
@@ -38,15 +38,31 @@ export default function Home() {
                 community around AWS, while donating any profits to local
                 charity!
               </p>
-              <div className="flex flex-col gap-2 sm:flex-row">
-                <Link
-                  href="https://www.vtixonline.com/aws-community-day-2024-vancouver/4471/"
-                  target="_blank"
-                  className="inline-flex h-10 items-center justify-center rounded-md border border-input bg-background px-8 text-sm font-medium shadow-sm transition-colors hover:bg-accent hover:text-accent-foreground focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50"
-                  prefetch={false}
-                >
-                  Register Now
-                </Link>
+              <div className="inline-flex sm:flex-row relative gap-x-4">
+                <div className="flex flex-col items-center">
+                  <Link
+                    className="text-lg font-bold text-black items-center justify-center rounded-md border border-input bg-background px-5 py-2 shadow-sm transition-colors"
+                    href="http://vip.awsday.ca/"
+                    target="_blank"
+                  >
+                    Join the After Party!
+                  </Link>
+                  <span className="text-xs text-center mt-1">
+                    Limited Tickets
+                  </span>
+                </div>
+                <div className="flex flex-col items-center">
+                  <Button
+                    className="bg-blue-700 z-10 text-lg font-bold items-center justify-center text-black rounded-md border border-input bg-background px-5 py-2 shadow-sm transition-colors"
+                    href="https://www.cloudaisummit.ca/"
+                    variant="outline"
+                  >
+                    Cloud & AI Summit 2025
+                  </Button>
+                  <span className="text-xs text-center mt-1">
+                    Early Bird Tickets
+                  </span>
+                </div>
               </div>
             </div>
 
