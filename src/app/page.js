@@ -41,7 +41,7 @@ export default function Home() {
               <div className="inline-flex sm:flex-row relative gap-x-4">
                 <div className="flex flex-col items-center">
                   <Link
-                    className="text-lg font-bold text-black items-center justify-center rounded-md border border-input bg-background px-5 py-2 shadow-sm transition-colors"
+                    className="text-lg font-bold text-black text-center items-center justify-center rounded-md border border-input bg-background px-5 py-2 shadow-sm transition-colors"
                     href="http://vip.awsday.ca/"
                     target="_blank"
                   >
@@ -53,7 +53,7 @@ export default function Home() {
                 </div>
                 <div className="flex flex-col items-center">
                   <Button
-                    className="bg-blue-700 z-10 text-lg font-bold items-center justify-center text-black rounded-md border border-input bg-background px-5 py-2 shadow-sm transition-colors"
+                    className="bg-blue-700 z-10 text-lg text-center font-bold items-center justify-center text-black rounded-md border border-input bg-background px-5 py-2 shadow-sm transition-colors"
                     href="https://www.cloudaisummit.ca/"
                     variant="outline"
                   >
@@ -67,7 +67,11 @@ export default function Home() {
             </div>
 
             <div className="relative -top-10 md:top-auto">
-              <img src="/main-banner.svg" alt="Conference" className="" />
+              <img
+                src="/main-banner-sold-out.svg"
+                alt="Conference"
+                className=""
+              />
               <div className="absolute bottom-0 left-0 flex w-full justify-between">
                 <div className="rounded-lg bg-background/50 mr-2 px-4 py-2 backdrop-blur-md flex flex-col items-center text-center">
                   <div className="text-sm md:text-2xl font-bold">
@@ -90,12 +94,6 @@ export default function Home() {
       </header>
       <main className="flex-1 bg-[#87CEEB]  -z-10" id="speakers">
         <section className="w-full pt-8 md:pt-24 relative overflow-hidden">
-          {/* <div className="absolute -z-10 bottom-0 w-full">
-            <LottieSplash />
-          </div>
-          <div className="absolute -z-10 top-0 w-full">
-            <LottieSplash />
-          </div> */}
           <div className="container px-4 md:px-6 m-auto h-full relative">
             <div className="flex flex-col items-center justify-center space-y-4 text-center">
               <div className="space-y-2 rounded-lg p-2">
