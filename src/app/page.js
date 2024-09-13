@@ -38,7 +38,7 @@ export default function Home() {
                 local community around AWS, while donating any profits to local
                 charity.
               </p>
-              <p className="font-bold  text-xl">
+              <p className="font-bold text-xl text-center md:text-left">
                 We are thrilled to announce that we are sold out! You can still
                 join us at the after party for a limited time.
               </p>
