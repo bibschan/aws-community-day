@@ -33,10 +33,13 @@ export default function Home() {
                 First ever AWS Community Day in Canada
               </h1>
               <p className="max-w-[600px] text-black md:text-xl z-20 text-center md:text-left">
-                AWS Community Day is held every year across the globe and we are
-                excited to be part of it. Join us as we bring together the local
-                community around AWS, while donating any profits to local
-                charity!
+                AWS Community Day is held every year across the globe, and we
+                are excited to be part of it. Join us as we bring together the
+                local community around AWS, while donating any profits to local
+                charity.
+              </p>
+              <p className="font-bold text-xl">
+                We are thrilled to announce that we are sold out!
               </p>
               <div className="inline-flex sm:flex-row relative gap-x-4">
                 <div className="flex flex-col items-center">
