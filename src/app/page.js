@@ -38,8 +38,9 @@ export default function Home() {
                 local community around AWS, while donating any profits to local
                 charity.
               </p>
-              <p className="font-bold text-xl">
-                We are thrilled to announce that we are sold out!
+              <p className="font-bold  text-xl">
+                We are thrilled to announce that we are sold out! You can still
+                join us at the after party for a limited time.
               </p>
               <div className="inline-flex sm:flex-row relative gap-x-4">
                 <div className="flex flex-col items-center">
