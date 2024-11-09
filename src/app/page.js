@@ -38,9 +38,11 @@ export default function Home() {
                 local community around AWS, while donating any profits to local
                 charity.
               </p>
-              <p className="font-bold text-xl text-center md:text-left">
-                We are thrilled to announce that we are sold out! You can still
-                join us at the after party for a limited time.
+              <p className="text-xl text-center md:text-left">
+                The 2024 event was a huge success with over 700 tickets sold,
+                for a sold out event. Make sure you book mark this page for the
+                2025 date announcement and join us at the Cloud Summit on May
+                27, 2025
               </p>
               <div className="inline-flex sm:flex-row relative gap-x-4">
                 <div className="flex flex-col items-center">
