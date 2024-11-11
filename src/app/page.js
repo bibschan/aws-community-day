@@ -83,7 +83,7 @@ export default function Home() {
                   <div className="text-sm md:text-2xl font-bold">
                     September 17
                   </div>
-                  <div className="text-sm text-muted-foreground">2~6PM</div>
+                  <div className="text-sm text-muted-foreground">2024</div>
                 </div>
                 <div className="rounded-lg bg-background/50 px-4 py-2 backdrop-blur-md flex flex-col items-center text-center">
                   <div className="text-sm md:text-2xl  font-bold">
@@ -173,7 +173,7 @@ export default function Home() {
           className="w-full py-12 relative overflow-hidden bg-[#bd9df8]"
           id="schedule"
           style={{
-            backgroundImage: "url('/background/yellow-paint-bg.png')",
+            backgroundImage: "url('/background/yellow-paint-bg.png')"
           }}
         >
           {/* <div className="absolute -z-20 bottom-0 w-full">
@@ -567,7 +567,7 @@ export default function Home() {
           className="w-full py-12 md:py-20 relative overflow-hidden bg-blue"
           id="team"
           style={{
-            backgroundImage: "url('/background/yellow-paint-bg.png')",
+            backgroundImage: "url('/background/yellow-paint-bg.png')"
           }}
         >
           <div className="absolute -z-20 bottom-0 w-full">
