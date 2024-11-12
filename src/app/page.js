@@ -46,18 +46,6 @@ export default function Home() {
               </p>
               <div className="inline-flex sm:flex-row relative gap-x-4">
                 <div className="flex flex-col items-center">
-                  <Link
-                    className="text-lg font-bold text-black text-center items-center justify-center rounded-md border border-input bg-background px-5 py-2 shadow-sm transition-colors"
-                    href="http://vip.awsday.ca/"
-                    target="_blank"
-                  >
-                    Join the After Party!
-                  </Link>
-                  <span className="text-xs text-center mt-1">
-                    Limited Tickets
-                  </span>
-                </div>
-                <div className="flex flex-col items-center">
                   <Button
                     className="bg-blue-700 z-10 text-lg text-center font-bold items-center justify-center text-black rounded-md border border-input bg-background px-5 py-2 shadow-sm transition-colors"
                     href="https://www.cloudaisummit.ca/"
@@ -173,7 +161,7 @@ export default function Home() {
           className="w-full py-12 relative overflow-hidden bg-[#bd9df8]"
           id="schedule"
           style={{
-            backgroundImage: "url('/background/yellow-paint-bg.png')",
+            backgroundImage: "url('/background/yellow-paint-bg.png')"
           }}
         >
           {/* <div className="absolute -z-20 bottom-0 w-full">
@@ -567,7 +555,7 @@ export default function Home() {
           className="w-full py-12 md:py-20 relative overflow-hidden bg-blue"
           id="team"
           style={{
-            backgroundImage: "url('/background/yellow-paint-bg.png')",
+            backgroundImage: "url('/background/yellow-paint-bg.png')"
           }}
         >
           <div className="absolute -z-20 bottom-0 w-full">
