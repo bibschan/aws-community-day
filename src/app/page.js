@@ -71,7 +71,7 @@ export default function Home() {
                   <div className="text-sm md:text-2xl font-bold">
                     September 17
                   </div>
-                  <div className="text-sm text-muted-foreground">2~6PM</div>
+                  <div className="text-sm text-muted-foreground">2024</div>
                 </div>
                 <div className="rounded-lg bg-background/50 px-4 py-2 backdrop-blur-md flex flex-col items-center text-center">
                   <div className="text-sm md:text-2xl  font-bold">
