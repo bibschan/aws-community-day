@@ -71,7 +71,6 @@ export default function Home() {
                 </div>
               </div>
             </div>
-
             <div className="relative -top-10 md:top-auto">
               <img
                 src="/main-banner-sold-out.svg"
@@ -98,6 +97,236 @@ export default function Home() {
           </div>
         </div>
       </header>
+      <section
+        className="w-full bg-muted pt-8 md:py-20"
+        style={{
+          backgroundImage: "url('/background/blue-paint-bg.png')"
+        }}
+      >
+        <div className="container px-4 md:px-6 m-auto">
+          <div className="flex flex-col items-center justify-center space-y-4 text-center ">
+            <div className="space-y-2">
+              <div className="inline-block rounded-lg bg-[#EA4129] text-white px-3 py-1 text-sm">
+                Recap
+              </div>
+              <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">
+                2024 AWS Day Recap
+              </h2>
+              <p className="max-w-[900px] text-black md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Est,
+                illum laudantium accusamus recusandae, repellendus qui,
+                assumenda non eos sed impedit omnis voluptates.
+              </p>
+            </div>
+          </div>
+          <div className="w-full flex flex-col items-center mt-4">
+            <h3 className="text-2xl font-bold">Youtube</h3>
+            <div
+              className="mx-auto grid max-w-5xl gap-6 py-6 md:py-1 md:grid-cols-2 md:gap-12 lg:grid-cols-3"
+              id="media"
+            >
+              <div className="rounded-lg bg-muted p-4">
+                <div className="aspect-video overflow-hidden rounded-lg">
+                  <Link
+                    href="https://www.youtube.com/watch?v=rLWbdKg_q0k&t=129s"
+                    target="_blank"
+                    className="relative flex h-full w-full items-center justify-center"
+                  >
+                    <img
+                      src="/kris-krug/play.png"
+                      width="60"
+                      height="60"
+                      alt="play"
+                      className="absolute z-20"
+                    />
+                    <img
+                      src="/kris-krug/1.png"
+                      width="600"
+                      height="400"
+                      alt="Video Thumbnail"
+                      className="object-cover relative opacity-80"
+                      style={{ aspectRatio: "600/400", objectFit: "cover" }}
+                    />
+                    <div className="absolute inset-0 bg-black bg-opacity-40"></div>
+                  </Link>
+                </div>
+                <div className="mt-4">
+                  <h3 className="text-xl font-bold">Warren Uniewski</h3>
+                  <p className="mt-2 text-muted-foreground">
+                    Alerts to Actionable Insights with GenAI
+                  </p>
+                </div>
+              </div>
+              <div className="rounded-lg bg-muted p-4 hidden md:block">
+                <div className="aspect-video overflow-hidden rounded-lg">
+                  <Link
+                    href="https://www.youtube.com/watch?v=L5hiHi5nTK4"
+                    target="_blank"
+                    className="relative flex h-full w-full items-center justify-center"
+                  >
+                    <img
+                      src="/kris-krug/play.png"
+                      width="60"
+                      height="60"
+                      alt="play"
+                      className="absolute z-20"
+                    />
+                    <img
+                      src="/kris-krug/2.png"
+                      width="600"
+                      height="400"
+                      alt="Video Thumbnail"
+                      className="object-cover relative opacity-80"
+                      style={{ aspectRatio: "600/400", objectFit: "cover" }}
+                    />
+                    <div className="absolute inset-0 bg-black bg-opacity-40"></div>
+                  </Link>
+                </div>
+                <div className="mt-4">
+                  <h3 className="text-xl font-bold">Mark Gamble</h3>
+                  <p className="mt-2 text-muted-foreground">
+                    The right stuff for Really Remote Edge Computing
+                  </p>
+                </div>
+              </div>
+              <div className="rounded-lg bg-muted p-4 hidden lg:block">
+                <div className="aspect-video overflow-hidden rounded-lg">
+                  <Link
+                    href="https://www.youtube.com/watch?v=FD3d5JOMeYI"
+                    target="_blank"
+                    className="relative flex h-full w-full items-center justify-center"
+                  >
+                    <img
+                      src="/kris-krug/play.png"
+                      width="60"
+                      height="60"
+                      alt="play"
+                      className="absolute z-20"
+                    />
+                    <img
+                      src="/kris-krug/3.png"
+                      width="600"
+                      height="400"
+                      alt="Video Thumbnail"
+                      className="object-cover relative opacity-80"
+                      style={{ aspectRatio: "600/400", objectFit: "cover" }}
+                    />
+                    <div className="absolute inset-0 bg-black bg-opacity-40"></div>
+                  </Link>
+                </div>
+                <div className="mt-4">
+                  <h3 className="text-xl font-bold">Tobias Dunn-Krahn</h3>
+                  <p className="mt-2 text-muted-foreground">
+                    Startup Velocity at Enterprise Scale
+                  </p>
+                </div>
+              </div>
+            </div>
+            <h3 className="text-2xl font-bold mt-2">Instagram</h3>
+            <div
+              className="mx-auto grid max-w-5xl gap-6 py-6 md:py-1 md:grid-cols-2 md:gap-12 lg:grid-cols-3"
+              id="media"
+            >
+              <div className="rounded-lg bg-muted p-4">
+                <div className="aspect-video overflow-hidden rounded-lg">
+                  <Link
+                    href="https://www.instagram.com/p/C9tAGilyLG4/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA=="
+                    target="_blank"
+                    className="relative flex h-full w-full items-center justify-center"
+                  >
+                    <img
+                      src="/instagram/ig_logo.png"
+                      width="40"
+                      height="40"
+                      alt="play"
+                      className="absolute z-20"
+                    />
+                    <img
+                      src="/instagram/ig1.png"
+                      width="600"
+                      height="400"
+                      alt="Video Thumbnail"
+                      className="object-cover relative opacity-80"
+                      style={{ aspectRatio: "600/400", objectFit: "cover" }}
+                    />
+                    <div className="absolute inset-0 bg-black bg-opacity-40"></div>
+                  </Link>
+                </div>
+                <div className="mt-4">
+                  <h3 className="text-xl font-bold">Warren Uniewski</h3>
+                  <p className="mt-2 text-muted-foreground">
+                    Alerts to Actionable Insights with GenAI
+                  </p>
+                </div>
+              </div>
+              <div className="rounded-lg bg-muted p-4 hidden md:block">
+                <div className="aspect-video overflow-hidden rounded-lg">
+                  <Link
+                    href="https://www.instagram.com/p/C9s_jkUyidd/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA=="
+                    target="_blank"
+                    className="relative flex h-full w-full items-center justify-center"
+                  >
+                    <img
+                      src="/instagram/ig_logo.png"
+                      width="40"
+                      height="40"
+                      alt="play"
+                      className="absolute z-20"
+                    />
+                    <img
+                      src="/instagram/ig2.png"
+                      width="600"
+                      height="400"
+                      alt="Video Thumbnail"
+                      className="object-cover relative opacity-80"
+                      style={{ aspectRatio: "600/400", objectFit: "cover" }}
+                    />
+                    <div className="absolute inset-0 bg-black bg-opacity-40"></div>
+                  </Link>
+                </div>
+                <div className="mt-4">
+                  <h3 className="text-xl font-bold">Mark Gamble</h3>
+                  <p className="mt-2 text-muted-foreground">
+                    The right stuff for Really Remote Edge Computing
+                  </p>
+                </div>
+              </div>
+              <div className="rounded-lg bg-muted p-4 hidden lg:block">
+                <div className="aspect-video overflow-hidden rounded-lg">
+                  <Link
+                    href="https://www.instagram.com/p/C9tALdlSf46/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA=="
+                    target="_blank"
+                    className="relative flex h-full w-full items-center justify-center"
+                  >
+                    <img
+                      src="/instagram/ig_logo.png"
+                      width="40"
+                      height="40"
+                      alt="play"
+                      className="absolute z-20"
+                    />
+                    <img
+                      src="/instagram/ig3.png"
+                      width="600"
+                      height="400"
+                      alt="Video Thumbnail"
+                      className="object-cover relative opacity-80"
+                      style={{ aspectRatio: "600/400", objectFit: "cover" }}
+                    />
+                    <div className="absolute inset-0 bg-black bg-opacity-40"></div>
+                  </Link>
+                </div>
+                <div className="mt-4">
+                  <h3 className="text-xl font-bold">Tobias Dunn-Krahn</h3>
+                  <p className="mt-2 text-muted-foreground">
+                    Startup Velocity at Enterprise Scale
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
       <main className="flex-1 bg-[#87CEEB]  -z-10" id="speakers">
         <section className="w-full pt-8 md:pt-24 relative overflow-hidden">
           <div className="container px-4 md:px-6 m-auto h-full relative">
@@ -173,7 +402,7 @@ export default function Home() {
           className="w-full py-12 relative overflow-hidden bg-[#bd9df8]"
           id="schedule"
           style={{
-            backgroundImage: "url('/background/yellow-paint-bg.png')",
+            backgroundImage: "url('/background/yellow-paint-bg.png')"
           }}
         >
           {/* <div className="absolute -z-20 bottom-0 w-full">
@@ -567,7 +796,7 @@ export default function Home() {
           className="w-full py-12 md:py-20 relative overflow-hidden bg-blue"
           id="team"
           style={{
-            backgroundImage: "url('/background/yellow-paint-bg.png')",
+            backgroundImage: "url('/background/yellow-paint-bg.png')"
           }}
         >
           <div className="absolute -z-20 bottom-0 w-full">
