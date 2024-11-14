@@ -11,6 +11,7 @@ import Speaker from "@/components/ui/speakers";
 import speakers from "/public/speakers/speakers.json";
 import Clouds from "@/components/ui/clouds";
 import { Button } from "@/components/ui/cloud-button";
+import { InstagramCarousel } from "@/components/instagram-carousel";
 
 export default function Home() {
   const teamMap = TeamMap();
@@ -223,107 +224,7 @@ export default function Home() {
               </div>
             </div>
             <h3 className="text-2xl font-bold mt-2">Instagram</h3>
-            <div
-              className="mx-auto grid max-w-5xl gap-6 py-6 md:py-1 md:grid-cols-2 md:gap-12 lg:grid-cols-3"
-              id="media"
-            >
-              <div className="rounded-lg bg-muted p-4">
-                <div className="aspect-video overflow-hidden rounded-lg">
-                  <Link
-                    href="https://www.instagram.com/p/C9tAGilyLG4/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA=="
-                    target="_blank"
-                    className="relative flex h-full w-full items-center justify-center"
-                  >
-                    <img
-                      src="/instagram/ig_logo.png"
-                      width="40"
-                      height="40"
-                      alt="play"
-                      className="absolute z-20"
-                    />
-                    <img
-                      src="/instagram/ig1.png"
-                      width="600"
-                      height="400"
-                      alt="Video Thumbnail"
-                      className="object-cover relative opacity-80"
-                      style={{ aspectRatio: "600/400", objectFit: "cover" }}
-                    />
-                    <div className="absolute inset-0 bg-black bg-opacity-40"></div>
-                  </Link>
-                </div>
-                <div className="mt-4">
-                  <h3 className="text-xl font-bold">Warren Uniewski</h3>
-                  <p className="mt-2 text-muted-foreground">
-                    Alerts to Actionable Insights with GenAI
-                  </p>
-                </div>
-              </div>
-              <div className="rounded-lg bg-muted p-4 hidden md:block">
-                <div className="aspect-video overflow-hidden rounded-lg">
-                  <Link
-                    href="https://www.instagram.com/p/C9s_jkUyidd/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA=="
-                    target="_blank"
-                    className="relative flex h-full w-full items-center justify-center"
-                  >
-                    <img
-                      src="/instagram/ig_logo.png"
-                      width="40"
-                      height="40"
-                      alt="play"
-                      className="absolute z-20"
-                    />
-                    <img
-                      src="/instagram/ig2.png"
-                      width="600"
-                      height="400"
-                      alt="Video Thumbnail"
-                      className="object-cover relative opacity-80"
-                      style={{ aspectRatio: "600/400", objectFit: "cover" }}
-                    />
-                    <div className="absolute inset-0 bg-black bg-opacity-40"></div>
-                  </Link>
-                </div>
-                <div className="mt-4">
-                  <h3 className="text-xl font-bold">Mark Gamble</h3>
-                  <p className="mt-2 text-muted-foreground">
-                    The right stuff for Really Remote Edge Computing
-                  </p>
-                </div>
-              </div>
-              <div className="rounded-lg bg-muted p-4 hidden lg:block">
-                <div className="aspect-video overflow-hidden rounded-lg">
-                  <Link
-                    href="https://www.instagram.com/p/C9tALdlSf46/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA=="
-                    target="_blank"
-                    className="relative flex h-full w-full items-center justify-center"
-                  >
-                    <img
-                      src="/instagram/ig_logo.png"
-                      width="40"
-                      height="40"
-                      alt="play"
-                      className="absolute z-20"
-                    />
-                    <img
-                      src="/instagram/ig3.png"
-                      width="600"
-                      height="400"
-                      alt="Video Thumbnail"
-                      className="object-cover relative opacity-80"
-                      style={{ aspectRatio: "600/400", objectFit: "cover" }}
-                    />
-                    <div className="absolute inset-0 bg-black bg-opacity-40"></div>
-                  </Link>
-                </div>
-                <div className="mt-4">
-                  <h3 className="text-xl font-bold">Tobias Dunn-Krahn</h3>
-                  <p className="mt-2 text-muted-foreground">
-                    Startup Velocity at Enterprise Scale
-                  </p>
-                </div>
-              </div>
-            </div>
+            <InstagramCarousel />
           </div>
         </div>
       </section>
