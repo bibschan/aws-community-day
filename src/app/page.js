@@ -141,7 +141,7 @@ export default function Home() {
                       className="absolute z-20"
                     />
                     <img
-                      src="/kris-krug/1.png"
+                      src="/youtube/warren.png"
                       width="600"
                       height="400"
                       alt="Video Thumbnail"
@@ -173,7 +173,7 @@ export default function Home() {
                       className="absolute z-20"
                     />
                     <img
-                      src="/kris-krug/2.png"
+                      src="/youtube/mark.png"
                       width="600"
                       height="400"
                       alt="Video Thumbnail"
@@ -205,11 +205,11 @@ export default function Home() {
                       className="absolute z-20"
                     />
                     <img
-                      src="/kris-krug/3.png"
+                      src="/youtube/tobias.png"
                       width="600"
                       height="400"
                       alt="Video Thumbnail"
-                      className="object-cover relative opacity-80"
+                      className="object-cover relative"
                       style={{ aspectRatio: "600/400", objectFit: "cover" }}
                     />
                     <div className="absolute inset-0 bg-black bg-opacity-40"></div>
