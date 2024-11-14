@@ -113,9 +113,9 @@ export default function Home() {
                 2024 AWS Day Recap
               </h2>
               <p className="max-w-[900px] text-black md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Est,
-                illum laudantium accusamus recusandae, repellendus qui,
-                assumenda non eos sed impedit omnis voluptates.
+                Catch up on the highlights from AWS Day 2024, where tech
+                enthusiasts and industry experts gathered to explore the latest
+                in cloud innovation!
               </p>
             </div>
           </div>
