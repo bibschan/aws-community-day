@@ -47,18 +47,6 @@ export default function Home() {
               </p>
               <div className="inline-flex sm:flex-row relative gap-x-4">
                 <div className="flex flex-col items-center">
-                  <Link
-                    className="text-lg font-bold text-black text-center items-center justify-center rounded-md border border-input bg-background px-5 py-2 shadow-sm transition-colors"
-                    href="http://vip.awsday.ca/"
-                    target="_blank"
-                  >
-                    Join the After Party!
-                  </Link>
-                  <span className="text-xs text-center mt-1">
-                    Limited Tickets
-                  </span>
-                </div>
-                <div className="flex flex-col items-center">
                   <Button
                     className="bg-blue-700 z-10 text-lg text-center font-bold items-center justify-center text-black rounded-md border border-input bg-background px-5 py-2 shadow-sm transition-colors"
                     href="https://www.cloudaisummit.ca/"
@@ -83,7 +71,7 @@ export default function Home() {
                   <div className="text-sm md:text-2xl font-bold">
                     September 17
                   </div>
-                  <div className="text-sm text-muted-foreground">2~6PM</div>
+                  <div className="text-sm text-muted-foreground">2024</div>
                 </div>
                 <div className="rounded-lg bg-background/50 px-4 py-2 backdrop-blur-md flex flex-col items-center text-center">
                   <div className="text-sm md:text-2xl  font-bold">
