@@ -99,7 +99,7 @@ export default function Home() {
         </div>
       </header>
       <section
-        className="w-full bg-muted pt-8 md:py-20"
+        className="w-full bg-muted p-8 md:py-20 "
         style={{
           backgroundImage: "url('/background/blue-paint-bg.png')"
         }}
@@ -123,10 +123,10 @@ export default function Home() {
           <div className="w-full flex flex-col items-center mt-4">
             <h3 className="text-2xl font-bold">Youtube</h3>
             <div
-              className="mx-auto grid max-w-5xl gap-6 py-6 md:py-1 md:grid-cols-2 md:gap-12 lg:grid-cols-3"
+              className="mx-auto grid max-w-5xl gap-6 md:py-6 md:grid-cols-2 md:gap-12 lg:grid-cols-3"
               id="media"
             >
-              <div className="rounded-lg bg-muted p-4">
+              <div className="rounded-lg bg-muted px-4 max-md:py-4">
                 <div className="aspect-video overflow-hidden rounded-lg">
                   <Link
                     href="https://www.youtube.com/watch?v=rLWbdKg_q0k&t=129s"
@@ -158,7 +158,7 @@ export default function Home() {
                   </p>
                 </div>
               </div>
-              <div className="rounded-lg bg-muted p-4 hidden md:block">
+              <div className="rounded-lg bg-muted px-4 hidden md:block">
                 <div className="aspect-video overflow-hidden rounded-lg">
                   <Link
                     href="https://www.youtube.com/watch?v=L5hiHi5nTK4"
@@ -190,7 +190,7 @@ export default function Home() {
                   </p>
                 </div>
               </div>
-              <div className="rounded-lg bg-muted p-4 hidden lg:block">
+              <div className="rounded-lg bg-muted px-4 hidden lg:block">
                 <div className="aspect-video overflow-hidden rounded-lg">
                   <Link
                     href="https://www.youtube.com/watch?v=FD3d5JOMeYI"

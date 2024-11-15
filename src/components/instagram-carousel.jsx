@@ -26,7 +26,7 @@ export function InstagramCarousel() {
   ];
 
   return (
-    <div className="w-full max-w-5xl mx-auto px-4 py-8">
+    <div className="w-full max-w-5xl mx-auto px-4 md:py-6 py-4">
       <div className="relative">
         <Carousel
           className="w-full"
