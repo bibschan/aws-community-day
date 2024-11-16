@@ -11,7 +11,7 @@ import Speaker from "@/components/ui/speakers";
 import speakers from "/public/speakers/speakers.json";
 import Clouds from "@/components/ui/clouds";
 import { Button } from "@/components/ui/cloud-button";
-import { InstagramCarousel } from "@/components/instagram-carousel";
+import { InstagramCarousel } from "@/components/ui/instagram-carousel";
 
 export default function Home() {
   const teamMap = TeamMap();
@@ -89,7 +89,7 @@ export default function Home() {
       <section
         className="w-full bg-muted p-8 md:py-20 "
         style={{
-          backgroundImage: "url('/background/blue-paint-bg.png')"
+          backgroundImage: "url('/background/blue-paint-bg.png')",
         }}
       >
         <div className="container px-4 md:px-6 m-auto">
@@ -117,7 +117,7 @@ export default function Home() {
               <div className="rounded-lg bg-muted px-4 max-md:py-4">
                 <div className="aspect-video overflow-hidden rounded-lg">
                   <Link
-                    href="https://www.youtube.com/watch?v=rLWbdKg_q0k&t=129s"
+                    href="https://www.youtube.com/watch?v=L5hiHi5nTK4"
                     target="_blank"
                     className="relative flex h-full w-full items-center justify-center"
                   >
@@ -140,7 +140,9 @@ export default function Home() {
                   </Link>
                 </div>
                 <div className="mt-4">
-                  <h3 className="text-xl font-bold">Warren Uniewski</h3>
+                  <h3 className="text-xl font-bold">
+                    Warren Uniewski @ Autimo
+                  </h3>
                   <p className="mt-2 text-muted-foreground">
                     Alerts to Actionable Insights with GenAI
                   </p>
@@ -149,7 +151,7 @@ export default function Home() {
               <div className="rounded-lg bg-muted px-4 hidden md:block">
                 <div className="aspect-video overflow-hidden rounded-lg">
                   <Link
-                    href="https://www.youtube.com/watch?v=L5hiHi5nTK4"
+                    href="https://www.youtube.com/watch?v=FD3d5JOMeYI"
                     target="_blank"
                     className="relative flex h-full w-full items-center justify-center"
                   >
@@ -172,7 +174,7 @@ export default function Home() {
                   </Link>
                 </div>
                 <div className="mt-4">
-                  <h3 className="text-xl font-bold">Mark Gamble</h3>
+                  <h3 className="text-xl font-bold">Mark Gamble @ Couchbase</h3>
                   <p className="mt-2 text-muted-foreground">
                     The right stuff for Really Remote Edge Computing
                   </p>
@@ -181,7 +183,7 @@ export default function Home() {
               <div className="rounded-lg bg-muted px-4 hidden lg:block">
                 <div className="aspect-video overflow-hidden rounded-lg">
                   <Link
-                    href="https://www.youtube.com/watch?v=FD3d5JOMeYI"
+                    href="https://www.youtube.com/watch?v=IYYMieq5D-Y"
                     target="_blank"
                     className="relative flex h-full w-full items-center justify-center"
                   >
@@ -204,7 +206,9 @@ export default function Home() {
                   </Link>
                 </div>
                 <div className="mt-4">
-                  <h3 className="text-xl font-bold">Tobias Dunn-Krahn</h3>
+                  <h3 className="text-xl font-bold">
+                    Tobias Dunn-Krahn @ Atono
+                  </h3>
                   <p className="mt-2 text-muted-foreground">
                     Startup Velocity at Enterprise Scale
                   </p>
@@ -291,7 +295,7 @@ export default function Home() {
           className="w-full py-12 relative overflow-hidden bg-[#bd9df8]"
           id="schedule"
           style={{
-            backgroundImage: "url('/background/yellow-paint-bg.png')"
+            backgroundImage: "url('/background/yellow-paint-bg.png')",
           }}
         >
           {/* <div className="absolute -z-20 bottom-0 w-full">
@@ -685,7 +689,7 @@ export default function Home() {
           className="w-full py-12 md:py-20 relative overflow-hidden bg-blue"
           id="team"
           style={{
-            backgroundImage: "url('/background/yellow-paint-bg.png')"
+            backgroundImage: "url('/background/yellow-paint-bg.png')",
           }}
         >
           <div className="absolute -z-20 bottom-0 w-full">
