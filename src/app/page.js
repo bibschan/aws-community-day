@@ -11,6 +11,7 @@ import Speaker from "@/components/ui/speakers";
 import speakers from "/public/speakers/speakers.json";
 import Clouds from "@/components/ui/clouds";
 import { Button } from "@/components/ui/cloud-button";
+import { InstagramCarousel } from "@/components/ui/instagram-carousel";
 
 export default function Home() {
   const teamMap = TeamMap();
@@ -59,7 +60,6 @@ export default function Home() {
                 </div>
               </div>
             </div>
-
             <div className="relative -top-10 md:top-auto">
               <img
                 src="/main-banner-sold-out.svg"
@@ -86,6 +86,140 @@ export default function Home() {
           </div>
         </div>
       </header>
+      <section
+        className="w-full bg-muted p-8 md:py-20 "
+        style={{
+          backgroundImage: "url('/background/blue-paint-bg.png')",
+        }}
+      >
+        <div className="container px-4 md:px-6 m-auto">
+          <div className="flex flex-col items-center justify-center space-y-4 text-center ">
+            <div className="space-y-2">
+              <div className="inline-block rounded-lg bg-[#EA4129] text-white px-3 py-1 text-sm">
+                Recap
+              </div>
+              <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">
+                2024 AWS Day Recap
+              </h2>
+              <p className="max-w-[900px] text-black md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
+                Catch up on the highlights from AWS Day 2024, where tech
+                enthusiasts and industry experts gathered to explore the latest
+                in cloud innovation!
+              </p>
+            </div>
+          </div>
+          <div className="w-full flex flex-col items-center mt-4">
+            <h3 className="text-2xl font-bold">Youtube</h3>
+            <div
+              className="mx-auto grid max-w-5xl gap-6 md:py-6 md:grid-cols-2 md:gap-12 lg:grid-cols-3"
+              id="media"
+            >
+              <div className="rounded-lg bg-muted px-4 max-md:py-4">
+                <div className="aspect-video overflow-hidden rounded-lg">
+                  <Link
+                    href="https://www.youtube.com/watch?v=L5hiHi5nTK4"
+                    target="_blank"
+                    className="relative flex h-full w-full items-center justify-center"
+                  >
+                    <img
+                      src="/kris-krug/play.png"
+                      width="60"
+                      height="60"
+                      alt="play"
+                      className="absolute z-20"
+                    />
+                    <img
+                      src="/youtube/warren.png"
+                      width="600"
+                      height="400"
+                      alt="Video Thumbnail"
+                      className="object-cover relative opacity-80"
+                      style={{ aspectRatio: "600/400", objectFit: "cover" }}
+                    />
+                    <div className="absolute inset-0 bg-black bg-opacity-40"></div>
+                  </Link>
+                </div>
+                <div className="mt-4">
+                  <h3 className="text-xl font-bold">
+                    Warren Uniewski @ Autimo
+                  </h3>
+                  <p className="mt-2 text-muted-foreground">
+                    Alerts to Actionable Insights with GenAI
+                  </p>
+                </div>
+              </div>
+              <div className="rounded-lg bg-muted px-4 hidden md:block">
+                <div className="aspect-video overflow-hidden rounded-lg">
+                  <Link
+                    href="https://www.youtube.com/watch?v=FD3d5JOMeYI"
+                    target="_blank"
+                    className="relative flex h-full w-full items-center justify-center"
+                  >
+                    <img
+                      src="/kris-krug/play.png"
+                      width="60"
+                      height="60"
+                      alt="play"
+                      className="absolute z-20"
+                    />
+                    <img
+                      src="/youtube/mark.png"
+                      width="600"
+                      height="400"
+                      alt="Video Thumbnail"
+                      className="object-cover relative opacity-80"
+                      style={{ aspectRatio: "600/400", objectFit: "cover" }}
+                    />
+                    <div className="absolute inset-0 bg-black bg-opacity-40"></div>
+                  </Link>
+                </div>
+                <div className="mt-4">
+                  <h3 className="text-xl font-bold">Mark Gamble @ Couchbase</h3>
+                  <p className="mt-2 text-muted-foreground">
+                    The right stuff for Really Remote Edge Computing
+                  </p>
+                </div>
+              </div>
+              <div className="rounded-lg bg-muted px-4 hidden lg:block">
+                <div className="aspect-video overflow-hidden rounded-lg">
+                  <Link
+                    href="https://www.youtube.com/watch?v=IYYMieq5D-Y"
+                    target="_blank"
+                    className="relative flex h-full w-full items-center justify-center"
+                  >
+                    <img
+                      src="/kris-krug/play.png"
+                      width="60"
+                      height="60"
+                      alt="play"
+                      className="absolute z-20"
+                    />
+                    <img
+                      src="/youtube/tobias.png"
+                      width="600"
+                      height="400"
+                      alt="Video Thumbnail"
+                      className="object-cover relative"
+                      style={{ aspectRatio: "600/400", objectFit: "cover" }}
+                    />
+                    <div className="absolute inset-0 bg-black bg-opacity-40"></div>
+                  </Link>
+                </div>
+                <div className="mt-4">
+                  <h3 className="text-xl font-bold">
+                    Tobias Dunn-Krahn @ Atono
+                  </h3>
+                  <p className="mt-2 text-muted-foreground">
+                    Startup Velocity at Enterprise Scale
+                  </p>
+                </div>
+              </div>
+            </div>
+            <h3 className="text-2xl font-bold mt-2">Instagram</h3>
+            <InstagramCarousel />
+          </div>
+        </div>
+      </section>
       <main className="flex-1 bg-[#87CEEB]  -z-10" id="speakers">
         <section className="w-full pt-8 md:pt-24 relative overflow-hidden">
           <div className="container px-4 md:px-6 m-auto h-full relative">
@@ -161,7 +295,7 @@ export default function Home() {
           className="w-full py-12 relative overflow-hidden bg-[#bd9df8]"
           id="schedule"
           style={{
-            backgroundImage: "url('/background/yellow-paint-bg.png')"
+            backgroundImage: "url('/background/yellow-paint-bg.png')",
           }}
         >
           {/* <div className="absolute -z-20 bottom-0 w-full">
@@ -555,7 +689,7 @@ export default function Home() {
           className="w-full py-12 md:py-20 relative overflow-hidden bg-blue"
           id="team"
           style={{
-            backgroundImage: "url('/background/yellow-paint-bg.png')"
+            backgroundImage: "url('/background/yellow-paint-bg.png')",
           }}
         >
           <div className="absolute -z-20 bottom-0 w-full">
