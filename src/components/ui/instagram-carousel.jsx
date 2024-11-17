@@ -6,7 +6,7 @@ import {
   CarouselContent,
   CarouselItem,
   CarouselNext,
-  CarouselPrevious
+  CarouselPrevious,
 } from "@/components/ui/carousel";
 import Image from "next/image";
 import Link from "next/link";
@@ -22,7 +22,7 @@ export function InstagramCarousel() {
     "https://www.instagram.com/p/C9s_jkUyidd/",
     "https://www.instagram.com/p/C9s_KXFSWpi/",
     "https://www.instagram.com/p/C9s_HfAycI_/",
-    "https://www.instagram.com/p/C9s_ARgS8Qx/"
+    "https://www.instagram.com/p/C9s_ARgS8Qx/",
   ];
 
   return (
@@ -32,7 +32,7 @@ export function InstagramCarousel() {
           className="w-full"
           opts={{
             align: "start",
-            loop: true
+            loop: true,
           }}
         >
           <CarouselContent className="-ml-4">
@@ -45,7 +45,7 @@ export function InstagramCarousel() {
                   <Card className="border-0 shadow-lg overflow-hidden">
                     <CardContent className="p-0">
                       <div className="relative aspect-square">
-                        <Image
+                        <img
                           src={`/instagram/ig${index + 1}.png`}
                           alt={`Instagram image ${index + 1}`}
                           fill
