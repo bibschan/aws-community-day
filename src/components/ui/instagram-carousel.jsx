@@ -13,17 +13,19 @@ import Link from "next/link";
 
 export function InstagramCarousel() {
   const instagramImages = [
-    "https://www.instagram.com/p/DA89juLz0Ap/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA%3D%3D&img_index=2",
-    "https://www.instagram.com/p/DA89juLz0Ap/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA%3D%3D&img_index=9",
-    "https://www.instagram.com/p/DA89juLz0Ap/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA%3D%3D&img_index=6",
-    "https://www.instagram.com/p/DA89juLz0Ap/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA%3D%3D&img_index=7",
-    "https://www.instagram.com/p/DA928Y6PJby/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA%3D%3D&img_index=5",
-    "https://www.instagram.com/p/DA93lckxXgD/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA%3D%3D&img_index=7",
-    "https://www.instagram.com/p/DA94ec4JhCp/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA%3D%3D&img_index=9",
-    "https://www.instagram.com/p/DA941dSJ4gc/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA%3D%3D&img_index=7",
-    "https://www.instagram.com/p/DA948whJC5a/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA%3D%3D&img_index=3",
-    "https://www.instagram.com/p/DA941dSJ4gc/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA%3D%3D&img_index=6",
-    "https://www.instagram.com/p/DBHYnQWSH8V/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA&img_index=8"
+    "https://www.instagram.com/p/DA928Y6PJby/?img_index=7",
+    "https://www.instagram.com/p/DA93HBMPT7G/?img_index=6",
+    "https://www.instagram.com/p/DA93HBMPT7G/?img_index=10",
+    "https://www.instagram.com/p/DA93lckxXgD/?img_index=3",
+    "https://www.instagram.com/p/DA93lckxXgD/?img_index=6",
+    "https://www.instagram.com/p/DA93lckxXgD/?img_index=7",
+    "https://www.instagram.com/p/DA93lckxXgD/?img_index=9",
+    "https://www.instagram.com/p/DA94UBKJaXv/?img_index=5",
+    "https://www.instagram.com/p/DA94UBKJaXv/?img_index=10",
+    "https://www.instagram.com/p/DA941dSJ4gc/?img_index=3",
+    "https://www.instagram.com/p/DA941dSJ4gc/?img_index=9",
+    "https://www.instagram.com/p/DA948whJC5a/?img_index=2",
+    "https://www.instagram.com/p/DA948whJC5a/?img_index=4"
   ];
 
   return (
@@ -45,12 +47,11 @@ export function InstagramCarousel() {
                 <Link className="w-full" href={imageUrl} target="_blank">
                   <Card className="border-0 shadow-lg overflow-hidden">
                     <CardContent className="p-0">
-                      <div className="relative aspect-square">
+                      <div className="relative">
                         <img
-                          src={`/instagram/ig${Number(index) + 1}.png`}
+                          src={`/instagram/ig${Number(index) + 1}.jpg`}
                           alt={`Instagram image ${index + 1}`}
-                          fill
-                          className="object-cover transition-transform hover:scale-105 duration-300"
+                          className="object-fill transition-transform hover:scale-105 duration-300"
                         />
                       </div>
                     </CardContent>
