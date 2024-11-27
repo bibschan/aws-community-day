@@ -111,107 +111,57 @@ export default function Home() {
           <div className="w-full flex flex-col items-center mt-4">
             <h3 className="text-2xl font-bold">Youtube</h3>
             <div
-              className="mx-auto grid max-w-5xl gap-6 md:py-6 md:grid-cols-2 md:gap-12 lg:grid-cols-3"
+              className="mx-auto grid max-w-5xl gap-6 md:py-6 md:grid-cols-2 md:gap-12 lg:grid-cols-2"
               id="media"
             >
-              <div className="rounded-lg bg-muted px-4 max-md:py-4">
+              <div className="rounded-lg px-4 hidden md:block">
                 <div className="aspect-video overflow-hidden rounded-lg">
                   <Link
-                    href="https://www.youtube.com/watch?v=L5hiHi5nTK4"
+                    href="https://www.youtube.com/playlist?list=PLtd0qWtLDNtWKm_CdsZpzQNkMtIOISZ5n"
                     target="_blank"
                     className="relative flex h-full w-full items-center justify-center"
                   >
                     <img
-                      src="/kris-krug/play.png"
-                      width="60"
-                      height="60"
-                      alt="play"
-                      className="absolute z-20"
-                    />
-                    <img
-                      src="/youtube/warren.png"
+                      src="/youtube/speakers.png"
                       width="600"
                       height="400"
                       alt="Video Thumbnail"
                       className="object-cover relative opacity-80"
-                      style={{ aspectRatio: "600/400", objectFit: "cover" }}
                     />
-                    <div className="absolute inset-0 bg-black bg-opacity-40"></div>
                   </Link>
                 </div>
                 <div className="mt-4">
-                  <h3 className="text-xl font-bold">
-                    Warren Uniewski @ Autimo
+                  <h3 className="text-xl font-bold text-center">
+                    The complete catalog of event speakers
                   </h3>
-                  <p className="mt-2 text-muted-foreground">
-                    Alerts to Actionable Insights with GenAI
-                  </p>
-                </div>
-              </div>
-              <div className="rounded-lg bg-muted px-4 hidden md:block">
-                <div className="aspect-video overflow-hidden rounded-lg">
-                  <Link
-                    href="https://www.youtube.com/watch?v=FD3d5JOMeYI"
-                    target="_blank"
-                    className="relative flex h-full w-full items-center justify-center"
-                  >
-                    <img
-                      src="/kris-krug/play.png"
-                      width="60"
-                      height="60"
-                      alt="play"
-                      className="absolute z-20"
-                    />
-                    <img
-                      src="/youtube/mark.png"
-                      width="600"
-                      height="400"
-                      alt="Video Thumbnail"
-                      className="object-cover relative opacity-80"
-                      style={{ aspectRatio: "600/400", objectFit: "cover" }}
-                    />
-                    <div className="absolute inset-0 bg-black bg-opacity-40"></div>
-                  </Link>
-                </div>
-                <div className="mt-4">
-                  <h3 className="text-xl font-bold">Mark Gamble @ Couchbase</h3>
-                  <p className="mt-2 text-muted-foreground">
+                  {/* <p className="mt-2 text-muted-foreground">
                     The right stuff for Really Remote Edge Computing
-                  </p>
+                  </p> */}
                 </div>
               </div>
-              <div className="rounded-lg bg-muted px-4 hidden lg:block">
+              <div className="rounded-lg  px-4 hidden lg:block">
                 <div className="aspect-video overflow-hidden rounded-lg">
                   <Link
-                    href="https://www.youtube.com/watch?v=IYYMieq5D-Y"
+                    href="https://www.youtube.com/playlist?list=PLtd0qWtLDNtXkz75CtYD5oyFwsevADWrs"
                     target="_blank"
                     className="relative flex h-full w-full items-center justify-center"
                   >
                     <img
-                      src="/kris-krug/play.png"
-                      width="60"
-                      height="60"
-                      alt="play"
-                      className="absolute z-20"
-                    />
-                    <img
-                      src="/youtube/tobias.png"
+                      src="/youtube/interviews.png"
                       width="600"
                       height="400"
                       alt="Video Thumbnail"
                       className="object-cover relative"
-                      style={{ aspectRatio: "600/400", objectFit: "cover" }}
                     />
-                    <div className="absolute inset-0 bg-black bg-opacity-40"></div>
                   </Link>
                 </div>
                 <div className="mt-4">
-                  <h3 className="text-xl font-bold">
-                    Tobias Dunn-Krahn @ Atono
+                  <h3 className="text-xl font-bold text-center">
+                    Interviews with event personalities
                   </h3>
-                  <p className="mt-2 text-muted-foreground">
+                  {/* <p className="mt-2 text-muted-foreground">
                     Startup Velocity at Enterprise Scale
-                  </p>
+                  </p> */}
                 </div>
               </div>
             </div>
