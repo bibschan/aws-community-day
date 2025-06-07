@@ -1,8 +1,14 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  output: process.env.NODE_ENV === "production" ? "export" : undefined,
-  basePath: process.env.NODE_ENV === "production" ? "/out" : undefined,
-  assetPrefix: process.env.NODE_ENV === "production" ? "/" : undefined,
+  output: 'export',
+  basePath: process.env.NODE_ENV === "production" ? "" : "",
+  assetPrefix: process.env.NODE_ENV === "production" ? "/" : "",
+  images: {
+    unoptimized: true,
+  },
+  eslint: {
+    ignoreDuringBuilds: true,
+  },
 };
 
 export default nextConfig;

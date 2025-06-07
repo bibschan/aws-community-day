@@ -53,20 +53,7 @@ export default function Menu() {
           >
             Schedule
           </Link>
-          <Link
-            href="#media"
-            className="text-sm font-medium hover:underline underline-offset-4"
-            prefetch={false}
-          >
-            Media
-          </Link>
-          <Link
-            href="#community"
-            className="text-sm font-medium hover:underline underline-offset-4"
-            prefetch={false}
-          >
-            Community
-          </Link>
+         
           <Link
             href="#location"
             className="text-sm font-medium hover:underline underline-offset-4"
@@ -92,20 +79,7 @@ export default function Menu() {
           >
             Schedule
           </Link>
-          <Link
-            href="#media"
-            className="text-md font-medium"
-            onClick={() => setMenuOpen(false)}
-          >
-            Media
-          </Link>
-          <Link
-            href="#community"
-            className="text-md font-medium"
-            onClick={() => setMenuOpen(false)}
-          >
-            Community
-          </Link>
+
           <Link
             href="#location"
             className="text-md font-medium"

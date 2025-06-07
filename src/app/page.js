@@ -1,24 +1,60 @@
-import Link from "next/link";
-import { Badge } from "@/components/ui/badge";
-import { TeamMap, TeamMobileMap } from "/public/team/team-svg-map";
-import LottiePaint from "@/components/ui/lottie-paint";
-import LottieSplash from "@/components/ui/lottie-splash";
-import LottieDownSplash from "@/components/ui/lottie-down-splash";
-import ZoomableImage from "@/components/ui/zoomable-image";
-import SponsorSection from "@/components/ui/sponsors";
+"use client";
+import { useEffect, useState } from "react";
+import dynamic from "next/dynamic";
+import Clouds from "@/components/ui/clouds";
+
+const LottiePaint = dynamic(() => import("@/components/ui/lottie-paint"), {
+  ssr: false,
+});
 import Menu from "@/components/ui/menu";
+import { Button } from "@/components/ui/cloud-button";
 import Speaker from "@/components/ui/speakers";
 import speakers from "/public/speakers/speakers.json";
-import Clouds from "@/components/ui/clouds";
-import { Button } from "@/components/ui/cloud-button";
-import { InstagramCarousel } from "@/components/ui/instagram-carousel";
+
+const useWindowSize = () => {
+  const [windowSize, setWindowSize] = useState({
+    width: 0,
+    height: 0,
+  });
+
+  useEffect(() => {
+    const handleResize = () => {
+      setWindowSize({
+        width: window.innerWidth,
+        height: window.innerHeight,
+      });
+    };
+
+    window.addEventListener("resize", handleResize);
+    handleResize();
+
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
+  return windowSize;
+};
+
+const InstagramCarousel = dynamic(
+  () =>
+    import("@/components/ui/instagram-carousel").then(
+      (mod) => mod.InstagramCarousel
+    ),
+  { ssr: false }
+);
 
 export default function Home() {
-  const teamMap = TeamMap();
-  const teamMobileMap = TeamMobileMap();
+  const { width } = useWindowSize();
+  const getVisibleSpeakers = () => {
+    if (!width) return speakers.slice(0, 4);
+    if (width < 640) return speakers.slice(0, 4);
+    if (width < 768) return speakers.slice(0, 5);
+    return speakers;
+  };
 
+  const visibleSpeakers = getVisibleSpeakers();
   return (
     <div className="">
+      {/* Hero Section */}
       <header className="bg-gradient-to-r from-orange-500 to-yellow-500 pt-8 md:py-4">
         <Menu />
         <div className="container py-8 pb-0 md:py-12 px-4 md:px-6 m-auto">
@@ -28,10 +64,10 @@ export default function Home() {
                 <div className="absolute -z-10 top-0">
                   <LottiePaint />
                 </div>
-                Conference Event
+                2025 Event
               </div>
               <h1 className="text-4xl font-bold tracking-tighter text-black sm:text-4xl md:text-5xl lg:text-6xl text-center md:text-left">
-                First ever AWS Community Day in Canada
+                AWS Community Day 2025 in Vancouver
               </h1>
               <p className="max-w-[600px] text-black md:text-xl z-20 text-center md:text-left">
                 AWS Community Day is held every year across the globe, and we
@@ -39,20 +75,14 @@ export default function Home() {
                 local community around AWS, while donating any profits to local
                 charity.
               </p>
-              <p className="text-xl text-center md:text-left">
-                The 2024 event was a huge success with over 700 tickets sold,
-                for a sold out event. Make sure you book mark this page for the
-                2025 date announcement and join us at the Cloud Summit on May
-                27, 2025
-              </p>
               <div className="inline-flex sm:flex-row relative gap-x-4">
                 <div className="flex flex-col items-center">
                   <Button
                     className="bg-blue-700 z-10 text-lg text-center font-bold items-center justify-center text-black rounded-md border border-input bg-background px-5 py-2 shadow-sm transition-colors"
-                    href="https://www.cloudaisummit.ca/"
+                    href="https://lu.ma/kw8u2byz"
                     variant="outline"
                   >
-                    Cloud & AI Summit 2025
+                    Get Your Ticket
                   </Button>
                   <span className="text-xs text-center mt-1">
                     Early Bird Tickets
@@ -61,24 +91,20 @@ export default function Home() {
               </div>
             </div>
             <div className="relative -top-10 md:top-auto">
-              <img
-                src="/main-banner-sold-out.svg"
-                alt="Conference"
-                className=""
-              />
+              <img src="/main-banner.svg" alt="Conference" className="" />
               <div className="absolute bottom-0 left-0 flex w-full justify-between">
                 <div className="rounded-lg bg-background/50 mr-2 px-4 py-2 backdrop-blur-md flex flex-col items-center text-center">
                   <div className="text-sm md:text-2xl font-bold">
-                    September 17
+                    October 25, 2025
                   </div>
-                  <div className="text-sm text-muted-foreground">2024</div>
+                  <div className="text-sm text-muted-foreground">2025</div>
                 </div>
                 <div className="rounded-lg bg-background/50 px-4 py-2 backdrop-blur-md flex flex-col items-center text-center">
                   <div className="text-sm md:text-2xl  font-bold">
-                    Vancouver
+                    BCIT Tech Collider
                   </div>
                   <div className="text-sm text-muted-foreground">
-                    Vancouver Playhouse
+                    Downtown, Vancouver
                   </div>
                 </div>
               </div>
@@ -98,80 +124,57 @@ export default function Home() {
               <div className="inline-block rounded-lg bg-[#EA4129] text-white px-3 py-1 text-sm">
                 Recap
               </div>
-              <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">
-                2024 AWS Day Recap
-              </h2>
-              <p className="max-w-[900px] text-black md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-                Catch up on the highlights from AWS Day 2024, where tech
-                enthusiasts and industry experts gathered to explore the latest
-                in cloud innovation!
-              </p>
+              <div className="container px-4 md:px-6">
+                <h2 className="text-3xl font-bold tracking-tighter text-center sm:text-4xl md:text-5xl mb-2">
+                  2024 Was a Huge Success!
+                </h2>
+                <p className="max-w-[900px]  align-center text-center text-black text-lg mb-12">
+                  Catch up on the highlights from AWS Day 2024, where tech
+                  enthusiasts and industry experts gathered to explore the
+                  latest in cloud innovation!
+                </p>
+                <div className="grid grid-cols-1 md:grid-cols-4 gap-8 text-center mb-12">
+                  <div className="bg-white p-6 rounded-lg shadow-md">
+                    <div className="text-4xl font-bold text-[#FF9900]">
+                      780+
+                    </div>
+                    <div className="text-lg text-gray-700">Attendees</div>
+                  </div>
+                  <div className="bg-white p-6 rounded-lg shadow-md">
+                    <div className="text-4xl font-bold text-[#FF9900]">13</div>
+                    <div className="text-lg text-gray-700">Sponsors</div>
+                  </div>
+                  <div className="bg-white p-6 rounded-lg shadow-md">
+                    <div className="text-4xl font-bold text-[#FF9900]">7</div>
+                    <div className="text-lg text-gray-700">Inspiring Talks</div>
+                  </div>
+                  <div className="bg-white p-6 rounded-lg shadow-md">
+                    <div className="text-4xl font-bold text-[#FF9900]">20+</div>
+                    <div className="text-lg text-gray-700">
+                      Community Partners
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
           <div className="w-full flex flex-col items-center mt-4">
-            <h3 className="text-2xl font-bold">Youtube</h3>
-            <div
-              className="mx-auto grid max-w-5xl gap-6 md:py-6 md:grid-cols-2 md:gap-12 lg:grid-cols-2"
-              id="media"
-            >
-              <div className="rounded-lg px-4 hidden md:block">
-                <div className="aspect-video overflow-hidden rounded-lg">
-                  <Link
-                    href="https://www.youtube.com/playlist?list=PLtd0qWtLDNtWKm_CdsZpzQNkMtIOISZ5n"
-                    target="_blank"
-                    className="relative flex h-full w-full items-center justify-center"
-                  >
-                    <img
-                      src="/youtube/speakers.png"
-                      width="600"
-                      height="400"
-                      alt="Video Thumbnail"
-                      className="object-cover relative opacity-80"
-                    />
-                  </Link>
-                </div>
-                <div className="mt-4">
-                  <h3 className="text-xl font-bold text-center">
-                    The complete catalog of event speakers
-                  </h3>
-                  {/* <p className="mt-2 text-muted-foreground">
-                    The right stuff for Really Remote Edge Computing
-                  </p> */}
-                </div>
-              </div>
-              <div className="rounded-lg  px-4 hidden lg:block">
-                <div className="aspect-video overflow-hidden rounded-lg">
-                  <Link
-                    href="https://www.youtube.com/playlist?list=PLtd0qWtLDNtXkz75CtYD5oyFwsevADWrs"
-                    target="_blank"
-                    className="relative flex h-full w-full items-center justify-center"
-                  >
-                    <img
-                      src="/youtube/interviews.png"
-                      width="600"
-                      height="400"
-                      alt="Video Thumbnail"
-                      className="object-cover relative"
-                    />
-                  </Link>
-                </div>
-                <div className="mt-4">
-                  <h3 className="text-xl font-bold text-center">
-                    Interviews with event personalities
-                  </h3>
-                  {/* <p className="mt-2 text-muted-foreground">
-                    Startup Velocity at Enterprise Scale
-                  </p> */}
-                </div>
-              </div>
-            </div>
-            <h3 className="text-2xl font-bold mt-2">Instagram</h3>
+            <h3 className="text-2xl font-bold mb-2">Video Highlights</h3>
+            <video
+              src="/videos/highlight-video.mp4"
+              controls
+              muted
+              autoPlay
+              className="w-full max-w-[900px] mb-6"
+            />
+
+            <h3 className="text-2xl font-bold mt-2">Event Pictures</h3>
             <InstagramCarousel />
           </div>
         </div>
       </section>
-      <main className="flex-1 bg-[#87CEEB]  -z-10" id="speakers">
-        <section className="w-full pt-8 md:pt-24 relative overflow-hidden">
+      <main className="flex-1 bg-[#87CEEB] -z-10" id="speakers">
+        <section className="w-full p-8 md:p-24 relative overflow-hidden">
           <div className="container px-4 md:px-6 m-auto h-full relative">
             <div className="flex flex-col items-center justify-center space-y-4 text-center">
               <div className="space-y-2 rounded-lg p-2">
@@ -184,59 +187,65 @@ export default function Home() {
                 </div>
 
                 <div className="inline-block rounded-lg bg-[#4E1479] text-white px-3 py-1 text-sm z-20 relative">
-                  Featured Speakers
+                  CFP is open!
                 </div>
                 <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl drop-shadow-[2px_3px_3px_rgba(255,255,255,0.75)] z-20 relative">
-                  Meet Our Speakers
+                  Want to speak?
                 </h2>
-                <p className="max-w-[900px]  text-black md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed z-20 relative">
-                  Hear from industry leaders and experts who will share their
-                  insights and experiences. We have a full afternoon of speakers
-                  lined up for you covering topics on AWS around AI, Costs,
-                  Kubernetes, Data and more.
-                </p>
+                <div className="max-w-[900px] text-black md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed z-20 relative space-y-4">
+                  <p className="mb-2">
+                    We're excited to announce that our Call for Speakers is now
+                    open! AWS Community Day is looking for passionate speakers
+                    to share their knowledge and experiences with our community.
+                    We'd love to hear your story!
+                  </p>
+                </div>
               </div>
             </div>
 
-            <div className="mx-auto max-w-3xl pt-6">
-              {speakers
-                .filter((speaker) => speaker.type === "keynote")
-                .map((speaker, index) => (
-                  <div key={index} className="flex flex-col items-center ">
-                    <div className="overflow-hidden rounded-lg w-80 mb-6  z-30">
-                      <a
-                        href={speaker.linkedin}
-                        target="_blank"
-                        className="cursor-pointer"
-                      >
-                        <img
-                          src={speaker.image}
-                          alt={`Keynote Speaker ${speaker.name}`}
-                          className="object-cover w-full h-full"
-                        />
-                      </a>
+            <div className="text-center py-8 z-50 relative">
+              <h3 className="text-md mb-3 z-50">Previous Speakers</h3>
+              <div className="flex justify-center max-w-6xl mx-auto">
+                <div className="grid grid-cols-4 sm:grid-cols-5 md:grid-cols-7 gap-0">
+                  {visibleSpeakers.map((speaker, index) => (
+                    <div
+                      key={index}
+                      className="flex flex-col items-center -mx-1 z-50"
+                    >
+                      <div className="w-16 h-16 sm:w-20 sm:h-20 md:w-24 md:h-24 rounded-full overflow-hidden shadow-sm transform hover:scale-110 transition-transform duration-200">
+                        <a
+                          href={speaker.linkedin}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="block w-full h-full"
+                        >
+                          <img
+                            src={speaker.image}
+                            alt={speaker.alt || speaker.name}
+                            className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+                          />
+                        </a>
+                      </div>
+                      <h4 className="font-semibold text-center text-sm">
+                        {speaker.name}
+                      </h4>
+                      {speaker.title && (
+                        <p className="text-xs text-gray-600 text-center">
+                          {speaker.title}
+                        </p>
+                      )}
                     </div>
-                    <h3 className="text-2xl font-bold">{speaker.name}</h3>
-
-                    <p className="mt-1 text-sm font-semibold text-primary">
-                      Keynote Speaker
-                    </p>
-                  </div>
-                ))}
+                  ))}
+                </div>
+              </div>
             </div>
-            <div className="mx-auto grid max-w-lg gap-1 pt-4 pb-12 md:gap-1 grid-cols-3">
-              {speakers
-                .filter((speaker) => speaker.type !== "keynote")
-                .map((speaker, index) => (
-                  <Speaker
-                    key={index}
-                    name={speaker.name}
-                    imgSrc={speaker.image}
-                    alt={speaker.alt}
-                    title={speaker.title}
-                    linkedin={speaker.linkedin}
-                  />
-                ))}
+            <div className="flex justify-center w-full mt-6">
+              <a
+                href="#"
+                className="inline-block px-6 py-3 bg-[#FF9900] text-white font-medium rounded-md hover:bg-[#e68a00] transition-colors text-center"
+              >
+                Apply to Speak
+              </a>
             </div>
           </div>
           <Clouds />
@@ -258,18 +267,63 @@ export default function Home() {
             <div className="flex flex-col items-center justify-center space-y-4 text-center">
               <div className="space-y-2 rounded-lg p-2">
                 <div className="inline-block rounded-lg bg-[#136493] text-white px-3 py-1 text-sm ">
-                  Conference Schedule
+                  COMING SOON
                 </div>
                 <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl ">
-                  Explore the Agenda
+                  Explore the Activities
                 </h2>
-                <p className="max-w-[900px]  text-black md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-                  Discover a diverse lineup of talks, workshops, and networking
-                  opportunities that will inspire and empower you.
+                <p className="max-w-[900px] text-black md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
+                  Discover a diverse lineup of activities, workshops, and
+                  networking opportunities that will inspire and empower you.
                 </p>
               </div>
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 w-full max-w-6xl mt-8">
+                {[
+                  {
+                    emoji: "🎤",
+                    title: "Main Stage Speakers",
+                    description:
+                      "Hear from top AWS experts and industry leaders",
+                  },
+                  {
+                    emoji: "🎙️",
+                    title: "Panel Talks",
+                    description:
+                      "Explore real-world cloud stories and insights",
+                  },
+                  {
+                    emoji: "🛠️",
+                    title: "Builder Workshops",
+                    description: "Get hands-on with AWS tools and services",
+                  },
+                  {
+                    emoji: "🗂️",
+                    title: "Breakout Tracks",
+                    description: "Dive deep into specific cloud topics",
+                  },
+                  {
+                    emoji: "🎮",
+                    title: "Esport Hackathon",
+                    description: "Witness high-energy coding competitions",
+                  },
+                  {
+                    emoji: "🤝",
+                    title: "Chill & Connect Zone",
+                    description: "Unwind and network with fellow builders",
+                  },
+                ].map((item, index) => (
+                  <div
+                    key={index}
+                    className="bg-white/80 backdrop-blur-sm rounded-xl p-6 hover:shadow-lg transition-shadow duration-300"
+                  >
+                    <div className="text-4xl mb-3">{item.emoji}</div>
+                    <h3 className="text-xl font-bold mb-2">{item.title}</h3>
+                    <p className="text-gray-600">{item.description}</p>
+                  </div>
+                ))}
+              </div>
             </div>
-            <div className="mx-auto grid max-w-5xl gap-6 py-12 md:grid-cols-2 md:gap-12 lg:grid-cols-3">
+            {/* <div className="mx-auto grid max-w-5xl gap-6 py-12 md:grid-cols-2 md:gap-12 lg:grid-cols-3">
               <div className="grid gap-4">
                 <div className="rounded-lg bg-muted p-4">
                   <div className="flex items-center justify-between">
@@ -416,10 +470,10 @@ export default function Home() {
                   </p>
                 </div>
               </div>
-            </div>
+            </div> */}
           </div>
         </section>
-        <section className="w-full bg-muted pt-8 md:py-20">
+        {/* <section className="w-full bg-muted pt-8 md:py-20">
           <div className="container px-4 md:px-6 m-auto">
             <div className="flex flex-col items-center justify-center space-y-4 text-center ">
               <div className="space-y-2">
@@ -549,8 +603,8 @@ export default function Home() {
               </div>
             </div>
           </div>
-        </section>
-        <section
+        </section> */}
+        {/* <section
           className="w-full py-12 md:py-20 relative bg-white"
           id="community"
         >
@@ -591,8 +645,8 @@ export default function Home() {
               </div>
             </div>
           </div>
-        </section>
-        <section className="w-full bg-muted py-12 md:py-20" id="location">
+        </section> */}
+        {/* <section className="w-full bg-muted py-12 md:py-20" id="location">
           <div className="container px-4 md:px-6 m-auto">
             <div className="flex flex-col items-center justify-center space-y-4 text-center">
               <div className="space-y-2 z-10">
@@ -634,8 +688,8 @@ export default function Home() {
               </div>
             </div>
           </div>
-        </section>
-        <section
+        </section> */}
+        {/* <section
           className="w-full py-12 md:py-20 relative overflow-hidden bg-blue"
           id="team"
           style={{
@@ -671,8 +725,8 @@ export default function Home() {
               </div>
             </div>
           </div>
-        </section>
-        <section className="w-full bg-muted py-12 md:py-20 " id="sponsors">
+        </section> */}
+        {/* <section className="w-full bg-muted py-12 md:py-20 " id="sponsors">
           <div className="container px-4 md:px-6 m-auto">
             <div className="flex flex-col items-center justify-center space-y-4 text-center">
               <div className="relative">
@@ -692,13 +746,132 @@ export default function Home() {
               </div>
             </div>
           </div>
-        </section>
-        <footer className="flex flex-col gap-2 sm:flex-row py-6 w-full shrink-0 items-center px-4 md:px-6 border-t">
-          <p className="text-xs text-muted-foreground m-auto">
-            Celebrating 11 years of the{" "}
-            <a href="http://www.awsusergroups.com/">Vancouver AWS Usergroup</a>.
-            This site is hosted using only AWS S3 and Cloudfront
-          </p>
+        </section> */}
+        <footer className="bg-gray-900 text-white py-12">
+          <div className="container px-4 md:px-6 m-auto">
+            <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+              <div className="md:col-span-2">
+                <h3 className="text-xl font-bold mb-4">
+                  About AWS Community Day Canada
+                </h3>
+                <p className="text-gray-300 mb-4">
+                  Celebrating 12 years of the Vancouver AWS User Group and the
+                  growing cloud community across Canada.
+                </p>
+                <p className="text-gray-400 text-sm">
+                  This site is hosted using only AWS S3 and CloudFront
+                </p>
+              </div>
+              <div>
+                <h4 className="font-semibold mb-4">Quick Links</h4>
+                <ul className="space-y-2">
+                  <li>
+                    <a
+                      href="#"
+                      className="text-gray-300 hover:text-white transition-colors"
+                    >
+                      Home
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href="#speakers"
+                      className="text-gray-300 hover:text-white transition-colors"
+                    >
+                      Speakers
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href="#schedule"
+                      className="text-gray-300 hover:text-white transition-colors"
+                    >
+                      Schedule
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href="#sponsors"
+                      className="text-gray-300 hover:text-white transition-colors"
+                    >
+                      Sponsors
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href="#location"
+                      className="text-gray-300 hover:text-white transition-colors"
+                    >
+                      Location
+                    </a>
+                  </li>
+                </ul>
+              </div>
+              <div>
+                <h4 className="font-semibold mb-4">Connect</h4>
+                <ul className="space-y-2">
+                  <li>
+                    <a
+                      href="https://awsusergroups.com"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-gray-300 hover:text-white transition-colors"
+                    >
+                      AWS User Groups
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href="#"
+                      className="text-gray-300 hover:text-white transition-colors"
+                    >
+                      Code of Conduct
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href="#"
+                      className="text-gray-300 hover:text-white transition-colors"
+                    >
+                      Contact Us
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href="/archive-2024/index.html"
+                      className="text-[#FF9900] hover:underline inline-flex items-center"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      AWS Day 2024 Archive
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        className="h-4 w-4 ml-1"
+                        viewBox="0 0 20 20"
+                        fill="currentColor"
+                      >
+                        <path
+                          fillRule="evenodd"
+                          d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z"
+                          clipRule="evenodd"
+                        />
+                      </svg>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div className="border-t border-gray-800 mt-12 pt-8 text-center text-gray-400 text-sm">
+              <p>
+                © {new Date().getFullYear()} AWS Community Day Canada. All
+                rights reserved.
+              </p>
+              <p className="mt-2">
+                AWS Community Day is a community-led event organized by the
+                Canadian Public Cloud Association.
+              </p>
+            </div>
+          </div>
         </footer>
       </main>
     </div>
