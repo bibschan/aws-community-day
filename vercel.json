@@ -3,10 +3,7 @@
   "builds": [
     {
       "src": "package.json",
-      "use": "@vercel/static-build",
-      "config": {
-        "distDir": "out"
-      }
+      "use": "@vercel/next"
     }
   ],
   "routes": [
@@ -15,22 +12,25 @@
       "dest": "/$1"
     },
     {
-      "src": "/(.*)\.(jpg|jpeg|png|gif|ico|svg|css|js|woff|woff2|ttf|eot|txt|xml|pdf|doc|docx|xls|xlsx|ppt|pptx|mp4|webm|wav|mp3|m4a|aac|oga)$",
+      "src": "/(.*)\\.(jpg|jpeg|png|gif|ico|svg|css|js|woff|woff2|ttf|eot|txt|xml|pdf|doc|docx|xls|xlsx|ppt|pptx|mp4|webm|wav|mp3|m4a|aac|oga)$",
       "headers": {
         "cache-control": "public, max-age=31536000, immutable"
-      }
+      },
+      "continue": true
     },
     {
-      "src": "/(.*)\.(json|xml|webmanifest)$",
+      "src": "/(.*)\\.(json|xml|webmanifest)$",
       "headers": {
         "cache-control": "public, max-age=3600"
-      }
+      },
+      "continue": true
     },
     {
-      "src": "/(.*)\.(html|htm)$",
+      "src": "/(.*)\\.(html|htm)$",
       "headers": {
         "cache-control": "public, max-age=0, must-revalidate"
-      }
+      },
+      "continue": true
     }
   ],
   "build": {
