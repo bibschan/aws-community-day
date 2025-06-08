@@ -2,6 +2,7 @@
 import { useEffect, useState } from "react";
 import dynamic from "next/dynamic";
 import Clouds from "@/components/ui/clouds";
+import Footer from "@/components/Footer";
 
 const LottiePaint = dynamic(() => import("@/components/ui/lottie-paint"), {
   ssr: false,
@@ -241,7 +242,9 @@ export default function Home() {
             </div>
             <div className="flex justify-center w-full mt-6">
               <a
-                href="#"
+                href="https://tally.so/r/mVBZYy"
+                target="_blank"
+                rel="AWS Day website"
                 className="inline-block px-6 py-3 bg-[#FF9900] text-white font-medium rounded-md hover:bg-[#e68a00] transition-colors text-center"
               >
                 Apply to Speak
@@ -747,132 +750,7 @@ export default function Home() {
             </div>
           </div>
         </section> */}
-        <footer className="bg-gray-900 text-white py-12">
-          <div className="container px-4 md:px-6 m-auto">
-            <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
-              <div className="md:col-span-2">
-                <h3 className="text-xl font-bold mb-4">
-                  About AWS Community Day Canada
-                </h3>
-                <p className="text-gray-300 mb-4">
-                  Celebrating 12 years of the Vancouver AWS User Group and the
-                  growing cloud community across Canada.
-                </p>
-                <p className="text-gray-400 text-sm">
-                  This site is hosted using only AWS S3 and CloudFront
-                </p>
-              </div>
-              <div>
-                <h4 className="font-semibold mb-4">Quick Links</h4>
-                <ul className="space-y-2">
-                  <li>
-                    <a
-                      href="#"
-                      className="text-gray-300 hover:text-white transition-colors"
-                    >
-                      Home
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      href="#speakers"
-                      className="text-gray-300 hover:text-white transition-colors"
-                    >
-                      Speakers
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      href="#schedule"
-                      className="text-gray-300 hover:text-white transition-colors"
-                    >
-                      Schedule
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      href="#sponsors"
-                      className="text-gray-300 hover:text-white transition-colors"
-                    >
-                      Sponsors
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      href="#location"
-                      className="text-gray-300 hover:text-white transition-colors"
-                    >
-                      Location
-                    </a>
-                  </li>
-                </ul>
-              </div>
-              <div>
-                <h4 className="font-semibold mb-4">Connect</h4>
-                <ul className="space-y-2">
-                  <li>
-                    <a
-                      href="https://awsusergroups.com"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="text-gray-300 hover:text-white transition-colors"
-                    >
-                      AWS User Groups
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      href="#"
-                      className="text-gray-300 hover:text-white transition-colors"
-                    >
-                      Code of Conduct
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      href="#"
-                      className="text-gray-300 hover:text-white transition-colors"
-                    >
-                      Contact Us
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      href="/past-events/2024/index.html"
-                      className="text-[#FF9900] hover:underline inline-flex items-center"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      AWS Day 2024 Archive
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        className="h-4 w-4 ml-1"
-                        viewBox="0 0 20 20"
-                        fill="currentColor"
-                      >
-                        <path
-                          fillRule="evenodd"
-                          d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z"
-                          clipRule="evenodd"
-                        />
-                      </svg>
-                    </a>
-                  </li>
-                </ul>
-              </div>
-            </div>
-            <div className="border-t border-gray-800 mt-12 pt-8 text-center text-gray-400 text-sm">
-              <p>
-                © {new Date().getFullYear()} AWS Community Day Canada. All
-                rights reserved.
-              </p>
-              <p className="mt-2">
-                AWS Community Day is a community-led event organized by the
-                Canadian Public Cloud Association.
-              </p>
-            </div>
-          </div>
-        </footer>
+        <Footer />
       </main>
     </div>
   );
