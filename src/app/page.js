@@ -838,7 +838,7 @@ export default function Home() {
                   </li>
                   <li>
                     <a
-                      href="/archive-2024/index.html"
+                      href="/past-events/2024/index.html"
                       className="text-[#FF9900] hover:underline inline-flex items-center"
                       target="_blank"
                       rel="noopener noreferrer"
