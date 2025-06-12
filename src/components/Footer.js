@@ -107,7 +107,7 @@ const Footer = () => {
 
             <h4 className="text-lg font-semibold mb-4">Previous Years</h4>
             <a
-              href="/past-events/2024/index.html"
+              href="/past-events/2024/"
               className="text-[#FF9900] hover:underline inline-flex items-center"
               target="_blank"
               rel="noopener noreferrer"
