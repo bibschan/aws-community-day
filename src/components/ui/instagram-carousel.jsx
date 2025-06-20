@@ -6,7 +6,7 @@ import {
   CarouselContent,
   CarouselItem,
   CarouselNext,
-  CarouselPrevious
+  CarouselPrevious,
 } from "@/components/ui/carousel";
 import Image from "next/image";
 import Link from "next/link";
@@ -25,7 +25,7 @@ export function InstagramCarousel() {
     "https://www.instagram.com/p/DA941dSJ4gc/?img_index=3",
     "https://www.instagram.com/p/DA941dSJ4gc/?img_index=9",
     "https://www.instagram.com/p/DA948whJC5a/?img_index=2",
-    "https://www.instagram.com/p/DA948whJC5a/?img_index=4"
+    "https://www.instagram.com/p/DA948whJC5a/?img_index=4",
   ];
 
   return (
@@ -35,7 +35,7 @@ export function InstagramCarousel() {
           className="w-full"
           opts={{
             align: "start",
-            loop: true
+            loop: true,
           }}
         >
           <CarouselContent className="-ml-4">
@@ -49,7 +49,7 @@ export function InstagramCarousel() {
                     <CardContent className="p-0">
                       <div className="relative">
                         <img
-                          src={`/instagram/ig${Number(index) + 1}.jpg`}
+                          src={`./instagram/ig${Number(index) + 1}.jpg`}
                           alt={`Instagram image ${index + 1}`}
                           className="object-fill transition-transform hover:scale-105 duration-300"
                         />
