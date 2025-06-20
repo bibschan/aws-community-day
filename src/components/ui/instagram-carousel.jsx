@@ -49,7 +49,7 @@ export function InstagramCarousel() {
                     <CardContent className="p-0">
                       <div className="relative">
                         <img
-                          src={`/Instagram/ig${Number(index) + 1}.jpg`}
+                          src={`/instagram/ig${Number(index) + 1}.jpg`}
                           alt={`Instagram image ${index + 1}`}
                           className="object-fill transition-transform hover:scale-105 duration-300"
                         />
