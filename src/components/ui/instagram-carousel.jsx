@@ -49,7 +49,7 @@ export function InstagramCarousel() {
                     <CardContent className="p-0">
                       <div className="relative">
                         <img
-                          src={`/instagram/ig${Number(index) + 1}.jpg`}
+                          src={`/Instagram/ig${Number(index) + 1}.jpg`}
                           alt={`Instagram image ${index + 1}`}
                           className="object-fill transition-transform hover:scale-105 duration-300"
                         />
@@ -67,7 +67,7 @@ export function InstagramCarousel() {
           <p className="text-md text-muted-foreground">
             click&nbsp;
             <Link
-              href="https://www.instagram.com/publiccloudninja/"
+              href="https://www.instagram.com/canadiancloudninja/"
               target="_blank"
               rel="noopener noreferrer"
               className="font-medium text-primary underline"
