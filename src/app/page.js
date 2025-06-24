@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 import dynamic from "next/dynamic";
 import Clouds from "@/components/ui/clouds";
 import Footer from "@/components/Footer";
+import SponsorSection from "@/components/ui/sponsors";
 
 const LottiePaint = dynamic(() => import("@/components/ui/lottie-paint"), {
   ssr: false,
@@ -729,7 +730,7 @@ export default function Home() {
             </div>
           </div>
         </section> */}
-        {/* <section className="w-full bg-muted py-12 md:py-20 " id="sponsors">
+        <section className="w-full bg-muted py-12 md:py-20 " id="sponsors">
           <div className="container px-4 md:px-6 m-auto">
             <div className="flex flex-col items-center justify-center space-y-4 text-center">
               <div className="relative">
@@ -738,10 +739,10 @@ export default function Home() {
                     Sponsors
                   </div>
                   <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">
-                    AWS Day 2024 Sponsors
+                    AWS Day 2025 Sponsors
                   </h2>
                   <p className="max-w-[900px] m-auto text-black md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-                    2024 AWS Day is proudly sponsored by the following
+                    2025 AWS Day is proudly sponsored by the following
                     organizations.
                   </p>
                   <SponsorSection />
@@ -749,7 +750,7 @@ export default function Home() {
               </div>
             </div>
           </div>
-        </section> */}
+        </section>
         <Footer />
       </main>
     </div>
