@@ -76,8 +76,8 @@ export default function SponsorSection() {
           </div>
         ))}
       </div>
-      {/* Silver Sponsors */}
-      <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 justify-items-center gap-0">
+      {/* Silver Sponsors the original tailwind with more sponsors: sm:grid-cols-2 lg:grid-cols-4*/}
+      <div className="grid grid-cols-2 justify-items-center gap-0">
         {silverSponsors.map((sponsor, index) => (
           <div key={index} className={`rounded-lg py-2 col-span-1 w-full`}>
             <div className="overflow-hidden rounded-lg">

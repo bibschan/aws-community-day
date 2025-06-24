@@ -8,80 +8,15 @@
     "website": "https://aws.amazon.com/"
   },
   {
-    "type": "Gold",
-    "name": "Couchbase",
-    "alt": "Gold Sponsor Video Thumbnail",
-    "imgSrc": "/sponsors/couchbase.png",
-    "website": "https://www.couchbase.com/"
-  },
-  {
-    "type": "Gold",
-    "name": "Fortinet",
-    "alt": "Gold Sponsor Video Thumbnail",
-    "imgSrc": "/sponsors/fortinet.webp",
-    "website": "https://www.fortinet.com/"
-  },
-  {
-    "type": "Gold",
-    "name": "Atono",
-    "alt": "Gold Sponsor Video Thumbnail",
-    "imgSrc": "/sponsors/atono.svg",
-    "website": "https://www.atono.io/"
-  },
-  {
-    "type": "Gold",
-    "name": "Randoli",
-    "alt": "Gold Sponsor Video Thumbnail",
-    "imgSrc": "/sponsors/randoli.png",
-    "website": "https://www.randoli.io/"
+    "type": "Silver",
+    "alt": "BCIT logo in blue",
+    "imgSrc": "/sponsors/bcit.png",
+    "website": "https://www.bcit.ca/"
   },
   {
     "type": "Silver",
-    "alt": "Silver Sponsor Video Thumbnail 1",
-    "imgSrc": "/sponsors/autimo.png",
-    "website": "https://autimo.com/"
-  },
-  {
-    "type": "Silver",
-    "alt": "Future Proof Creatives",
-    "imgSrc": "/sponsors/futureproof.png",
-    "website": "https://futureproofcreatives.com/"
-  },
-  {
-    "type": "Silver",
-    "alt": "Convergence",
-    "imgSrc": "/sponsors/convergence.png",
-    "website": "https://cctech.io/"
-  },
-  {
-    "name": "SUSE",
-    "type": "Silver",
-    "alt": "SUSE",
-    "imgSrc": "/sponsors/suse.png",
-    "website": "https://www.suse.com/"
-  },
-  {
-    "type": "Silver",
-    "alt": "Speedyrails",
-    "imgSrc": "/sponsors/speedyrails.png",
-    "website": "https://www.speedyrails.com/"
-  },
-  {
-    "type": "Silver",
-    "alt": "Inside View",
-    "imgSrc": "/sponsors/inside-view.png",
-    "website": "http://www.insideviewglobal.com/"
-  },
-  {
-    "type": "Silver",
-    "alt": "Data Elephant",
-    "imgSrc": "/sponsors/data-elephant.png",
-    "website": "https://www.dataelephant.com/"
-  },
-  {
-    "type": "Silver",
-    "alt": "Northeastern University",
-    "imgSrc": "/sponsors/northeastern.svg",
-    "website": "https://www.northeastern.edu/"
+    "alt": "GREYDATA",
+    "imgSrc": "/sponsors/greydata.svg",
+    "website": "https://greydata.ca/"
   }
 ]
