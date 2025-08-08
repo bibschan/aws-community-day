@@ -37,10 +37,10 @@ const Footer = () => {
             <ul className="space-y-3">
               {[
                 { name: "Home", href: "#" },
-                { name: "Speakers", href: "#" },
-                { name: "Schedule", href: "#" },
-                { name: "Sponsors", href: "#" },
-                { name: "Location", href: "#" },
+                // { name: "Speakers", href: "#" },
+                // { name: "Schedule", href: "#" },
+                // { name: "Sponsors", href: "#" },
+                // { name: "Location", href: "#" },
               ].map((item) => (
                 <NavItem key={item.name} {...item} />
               ))}
