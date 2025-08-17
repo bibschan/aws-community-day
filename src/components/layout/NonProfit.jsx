@@ -1,6 +1,6 @@
 import React from 'react'
 
-export default function Cpca() {
+export default function NonProfit() {
     return (
         <div>
 
