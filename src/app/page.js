@@ -10,6 +10,7 @@ import Footer from "@/components/layout/Footer";
 import About from "@/components/layout/About";
 import NonProfit from "@/components/layout/NonProfit";
 
+
 const useWindowSize = () => {
   const [windowSize, setWindowSize] = useState({
     width: 0,
