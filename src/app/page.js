@@ -8,7 +8,7 @@ import Speakers from "@/components/layout/Speakers";
 import Sponsors from "@/components/layout/Sponsors";
 import Footer from "@/components/layout/Footer";
 import About from "@/components/layout/About";
-import Cpca from "@/components/layout/cpca";
+import Cpca from "@/components/layout/Cpca";
 
 const useWindowSize = () => {
   const [windowSize, setWindowSize] = useState({
