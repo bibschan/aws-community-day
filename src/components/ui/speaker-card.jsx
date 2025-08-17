@@ -1,6 +1,6 @@
 import React from "react";
 
-const Speaker = ({ name, imgSrc, alt, company, linkedin }) => (
+const SpeakerCard = ({ name, imgSrc, alt, company, linkedin }) => (
   <div className="rounded-lg bg-transparent -mx-6 z-20">
     <div className="overflow-hidden rounded-lg">
       <a href={linkedin} target="_blank" className="cursor-pointer">
@@ -20,4 +20,4 @@ const Speaker = ({ name, imgSrc, alt, company, linkedin }) => (
   </div>
 );
 
-export default Speaker;
+export default SpeakerCard;

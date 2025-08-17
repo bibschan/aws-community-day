@@ -8,7 +8,7 @@ export default function Menu() {
 
   return (
     <div>
-      <nav className="text-black bg-gradient-to-r from-orange-500 to-yellow-500 flex justify-between items-center gap-4 sm:gap-6 fixed top-0 right-0 py-2 px-4 z-30 w-full backdrop-blur-lg">
+      <nav className="text-black bg-gradient-to-r from-orange-500 to-yellow-500 flex justify-between items-center gap-4 sm:gap-6 fixed top-0 right-0 py-2 px-4 z-[100] w-full backdrop-blur-lg">
         <Link
           href="https://www.meetup.com/vanawsug/"
           target="_blank"
@@ -53,7 +53,7 @@ export default function Menu() {
           >
             Schedule
           </Link>
-         
+
           <Link
             href="#location"
             className="text-sm font-medium hover:underline underline-offset-4"
