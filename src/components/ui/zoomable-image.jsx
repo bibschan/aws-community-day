@@ -1,12 +1,8 @@
 "use client";
 
 import React from "react";
-import dynamic from "next/dynamic";
+import ModalImage from "react-modal-image";
 import { FaSearchPlus } from "react-icons/fa"; // Import a zoom icon from react-icons
-
-const ModalImage = dynamic(() => import("react-modal-image"), {
-  ssr: false,
-});
 
 export default function ZoomableImage({ url }) {
   return (
