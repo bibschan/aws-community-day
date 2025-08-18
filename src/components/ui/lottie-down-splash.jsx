@@ -1,7 +1,12 @@
 "use client";
 
 import { useRef, useEffect } from "react";
-import { Player } from "@lottiefiles/react-lottie-player";
+import dynamic from "next/dynamic";
+
+const Player = dynamic(
+  () => import("@lottiefiles/react-lottie-player").then((mod) => mod.Player),
+  { ssr: false }
+);
 import lottieDownSplash from "/public/downward-splash-lottie";
 
 export default function LottieDownSplash() {
