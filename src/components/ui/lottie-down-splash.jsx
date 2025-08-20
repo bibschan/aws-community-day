@@ -1,8 +1,15 @@
 "use client";
 
 import { useRef, useEffect } from "react";
-import { Player } from "@lottiefiles/react-lottie-player";
+import dynamic from "next/dynamic";
 import lottieDownSplash from "/public/downward-splash-lottie";
+
+const Player = dynamic(
+  () => import("@lottiefiles/react-lottie-player").then((mod) => mod.Player),
+  {
+    ssr: false,
+  }
+);
 
 export default function LottieDownSplash() {
   const playerRef = useRef(null); // Create a reference to the Player component
