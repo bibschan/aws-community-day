@@ -1,228 +1,141 @@
 import React from 'react'
+import Image from 'next/image'
 
 export default function Activities() {
+    const activities = [
+        {
+            icon: "/activities/activity-icon-1.svg",
+            title: "Main Stage Speaker",
+            description: "Hear from top AWS experts and industry leaders"
+        },
+        {
+            icon: "/activities/activity-icon-2.svg",
+            title: "Panel Talks",
+            description: "Explore real-world cloud stories and insights"
+        },
+        {
+            icon: "/activities/activity-icon-3.svg",
+            title: "Builder Workshops",
+            description: "Get hands-on with AWS tools and services"
+        },
+        {
+            icon: "/activities/activity-icon-4.svg",
+            title: "Breakout Tracks",
+            description: "Explore real-world cloud stories and insights"
+        },
+        {
+            icon: "/activities/activity-icon-5.svg",
+            title: "E-Sports Hackathon",
+            description: "Witness high-energy coding competitions"
+        },
+        {
+            icon: "/activities/activity-icon-6.svg",
+            title: "Chill & Connect Zone",
+            description: "Unwind and network with fellow builders"
+        }
+    ];
+
     return (
         <section
-            className="w-full py-12 relative overflow-hidden bg-[#bd9df8]"
-            id="schedule"
-            style={{
-                backgroundImage: "url('/background/yellow-paint-bg.png')",
-            }}
+            className="w-full py-16 md:py-24 relative overflow-hidden bg-gray-50"
+            id="activities"
         >
-            {/* <div className="absolute -z-20 bottom-0 w-full">
-            <LottieSplash color="purple" />
-          </div>
-          <div className="absolute -z-20 top-0 w-full">
-            <LottieSplash color="purple" />
-          </div> */}
-            <div className="container px-4 md:px-6 m-auto">
-                <div className="flex flex-col items-center justify-center space-y-4 text-center">
-                    <div className="space-y-2 rounded-lg p-2">
-                        <div className="inline-block rounded-lg bg-[#136493] text-white px-3 py-1 text-sm ">
-                            COMING SOON
-                        </div>
-                        <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl ">
-                            Explore the Activities
-                        </h2>
-                        <p className="max-w-[900px] text-black md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-                            Discover a diverse lineup of activities, workshops, and
-                            networking opportunities that will inspire and empower you.
-                        </p>
+            <div className="container px-4 md:px-6 m-auto max-w-6xl">
+                <div className="text-center mb-12 md:mb-16">
+                    <h2 className="text-3xl md:text-4xl font-bold tracking-tight text-gray-900 mb-4">
+                        2025 AWS COMMUNITY DAY
+                    </h2>
+                    <h3 className="text-2xl md:text-3xl font-bold text-gray-800">
+                        EVENT ACTIVITIES
+                    </h3>
+                </div>
+
+                <div className="relative">
+                    {/* Desktop Timeline */}
+                    <div className="hidden md:block">
+                        {activities.map((activity, index) => (
+                        <div key={index} className="relative">
+                                <div className="grid grid-cols-[1fr_160px_1fr] gap-8 items-center mb-12">
+                                    {/* Left content for even indexes */}
+                                    {index % 2 === 0 ? (
+                                        <div className="text-right pr-12">
+                                            <h3 className="text-2xl font-bold text-gray-900 mb-2">
+                                                {activity.title}
+                                            </h3>
+                                            <p className="text-gray-600">
+                                                {activity.description}
+                                            </p>
+                                        </div>
+                                    ) : (
+                                        <div></div>
+                                    )}
+                                    
+                                    {/* Icon - Always in center column */}
+                                    <div className="flex justify-center">
+                                        <div className="relative">
+                                            <Image
+                                                src={activity.icon}
+                                                alt={activity.title}
+                                                width={160}
+                                                height={160}
+                                                className="w-40 h-40"
+                                            />
+                                            {/* Dotted line */}
+                                            {index < activities.length - 1 && (
+                                                <div className="absolute top-full left-1/2 transform -translate-x-1/2 w-0.5 h-12 border-l-2 border-dotted border-gray-400"></div>
+                                            )}
+                                        </div>
+                                    </div>
+                                    
+                                    {/* Right content for odd indexes */}
+                                    {index % 2 !== 0 ? (
+                                        <div className="text-left pl-12">
+                                            <h3 className="text-2xl font-bold text-gray-900 mb-2">
+                                                {activity.title}
+                                            </h3>
+                                            <p className="text-gray-600">
+                                                {activity.description}
+                                            </p>
+                                        </div>
+                                    ) : (
+                                        <div></div>
+                                    )}
+                                </div>
+                            </div>
+                        ))}
                     </div>
-                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 w-full max-w-6xl mt-8">
-                        {[
-                            {
-                                emoji: "🎤",
-                                title: "Main Stage Speakers",
-                                description:
-                                    "Hear from top AWS experts and industry leaders",
-                            },
-                            {
-                                emoji: "🎙️",
-                                title: "Panel Talks",
-                                description:
-                                    "Explore real-world cloud stories and insights",
-                            },
-                            {
-                                emoji: "🛠️",
-                                title: "Builder Workshops",
-                                description: "Get hands-on with AWS tools and services",
-                            },
-                            {
-                                emoji: "🗂️",
-                                title: "Breakout Tracks",
-                                description: "Dive deep into specific cloud topics",
-                            },
-                            {
-                                emoji: "🎮",
-                                title: "Esport Hackathon",
-                                description: "Witness high-energy coding competitions",
-                            },
-                            {
-                                emoji: "🤝",
-                                title: "Chill & Connect Zone",
-                                description: "Unwind and network with fellow builders",
-                            },
-                        ].map((item, index) => (
-                            <div
-                                key={index}
-                                className="bg-white/80 backdrop-blur-sm rounded-xl p-6 hover:shadow-lg transition-shadow duration-300"
-                            >
-                                <div className="text-4xl mb-3">{item.emoji}</div>
-                                <h3 className="text-xl font-bold mb-2">{item.title}</h3>
-                                <p className="text-gray-600">{item.description}</p>
+
+                    {/* Mobile Layout */}
+                    <div className="md:hidden space-y-8">
+                        {activities.map((activity, index) => (
+                            <div key={index} className="flex gap-4">
+                                <div className="flex-shrink-0">
+                                    <div className="relative">
+                                        <Image
+                                            src={activity.icon}
+                                            alt={activity.title}
+                                            width={100}
+                                            height={100}
+                                            className="w-20 h-20"
+                                        />
+                                        {/* Dotted line for mobile */}
+                                        {index < activities.length - 1 && (
+                                            <div className="absolute top-full left-1/2 transform -translate-x-1/2 w-0.5 h-8 border-l-2 border-dotted border-gray-400"></div>
+                                        )}
+                                    </div>
+                                </div>
+                                <div className="flex-1">
+                                    <h3 className="text-xl font-bold text-gray-900 mb-1">
+                                        {activity.title}
+                                    </h3>
+                                    <p className="text-gray-600 text-sm">
+                                        {activity.description}
+                                    </p>
+                                </div>
                             </div>
                         ))}
                     </div>
                 </div>
-                {/* <div className="mx-auto grid max-w-5xl gap-6 py-12 md:grid-cols-2 md:gap-12 lg:grid-cols-3">
-              <div className="grid gap-4">
-                <div className="rounded-lg bg-muted p-4">
-                  <div className="flex items-center justify-between">
-                    <div className="text-lg font-bold">1 PM</div>
-                    <Badge variant="secondary">Event</Badge>
-                  </div>
-                  <h3 className="mt-2 text-xl font-bold">Doors Open</h3>
-                  <p className="mt-2 text-muted-foreground">
-                    Networking time, 1-on-1 meetings, and more
-                  </p>
-                </div>
-                <div className="rounded-lg bg-muted p-4">
-                  <div className="flex items-center justify-between">
-                    <div className="text-lg font-bold">2 PM ~ 6 PM</div>
-                    <Badge variant="secondary">Event</Badge>
-                  </div>
-                  <h3 className="mt-2 text-xl font-bold">Community Hall</h3>
-                  <p className="mt-2 text-muted-foreground">
-                    Join our sponsors and community booths on the second level
-                  </p>
-                </div>
-                <div className="rounded-lg bg-muted p-4">
-                  <div className="flex items-center justify-between">
-                    <div className="text-lg font-bold">2 PM ~ 6 PM</div>
-                    <Badge variant="secondary">Event</Badge>
-                  </div>
-                  <h3 className="mt-2 text-xl font-bold">Media Lounge</h3>
-                  <p className="mt-2 text-muted-foreground">
-                    Kris Krug will lead live interviews with our AWS experts
-                  </p>
-                </div>
-                <div className="rounded-lg bg-muted p-4">
-                  <div className="flex items-center justify-between">
-                    <div className="text-lg font-bold">2:00 PM</div>
-                    <Badge variant="secondary">AWS</Badge>
-                  </div>
-                  <h3 className="mt-2 text-xl font-bold">
-                    Keynote: Anthropics on AWS
-                  </h3>
-                  <p className="mt-2 text-muted-foreground">
-                    Speaker: Gabriel Velazquez
-                  </p>
-                </div>
-              </div>
-              <div className="grid gap-4">
-                <div className="rounded-lg bg-muted p-4">
-                  <div className="flex items-center justify-between">
-                    <div className="text-lg font-bold">2:30 PM</div>
-                    <Badge variant="secondary">Couchbase</Badge>
-                  </div>
-                  <h3 className="mt-2 text-xl font-bold">
-                    The Right Stuff For Really Remote Edge Computing
-                  </h3>
-                  <p className="mt-2 text-muted-foreground">
-                    Speaker: Mark Gamble
-                  </p>
-                </div>
-                <div className="rounded-lg bg-muted p-4">
-                  <div className="flex items-center justify-between">
-                    <div className="text-lg font-bold">3 PM</div>
-                    <Badge variant="secondary">Atono</Badge>
-                  </div>
-                  <h3 className="mt-2 text-xl font-bold">
-                    Startup Velocity at Enterprise Scale
-                  </h3>
-                  <p className="mt-2 text-muted-foreground">
-                    Speaker: Tobias Dunn-Krahn
-                  </p>
-                </div>
-                <div className="rounded-lg bg-muted p-4">
-                  <div className="flex items-center justify-between">
-                    <div className="text-lg font-bold">3:30 PM</div>
-                    <Badge variant="secondary">Event</Badge>
-                  </div>
-                  <h3 className="mt-2 text-xl font-bold">Coffee Break</h3>
-                </div>
-                <div className="rounded-lg bg-muted p-4">
-                  <div className="flex items-center justify-between">
-                    <div className="text-lg font-bold">3:45 PM</div>
-                    <Badge variant="secondary"></Badge>
-                  </div>
-                  <h3 className="mt-2 text-xl font-bold">
-                    Leverage AWS Gen AI to Build & Simplify Gen BI
-                  </h3>
-                  <p className="mt-2 text-muted-foreground">
-                    Speaker: Amit Bajaj
-                  </p>
-                </div>
-              </div>
-              <div className="grid gap-4">
-                <div className="rounded-lg bg-muted p-4">
-                  <div className="flex items-center justify-between">
-                    <div className="text-lg font-bold">4:15 PM</div>
-                    <Badge variant="secondary">Autimo</Badge>
-                  </div>
-                  <h3 className="mt-2 text-xl font-bold">
-                    From AWS Alerts to Actionable Insights with Generative AI
-                  </h3>
-                  <p className="mt-2 text-muted-foreground">
-                    Speaker: Warren Uniewski
-                  </p>
-                </div>
-                <div className="rounded-lg bg-muted p-4">
-                  <div className="flex items-center justify-between">
-                    <div className="text-lg font-bold">4:45 PM</div>
-                    <Badge variant="secondary">Event</Badge>
-                  </div>
-                  <h3 className="mt-2 text-xl font-bold">Coffee Break</h3>
-                </div>
-                <div className="rounded-lg bg-muted p-4">
-                  <div className="flex items-center justify-between">
-                    <div className="text-lg font-bold">5 PM</div>
-                    <Badge variant="secondary">Fortinet</Badge>
-                  </div>
-                  <h3 className="mt-2 text-xl font-bold">
-                    Cloud Security Trends: How Do You Stack Up?
-                  </h3>
-                  <p className="mt-2 text-muted-foreground">
-                    Speaker: Tyler Germer
-                  </p>
-                </div>
-                <div className="rounded-lg bg-muted p-4">
-                  <div className="flex items-center justify-between">
-                    <div className="text-lg font-bold">5:30 PM</div>
-                    <Badge variant="secondary">Randoli</Badge>
-                  </div>
-                  <h3 className="mt-2 text-xl font-bold">
-                    Considerations & Best Practices for Building EKS Clusters
-                    for Production
-                  </h3>
-                  <p className="mt-2 text-muted-foreground">Rajith Attapattu</p>
-                </div>
-                <div className="rounded-lg bg-muted p-4">
-                  <div className="flex items-center justify-between">
-                    <div className="text-lg font-bold">6:15 PM</div>
-                    <Badge variant="secondary">Networking</Badge>
-                  </div>
-                  <h3 className="mt-2 text-xl font-bold">
-                    VIP After Party (Invite-only)
-                  </h3>
-                  <p className="mt-2 text-muted-foreground">
-                    A private party to connect with other VIP attendees and
-                    speakers.
-                  </p>
-                </div>
-              </div>
-            </div> */}
             </div>
         </section>
     )
