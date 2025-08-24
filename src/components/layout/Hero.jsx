@@ -5,13 +5,15 @@ export default function Hero() {
       <div className="h-[95vh] min-h-[600px] w-[95%] bg-blue-200 rounded-3xl relative">
         {/* Moving clouds */}
         <div className="absolute inset-0 overflow-hidden rounded-3xl">
-          <img src="/background/cloud-2.svg" alt="Cloud" className="absolute top-1/3 left-1/4 w-16 md:w-24 opacity-60 animate-slide-1" />
-          <img src="/background/cloud-3.svg" alt="Cloud" className="absolute top-1/2 right-1/4 w-20 md:w-28 opacity-40 animate-slide-2" />
-          <img src="/background/cloud-4.svg" alt="Cloud" className="absolute top-2/5 left-1/3 w-12 md:w-20 opacity-50 animate-slide-1" />
+          <img src="/background/cloud-3.svg" alt="Cloud" className="absolute top-[60%] left-[5%] h-[80px] w-auto opacity-80 animate-slide-1" />
+          <img src="/background/cloud-3.svg" alt="Cloud" className="absolute top-[55%] left-[25%] h-[70px] w-auto opacity-70 animate-slide-2" />
+          <img src="/background/cloud-3.svg" alt="Cloud" className="absolute top-[45%] left-[45%] h-[60px] w-auto opacity-85 animate-slide-1" />
+          <img src="/background/cloud-3.svg" alt="Cloud" className="absolute top-[50%] left-[85%] h-[70px] w-auto opacity-65 animate-slide-1" />
+          <img src="/background/cloud-3.svg" alt="Cloud" className="absolute top-[65%] left-[65%] h-[80px] w-auto opacity-75 animate-slide-2" />
         </div>
 
         {/* City background (behind cloud) */}
-        <img src="/hero/hero-city.svg" alt="City skyline" className="absolute bottom-0 translate-y-6 z-10 left-1/2 -translate-x-1/2 w-[60%]" />
+        <img src="/hero/hero-city.png" alt="City skyline" className="absolute bottom-0 translate-y-4 z-10 left-1/2 -translate-x-1/2 w-[60%]" />
         
         {/* Bottom cloud */}
         <img src="/hero/bottom-cloud.svg" alt="Bottom cloud" className="absolute bottom-0 translate-y-1/2 z-10 w-[80%] left-1/2 -translate-x-1/2" />
