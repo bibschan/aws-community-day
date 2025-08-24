@@ -7,7 +7,7 @@ import Activities from "@/components/layout/Activities";
 import Speakers from "@/components/layout/Speakers";
 import Sponsors from "@/components/layout/Sponsors";
 import Footer from "@/components/layout/Footer";
-// import About from "@/components/layout/About";
+import About from "@/components/layout/About";
 // import NonProfit from "@/components/layout/NonProfit";
 
 
@@ -42,7 +42,7 @@ export default function Home() {
       <Header />
       <Hero />
       <main className="flex-1 bg-[#87CEEB] -z-10" id="speakers">
-        {/* <About /> */}
+        <About />
         <Activities />
         <Speakers width={width} />
         <Sponsors />

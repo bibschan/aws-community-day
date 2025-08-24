@@ -30,6 +30,35 @@ export const AWS_EVENT_CONFIG = {
         },
     },
     sections: {
+        about: {
+            title: "What is AWS Community Day?",
+            description: "AWS Community Day events are community-led conferences where event logistics and content is planned, sourced, and delivered by community leaders.",
+            facts:[
+                {
+                    stat: "780+",
+                    feature: "Attendees"
+                },
+                                {
+                    stat: "13",
+                    feature: "Sponsors"
+                },
+                                {
+                    stat: "7",
+                    feature: "Inspiring Talks"
+                },
+                                {
+                    stat: "20+",
+                    feature: "Community Partners"
+                }
+            ],
+            motto: "By the community, for the community",
+            cta:
+            {
+                type: "phase1",
+                descrp: "Interested in sponsoring AWS Community Day",
+                button: "Learn More about Sponsoring"
+            },
+        },
         sponsors: {
             title: "Thank you to our sponsors"
         },
