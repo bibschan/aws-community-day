@@ -55,28 +55,30 @@ export default function Activities() {
                     <div className="hidden md:block">
                         {activities.map((activity, index) => (
                         <div key={index} className="relative">
-                                <div className={`grid grid-cols-3 gap-8 items-center mb-12 ${
-                                    index % 2 === 0 ? '' : 'direction-rtl'
-                                }`}>
-                                    {/* Content */}
-                                    <div className={`${index % 2 === 0 ? 'text-right pr-12' : 'col-start-2 text-left pl-12'}`}>
-                                        <h3 className="text-2xl font-bold text-gray-900 mb-2">
-                                            {activity.title}
-                                        </h3>
-                                        <p className="text-gray-600">
-                                            {activity.description}
-                                        </p>
-                                    </div>
+                                <div className="grid grid-cols-[1fr_160px_1fr] gap-8 items-center mb-12">
+                                    {/* Left content for even indexes */}
+                                    {index % 2 === 0 ? (
+                                        <div className="text-right pr-12">
+                                            <h3 className="text-2xl font-bold text-gray-900 mb-2">
+                                                {activity.title}
+                                            </h3>
+                                            <p className="text-gray-600">
+                                                {activity.description}
+                                            </p>
+                                        </div>
+                                    ) : (
+                                        <div></div>
+                                    )}
                                     
-                                    {/* Icon */}
-                                    <div className={`${index % 2 === 0 ? 'col-start-2' : 'col-start-1 row-start-1'} flex ${index % 2 === 0 ? 'justify-start' : 'justify-end'}`}>
+                                    {/* Icon - Always in center column */}
+                                    <div className="flex justify-center">
                                         <div className="relative">
                                             <Image
                                                 src={activity.icon}
                                                 alt={activity.title}
-                                                width={150}
-                                                height={150}
-                                                className="w-32 h-32 md:w-40 md:h-40"
+                                                width={160}
+                                                height={160}
+                                                className="w-40 h-40"
                                             />
                                             {/* Dotted line */}
                                             {index < activities.length - 1 && (
@@ -84,6 +86,20 @@ export default function Activities() {
                                             )}
                                         </div>
                                     </div>
+                                    
+                                    {/* Right content for odd indexes */}
+                                    {index % 2 !== 0 ? (
+                                        <div className="text-left pl-12">
+                                            <h3 className="text-2xl font-bold text-gray-900 mb-2">
+                                                {activity.title}
+                                            </h3>
+                                            <p className="text-gray-600">
+                                                {activity.description}
+                                            </p>
+                                        </div>
+                                    ) : (
+                                        <div></div>
+                                    )}
                                 </div>
                             </div>
                         ))}
