@@ -15,7 +15,7 @@ export default function About() {
               <h2 className="text-gray-700 text-3xl font-bold tracking-tighter text-center sm:text-4xl md:text-5xl mb-2 uppercase">
                 {AWS_EVENT_CONFIG.sections.about.title}
               </h2>
-              <p className="max-w-[900px] text-gray-700 align-center text-center text-black text-lg mb-12">
+              <p className="max-w-[900px] text-gray-700 align-center text-center  text-lg mb-12">
                 {AWS_EVENT_CONFIG.sections.about.description}
               </p>
               <div className="grid grid-cols-1 md:grid-cols-4 gap-8 text-center mb-12">
@@ -47,7 +47,7 @@ export default function About() {
         <div className='flex flex-col items-center'>
           <h4 className='font-bold uppercase'>{AWS_EVENT_CONFIG.sections.about.motto}</h4>
           <p className='mb-4'>{AWS_EVENT_CONFIG.sections.about.cta.descrp}</p>
-          <Button className="bg-gray-700">{AWS_EVENT_CONFIG.sections.about.cta.button}</Button>
+          <Button className="bg-gray-700 hover:bg-[#FF9900]">{AWS_EVENT_CONFIG.sections.about.cta.button}</Button>
 
         </div>
       </div>

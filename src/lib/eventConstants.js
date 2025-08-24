@@ -33,20 +33,20 @@ export const AWS_EVENT_CONFIG = {
         about: {
             title: "What is AWS Community Day?",
             description: "AWS Community Day events are community-led conferences where event logistics and content is planned, sourced, and delivered by community leaders.",
-            facts:[
+            facts: [
                 {
                     stat: "780+",
                     feature: "Attendees"
                 },
-                                {
+                {
                     stat: "13",
                     feature: "Sponsors"
                 },
-                                {
+                {
                     stat: "7",
                     feature: "Inspiring Talks"
                 },
-                                {
+                {
                     stat: "20+",
                     feature: "Community Partners"
                 }
@@ -100,7 +100,12 @@ export const AWS_EVENT_CONFIG = {
             title: "Call for Speakers",
             description: "Share your expertise with our community",
             content:
-                "Be part of shaping the future of cloud technology. Submit your talk proposal and inspire the next generation of innovators.",
+                "We're excited to announce that our Call for Speakers is now open! AWS Community Day is looking for passionate speakers to share their knowledge and experiences with our community. We'd love to hear your story!",
+            cta:
+            {
+                type: "phase1",
+                button: "Apply to be a Speaker"
+            },
         },
         volunteers: {
             title: "Volunteer Opportunities",
