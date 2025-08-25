@@ -13,9 +13,8 @@ export const AWS_EVENT_CONFIG = {
     },
     description:
         "AWS Community Day events are community-led conferences where event logistics and content is planned, sourced, and delivered by community leaders.",
+    about: "AWS Community Day is a community-led event organized by the Canadian Public Cloud Association.",
     slogan: "By the community, for the community",
-    aboutCPCA:
-        "As a non-profit organization, our purpose is to bring together & educate the local tech community about the cloud and support our local community through charity.",
     links: {
         tickets: "https://lu.ma/kw8u2byz",
         speakersApplication: "https://tally.so/r/mVBZYy",
@@ -30,6 +29,35 @@ export const AWS_EVENT_CONFIG = {
         },
     },
     sections: {
+        about: {
+            title: "What is AWS Community Day?",
+            description: "AWS Community Day events are community-led conferences where event logistics and content is planned, sourced, and delivered by community leaders.",
+            facts: [
+                {
+                    stat: "780+",
+                    feature: "Attendees"
+                },
+                {
+                    stat: "13",
+                    feature: "Sponsors"
+                },
+                {
+                    stat: "7",
+                    feature: "Inspiring Talks"
+                },
+                {
+                    stat: "20+",
+                    feature: "Community Partners"
+                }
+            ],
+            motto: "By the community, for the community",
+            cta:
+            {
+                type: "phase1",
+                descrp: "Interested in sponsoring AWS Community Day",
+                button: "Learn More about Sponsoring"
+            },
+        },
         sponsors: {
             title: "Thank you to our sponsors"
         },
@@ -71,7 +99,12 @@ export const AWS_EVENT_CONFIG = {
             title: "Call for Speakers",
             description: "Share your expertise with our community",
             content:
-                "Be part of shaping the future of cloud technology. Submit your talk proposal and inspire the next generation of innovators.",
+                "We're excited to announce that our Call for Speakers is now open! AWS Community Day is looking for passionate speakers to share their knowledge and experiences with our community. We'd love to hear your story!",
+            cta:
+            {
+                type: "phase1",
+                button: "Apply to be a Speaker"
+            },
         },
         volunteers: {
             title: "Volunteer Opportunities",
@@ -143,6 +176,58 @@ export const AWS_EVENT_CONFIG = {
                         "The event won't be live-streamed; however, we will have photos on Instagram and videos on YouTube.",
                 },
             ],
+        },
+        footer: {
+            title: "About AWS Community Day",
+            description: "Celebrating 12 years of Vancouver AWS User Group and the growing cloud community across Canada",
+            quickLinks: [
+                {
+                    name: "AWS User Groups",
+                    href: "https://awsusergroups.com",
+                    external: true,
+                },
+                {
+                    name: "Become a Volunteer",
+                    href: "https://tally.so/r/waPdMy",
+                    external: true,
+                },
+                {
+                    name: "Become a Sponsor",
+                    href: "https://tally.so/r/mR6zPQ",
+                    external: true,
+                },
+                { name: "FAQ", href: "#", external: false },
+            ],
+            policies: [
+                                {
+                    name: "Code of Conduct",
+                    href: "#",
+                    external: false,
+                    modalContent: {
+                        title: "Attendee Pledge – AWS Community Day Canada",
+                        body: [
+                            "By joining us on the day, I pledge to:",
+                            "Respect everyone — participants, speakers, sponsors, and volunteers.",
+                            "Engage positively — share knowledge, listen, and collaborate.",
+                            "Be professional — avoid disruptive, offensive, or harassing behavior.",
+                            "Support inclusivity — create a welcoming environment for all."
+                        ],
+                    },
+                },
+                {
+                    name: "Privacy Policy",
+                    href: "#",
+                    external: false,
+                    modalContent: {
+                        title: "Privacy Policy",
+                        body: [
+                            "Photography and video will be taken at the event. By attending, you give us permission to use these photos and videos.",
+                            "Photos and video will not be edited to appear out of context or AI-modified. Edits will only be made to improve clarity and professionalism, such as adding logo watermarks and trimming videos to be shorter.",
+                            "Personal information collected will be used solely to benefit the event and to communicate with attendees about activities and groups related to the event.",
+                        ],
+                    },
+                },
+            ]
         },
     },
     features: {
@@ -222,10 +307,16 @@ export const AWS_EVENT_CONFIG = {
             },
         ],
         webMembers: [
-            { name: "Bibi", github: "https://github.com/bibschan" },
-            { name: "Jackie", github: "https://jackieho.ca/" },
-            { name: "Luis", github: "https://github.com/luisher98" },
-            { name: "Sophia", github: "https://github.com/Sophia-G-Chan" },
+            { name: "Bibi", link: "https://github.com/bibschan", type: "software engineer" },
+            { name: "Catalina", link: "https://www.linkedin.com/in/catalinatorresbe/", type: "designer"  },
+            { name: "Jackie", link: "https://jackieho.ca/", type: "designer"  },
+            { name: "Luis", link: "https://github.com/luisher98", type: "software engineer"  },
+            { name: "Sophia", link: "https://github.com/Sophia-G-Chan", type: "software engineer"  },
+
         ],
     },
+    cpca: {
+        title: "Canadian Public Cloud Association",
+        about: "As a non-profit organization, our purpose is to bring together & educate the local tech community about the cloud and support our local community through charity.",
+    }
 };
