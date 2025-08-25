@@ -19,7 +19,7 @@ export default function Speakers(width) {
                         />
                     </div>
                     <div className="flex flex-col gap-2 place-content-evenly text-center">
-                        <h2 className="text-left text-3xl font-bold tracking-tighter sm:text-5xl uppercase text-[#DD344C]">
+                        <h2 className="text-left text-3xl md:text-4xl font-bold tracking-tighter uppercase text-[#DD344C]">
                             {AWS_EVENT_CONFIG.sections.speakers.title}
                         </h2>
                         <p className="mb-2 text-left text-[#DD344C]">
