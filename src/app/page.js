@@ -8,7 +8,7 @@ import Speakers from "@/components/layout/Speakers";
 import Sponsors from "@/components/layout/Sponsors";
 import Footer from "@/components/layout/Footer";
 import About from "@/components/layout/About";
-// import NonProfit from "@/components/layout/NonProfit";
+import NonProfit from "@/components/layout/NonProfit";
 
 
 const useWindowSize = () => {
@@ -46,7 +46,7 @@ export default function Home() {
         <Activities />
         <Speakers width={width} />
         <Sponsors />
-        {/* <NonProfit /> */}
+        <NonProfit />
       </main>
       <Footer />
     </div>

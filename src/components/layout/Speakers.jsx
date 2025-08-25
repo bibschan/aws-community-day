@@ -19,10 +19,10 @@ export default function Speakers(width) {
                         />
                     </div>
                     <div className="flex flex-col gap-2 place-content-evenly text-center">
-                        <h2 className="text-left text-3xl font-bold tracking-tighter sm:text-5xl uppercase text-red-600">
+                        <h2 className="text-left text-3xl font-bold tracking-tighter sm:text-5xl uppercase text-[#DD344C]">
                             {AWS_EVENT_CONFIG.sections.speakers.title}
                         </h2>
-                        <p className="mb-2 text-left text-red-600">
+                        <p className="mb-2 text-left text-[#DD344C]">
                             {AWS_EVENT_CONFIG.sections.speakers.content}
                         </p>
                         <div className="flex justify-start w-full">
@@ -30,7 +30,7 @@ export default function Speakers(width) {
                                 href="https://tally.so/r/mVBZYy"
                                 target="_blank"
                                 rel="AWS Day website"
-                                className="inline-block px-6 py-3 bg-red-600 text-white font-medium rounded-md hover:bg-[#e68a00] transition-colors text-center"
+                                className="inline-block px-6 py-3 bg-[#DD344C] text-white font-medium rounded-md hover:bg-[#e68a00] transition-colors text-center"
                             >
                                 {AWS_EVENT_CONFIG.sections.speakers.cta.button}
                             </a>
