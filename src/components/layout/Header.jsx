@@ -9,7 +9,10 @@ export default function Header() {
         <header className="bg-white sticky top-0 z-50 flex justify-center">
             <div className="w-[95%]">
                 <nav className="flex items-center justify-between h-20 sm:h-24 md:h-28 lg:h-[115px]">
-                    <Link href="/" className="flex items-center">
+                    {/* Spacer for mobile centering */}
+                    <div className="md:hidden w-10"></div>
+                    
+                    <Link href="/" className="flex items-center md:justify-start justify-center flex-1 md:flex-none">
                         <Image 
                             src="/header-logo.svg" 
                             alt="AWS Community Day Vancouver" 
@@ -21,18 +24,18 @@ export default function Header() {
                     
                     {/* Desktop Menu */}
                     <div className="hidden md:flex items-center gap-2 md:gap-3 lg:gap-6 xl:gap-8 2xl:gap-12">
-                        <Link href="/recap" className="text-[10px] md:text-xs lg:text-sm xl:text-base 2xl:text-[16px] text-text-primary hover:text-text-primary font-heroDate font-extrabold whitespace-nowrap">
+                        <a href="#recap" className="text-[10px] md:text-xs lg:text-sm xl:text-base 2xl:text-[16px] text-text-primary hover:text-text-primary font-heroDate font-extrabold whitespace-nowrap">
                             2024 Recap
-                        </Link>
-                        <Link href="/activities" className="text-[10px] md:text-xs lg:text-sm xl:text-base 2xl:text-[16px] text-text-primary hover:text-text-primary font-heroDate font-extrabold whitespace-nowrap">
+                        </a>
+                        <a href="#activities" className="text-[10px] md:text-xs lg:text-sm xl:text-base 2xl:text-[16px] text-text-primary hover:text-text-primary font-heroDate font-extrabold whitespace-nowrap">
                             Activities
-                        </Link>
-                        <Link href="/tickets" className="text-[10px] md:text-xs lg:text-sm xl:text-base 2xl:text-[16px] text-text-primary hover:text-text-primary font-heroDate font-extrabold whitespace-nowrap">
+                        </a>
+                        <a href="#tickets" className="text-[10px] md:text-xs lg:text-sm xl:text-base 2xl:text-[16px] text-text-primary hover:text-text-primary font-heroDate font-extrabold whitespace-nowrap">
                             Get Earlybird Tickets
-                        </Link>
-                        <Link href="/sponsors" className="text-[10px] md:text-xs lg:text-sm xl:text-base 2xl:text-[16px] text-text-primary hover:text-text-primary font-heroDate font-extrabold whitespace-nowrap">
+                        </a>
+                        <a href="#sponsors" className="text-[10px] md:text-xs lg:text-sm xl:text-base 2xl:text-[16px] text-text-primary hover:text-text-primary font-heroDate font-extrabold whitespace-nowrap">
                             Our Sponsors
-                        </Link>
+                        </a>
                         <Link 
                             href="/apply-speaker" 
                             className="bg-[#FF9900] hover:bg-[#E88800] text-white text-[10px] md:text-xs lg:text-sm xl:text-base 2xl:text-[16px] font-heroDate font-extrabold px-2 py-1.5 md:px-3 md:py-2 lg:px-4 lg:py-2.5 xl:px-5 xl:py-3 rounded-lg transition-colors whitespace-nowrap"
@@ -53,37 +56,47 @@ export default function Header() {
                     </button>
                 </nav>
 
-                {/* Mobile Menu */}
-                <div className={`md:hidden ${isMenuOpen ? 'block' : 'hidden'} py-4`}>
-                    <div className="flex flex-col space-y-4">
-                        <Link 
-                            href="/recap" 
+            </div>
+
+            {/* Mobile Menu Overlay */}
+            <div className={`md:hidden fixed top-20 sm:top-24 left-0 right-0 bottom-0 z-40 ${isMenuOpen ? 'block' : 'hidden'}`}>
+                {/* Backdrop */}
+                <div 
+                    className="absolute inset-0 bg-black bg-opacity-50" 
+                    onClick={() => setIsMenuOpen(false)}
+                ></div>
+                
+                {/* Menu Content */}
+                <div className="absolute top-0 left-0 right-0 bg-white">
+                    <div className="flex flex-col space-y-4 py-4">
+                        <a 
+                            href="#recap" 
                             className="text-[16px] text-text-primary hover:text-text-primary font-heroDate font-extrabold px-4"
                             onClick={() => setIsMenuOpen(false)}
                         >
                             2024 Recap
-                        </Link>
-                        <Link 
-                            href="/activities" 
+                        </a>
+                        <a 
+                            href="#activities" 
                             className="text-[16px] text-text-primary hover:text-text-primary font-heroDate font-extrabold px-4"
                             onClick={() => setIsMenuOpen(false)}
                         >
                             Activities
-                        </Link>
-                        <Link 
-                            href="/tickets" 
+                        </a>
+                        <a 
+                            href="#tickets" 
                             className="text-[16px] text-text-primary hover:text-text-primary font-heroDate font-extrabold px-4"
                             onClick={() => setIsMenuOpen(false)}
                         >
                             Get Earlybird Tickets
-                        </Link>
-                        <Link 
-                            href="/sponsors" 
+                        </a>
+                        <a 
+                            href="#sponsors" 
                             className="text-[16px] text-text-primary hover:text-text-primary font-heroDate font-extrabold px-4"
                             onClick={() => setIsMenuOpen(false)}
                         >
                             Our Sponsors
-                        </Link>
+                        </a>
                         <Link 
                             href="/apply-speaker" 
                             className="bg-[#FF9900] hover:bg-[#E88800] text-white text-[16px] font-heroDate font-extrabold py-2 px-4 mx-4 rounded-lg transition-colors text-center"

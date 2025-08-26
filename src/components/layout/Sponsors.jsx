@@ -140,7 +140,7 @@ export default function Sponsors() {
         </div>
       </div>
       {/* Bottom cloud cut horizontally in half */}
-      <div className="absolute rotate-180 -bottom-12 left-1/2 -translate-x-1/2 z-0 w-screen h-24 overflow-hidden">
+      <div className="absolute rotate-180 -bottom-24 left-1/2 -translate-x-1/2 z-0 w-screen h-24 overflow-hidden">
         <img 
           src="/hero/bottom-cloud.svg" 
           alt="Bottom cloud" 
