@@ -20,22 +20,22 @@ export default function Header() {
                     </Link>
                     
                     {/* Desktop Menu */}
-                    <div className="hidden md:flex items-center gap-8 lg:gap-12">
-                        <Link href="/recap" className="text-[16px] text-gray-700 hover:text-gray-900 font-heroDate font-extrabold">
+                    <div className="hidden md:flex items-center gap-4 lg:gap-8 xl:gap-12">
+                        <Link href="/recap" className="text-sm md:text-[16px] text-gray-700 hover:text-gray-900 font-heroDate font-extrabold">
                             2024 Recap
                         </Link>
-                        <Link href="/activities" className="text-[16px] text-gray-700 hover:text-gray-900 font-heroDate font-extrabold">
+                        <Link href="/activities" className="text-sm md:text-[16px] text-gray-700 hover:text-gray-900 font-heroDate font-extrabold">
                             Activities
                         </Link>
-                        <Link href="/tickets" className="text-[16px] text-gray-700 hover:text-gray-900 font-heroDate font-extrabold">
+                        <Link href="/tickets" className="text-sm md:text-[16px] text-gray-700 hover:text-gray-900 font-heroDate font-extrabold">
                             Get Earlybird Tickets
                         </Link>
-                        <Link href="/sponsors" className="text-[16px] text-gray-700 hover:text-gray-900 font-heroDate font-extrabold">
+                        <Link href="/sponsors" className="text-sm md:text-[16px] text-gray-700 hover:text-gray-900 font-heroDate font-extrabold">
                             Our Sponsors
                         </Link>
                         <Link 
                             href="/apply-speaker" 
-                            className="bg-[#FF9900] hover:bg-[#E88800] text-white text-[16px] font-heroDate font-extrabold p-4 rounded-lg transition-colors"
+                            className="bg-[#FF9900] hover:bg-[#E88800] text-white text-sm md:text-[16px] font-heroDate font-extrabold p-3 md:p-4 rounded-lg transition-colors"
                         >
                             Apply to be a Speaker
                         </Link>

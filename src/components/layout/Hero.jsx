@@ -1,22 +1,12 @@
+import HeroClouds from './HeroClouds';
+
 export default function Hero() {
   return (
     <section className="relative min-h-screen flex flex-col items-center justify-center text-center overflow-hidden">
       {/* Content */}
       <div className="h-[95vh] lg:min-h-[900px] w-[95%] bg-blue-200 rounded-3xl pt-[10vh] relative">
-        {/* Moving clouds */}
-        <div className="absolute inset-0 overflow-hidden rounded-3xl">
-          <img src="/background/cloud-3.svg" alt="Cloud" className="absolute top-[60%] left-[5%] h-[100px] w-auto animate-slide-1" />
-          <img src="/background/cloud-3.svg" alt="Cloud" className="absolute top-[55%] left-[25%] h-[100px] w-auto animate-slide-2" />
-          <img src="/background/cloud-3.svg" alt="Cloud" className="absolute top-[75%] left-[45%] h-[100px] w-auto animate-slide-1" />
-          <img src="/background/cloud-3.svg" alt="Cloud" className="absolute top-[50%] left-[50%] h-[100px] w-auto animate-slide-1" />
-          <img src="/background/cloud-3.svg" alt="Cloud" className="absolute top-[65%] left-[65%] h-[100px] w-auto animate-slide-2" />
-        </div>
-
-        {/* City background (behind cloud) */}
-        <img src="/hero/hero-city.png" alt="City skyline" className="absolute bottom-0 translate-y-4 z-10 left-1/2 -translate-x-1/2 w-[60%]" />
         
-        {/* Bottom cloud */}
-        <img src="/hero/bottom-cloud.svg" alt="Bottom cloud" className="absolute bottom-0 translate-y-1/2 z-10 w-[80%] left-1/2 -translate-x-1/2" />
+        <HeroClouds />
 
         <div className="relative z-20 px-1 max-w-8xl mx-auto pt-8 pb-6">
           {/* Save The Date */}
@@ -48,7 +38,7 @@ export default function Hero() {
 
         {/* More Details */}
         <div className="absolute bottom-0 left-1/2 -translate-x-1/2 z-30">
-          <p className="text-[#333E48] text-base md:text-xl lg:text-[24px] font-heroRegular font-normal leading-tight tracking-normal">MORE DETAILS BELOW</p>
+          <p className="text-[#333E48] text-base md:text-xl lg:text-[24px] font-heroRegular font-normal leading-tight tracking-normal">MORE DETAILS BELOW ↓</p>
         </div>
       </div>
     </section>
