@@ -24,6 +24,7 @@
     --input: 240 5.9% 90%;
     --ring: 240 5.9% 10%;
     --radius: 0.5rem;
+    --text-primary: #333E48;
   }
 }
 
@@ -33,7 +34,8 @@
   }
 
   body {
-    @apply bg-background text-foreground font-body;
+    @apply bg-background font-body;
+    color: #333E48;
   }
 
   h1,
@@ -188,3 +190,17 @@ span.cloud-button-content {
 }
 
 /* Cloud animation ends */
+
+/* Arrow bounce animation */
+@keyframes bounce-arrow {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(10px);
+  }
+}
+
+.animate-bounce-arrow {
+  animation: bounce-arrow 2s ease-in-out infinite;
+}

@@ -1,4 +1,5 @@
 import { Inter } from "next/font/google";
+import localFont from "next/font/local";
 import { cn } from "@/lib/utils";
 const inter = Inter({ subsets: ["latin"] });
 import "./globals.css";
@@ -9,27 +10,28 @@ export const metadata = {
     "The AWS Community Day in Vancouver Canada features expert-led talks, technical workshops, hands-on labs, and networking opportunities with industry leaders and fellow enthusiasts. Whether you're an experienced professional or a newcomer in the world of AWS, come join us. Be part of the movement to create a better, smarter, and more connected world.",
 };
 
-const fontHeading = Inter({
-  subsets: ["latin"],
+const fontHeading = localFont({
+  src: "../../public/fonts/amazon/Ember/AmazonEmber_He.ttf",
   display: "swap",
   variable: "--font-heading",
 });
 
-const fontBody = Inter({
-  subsets: ["latin"],
+const fontBody = localFont({
+  src: "../../public/fonts/amazon/Ember/AmazonEmber_Rg.ttf",
   display: "swap",
   variable: "--font-body",
 });
 
-const fontHeroDate = Inter({
-  subsets: ["latin"],
-  weight: "800",
+// Load Amazon Ember Display Heavy font for maximum boldness
+const fontHeroDate = localFont({
+  src: "../../public/fonts/amazon/Ember Display/AmazonEmberDisplay_He.ttf",
+  weight: "900",
   display: "swap",
   variable: "--font-hero-date",
 });
 
-const fontHeroRegular = Inter({
-  subsets: ["latin"],
+const fontHeroRegular = localFont({
+  src: "../../public/fonts/amazon/Ember Display/AmazonEmberDisplay_Rg.ttf",
   weight: "400",
   display: "swap",
   variable: "--font-hero-regular",

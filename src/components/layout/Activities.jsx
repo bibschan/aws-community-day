@@ -37,15 +37,15 @@ export default function Activities() {
 
     return (
         <section
-            className="w-full py-16 md:py-24 relative overflow-hidden bg-gray-50"
+            className="w-full py-16 md:py-24 relative overflow-hidden bg-white"
             id="activities"
         >
             <div className="container px-4 md:px-6 m-auto max-w-6xl">
                 <div className="text-center mb-12 md:mb-16">
-                    <h2 className="text-3xl md:text-4xl font-bold tracking-tight text-gray-900 mb-4">
+                    <h2 className="text-[48px] font-heroDate font-extrabold leading-none text-text-primary mb-4">
                         2025 AWS COMMUNITY DAY
                     </h2>
-                    <h3 className="text-2xl md:text-3xl font-bold text-gray-800">
+                    <h3 className="text-[48px] font-heroDate font-extrabold leading-none text-text-primary">
                         EVENT ACTIVITIES
                     </h3>
                 </div>
@@ -59,7 +59,7 @@ export default function Activities() {
                                     {/* Left content for even indexes */}
                                     {index % 2 === 0 ? (
                                         <div className="text-right pr-12">
-                                            <h3 className="text-2xl font-bold text-gray-900 mb-2">
+                                            <h3 className="text-2xl font-bold text-text-primary mb-2">
                                                 {activity.title}
                                             </h3>
                                             <p className="text-gray-600">
@@ -90,7 +90,7 @@ export default function Activities() {
                                     {/* Right content for odd indexes */}
                                     {index % 2 !== 0 ? (
                                         <div className="text-left pl-12">
-                                            <h3 className="text-2xl font-bold text-gray-900 mb-2">
+                                            <h3 className="text-2xl font-bold text-text-primary mb-2">
                                                 {activity.title}
                                             </h3>
                                             <p className="text-gray-600">
@@ -125,7 +125,7 @@ export default function Activities() {
                                     </div>
                                 </div>
                                 <div className="flex-1">
-                                    <h3 className="text-xl font-bold text-gray-900 mb-1">
+                                    <h3 className="text-xl font-bold text-text-primary mb-1">
                                         {activity.title}
                                     </h3>
                                     <p className="text-gray-600 text-sm">
