@@ -27,10 +27,7 @@ export default function Header() {
         <header className={`bg-white sticky top-0 z-50 flex justify-center transition-shadow duration-300 ${hasScrolled ? 'shadow-md' : ''}`}>
             <div className="w-[95%]">
                 <nav className={`flex items-center justify-between transition-all duration-300 ${hasScrolled ? 'h-16 sm:h-18 md:h-20 lg:h-[80px]' : 'h-20 sm:h-24 md:h-28 lg:h-[115px]'}`}>
-                    {/* Spacer for mobile centering */}
-                    <div className="md:hidden w-10"></div>
-                    
-                    <Link href="/" className="flex items-center md:justify-start justify-center flex-1 md:flex-none">
+                    <Link href="/" className="flex items-center justify-start flex-1 md:flex-none">
                         <Image 
                             src="/header-logo.svg" 
                             alt="AWS Community Day Vancouver" 

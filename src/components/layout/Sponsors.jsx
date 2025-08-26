@@ -52,7 +52,7 @@ export default function Sponsors() {
               </h3>
 
               {/* Sponsor Content */}
-              <div className="mx-auto max-w-5xl pt-12">
+              <div className="mx-auto max-w-5xl pt-12 sm:px-0">
                 {/* Main Sponsor */}
                 <div 
                   ref={mainSponsorRef}
@@ -72,8 +72,10 @@ export default function Sponsors() {
                           style={{
                             objectFit: "contain",
                             height: "250px",
+                            maxWidth: "500px",
                             paddingBottom: "20px",
                           }}
+                          className="w-full h-auto max-w-[300px] sm:max-w-[500px]"
                         />
                       </a>
                       <div className="mt-4 text-center">
@@ -88,7 +90,7 @@ export default function Sponsors() {
                 {/* Silver Sponsors */}
                 <div 
                   ref={silverSponsorsRef}
-                  className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-2 justify-items-center gap-2 mb-6 w-fit mx-auto opacity-0 translate-y-8 transition-all duration-700 ease-out"
+                  className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 justify-items-center gap-4 sm:gap-2 mb-6 w-full sm:w-fit mx-auto opacity-0 translate-y-8 transition-all duration-700 ease-out"
                 >
                   {silverSponsors?.map((sponsor, index) => (
                     <div key={index} className="rounded-lg p-4 col-span-1 w-min">
@@ -110,6 +112,7 @@ export default function Sponsors() {
                                 height: "200px",
                                 maxWidth: "500px",
                               }}
+                              className="w-full h-auto max-w-[220px] sm:max-w-[500px]"
                             />
                           </span>
                         </a>
@@ -139,7 +142,7 @@ export default function Sponsors() {
                           <img
                             src={sponsor.imgSrc}
                             alt={sponsor.alt}
-                            className={`mx-auto object-contain ${
+                            className={`mx-auto object-contain w-full h-auto max-w-[140px] sm:max-w-[200px] ${
                               sponsor.name === "SUSE" ? "p-5" : ""
                             }`}
                             style={{

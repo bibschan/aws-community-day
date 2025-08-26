@@ -2,13 +2,13 @@ import HeroClouds from './HeroClouds';
 
 export default function Hero() {
   return (
-    <section className="relative min-h-screen flex flex-col items-center justify-center text-center overflow-hidden">
+    <section className="relative min-h-[80vh] md:min-h-screen flex flex-col items-center justify-center text-center overflow-hidden">
       {/* Content */}
-      <div className="h-[95vh] lg:min-h-[900px] w-[95%] rounded-3xl pt-[10vh] relative overflow-hidden" style={{backgroundColor: '#BCDAFE'}}>
+      <div className="h-[70vh] md:h-[85vh] lg:min-h-[900px] w-[95%] rounded-3xl pt-0 md:pt-[5vh] lg:pt-[10vh] relative overflow-hidden" style={{backgroundColor: '#BCDAFE'}}>
         
         <HeroClouds />
 
-        <div className="relative z-20 px-1 max-w-8xl mx-auto pt-8 pb-6">
+        <div className="relative z-20 px-1 max-w-8xl mx-auto pt-4 md:pt-8 pb-6">
           {/* Save The Date */}
           <p className="text-lg md:text-2xl lg:text-[32px] font-heroDate font-extrabold mb-2 tracking-normal text-text-primary leading-tight">
             SAVE THE DATE
