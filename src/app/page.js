@@ -40,7 +40,7 @@ export default function Home() {
   return (
     <div className="">
       <Header />
-      {/* <Hero /> */}
+      <Hero />
       <main className="flex-1 bg-[#87CEEB] -z-10" id="speakers">
         <About />
         <Activities />

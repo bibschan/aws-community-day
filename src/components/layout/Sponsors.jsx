@@ -9,7 +9,6 @@ export default function Sponsors() {
   const mainSponsorRef = useRef(null);
   const silverSponsorsRef = useRef(null);
   const bronzeSponsorsRef = useRef(null);
-  const cpcaRef = useRef(null);
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -24,7 +23,7 @@ export default function Sponsors() {
       { threshold: 0.1, rootMargin: '50px' }
     );
 
-    const elements = [titleRef, mainSponsorRef, silverSponsorsRef, bronzeSponsorsRef, cpcaRef];
+    const elements = [titleRef, mainSponsorRef, silverSponsorsRef, bronzeSponsorsRef];
     elements.forEach((ref) => {
       if (ref.current) observer.observe(ref.current);
     });
@@ -68,14 +67,13 @@ export default function Sponsors() {
                         <img
                           src={mainSponsor?.imgSrc}
                           alt={mainSponsor?.alt}
-                          className="mx-auto object-contain"
+                          className="mx-auto object-contain w-full h-auto max-w-[300px] sm:max-w-[500px]"
                           style={{
                             objectFit: "contain",
                             height: "250px",
                             maxWidth: "500px",
                             paddingBottom: "20px",
                           }}
-                          className="w-full h-auto max-w-[300px] sm:max-w-[500px]"
                         />
                       </a>
                       <div className="mt-4 text-center">
@@ -104,7 +102,7 @@ export default function Sponsors() {
                             <img
                               src={sponsor.imgSrc}
                               alt={sponsor.alt}
-                              className={`mx-auto object-contain ${
+                              className={`mx-auto object-contain w-full h-auto max-w-[220px] sm:max-w-[500px] ${
                                 sponsor.name === "Atono" ? "p-5" : ""
                               }`}
                               style={{
@@ -112,7 +110,6 @@ export default function Sponsors() {
                                 height: "200px",
                                 maxWidth: "500px",
                               }}
-                              className="w-full h-auto max-w-[220px] sm:max-w-[500px]"
                             />
                           </span>
                         </a>
@@ -162,34 +159,10 @@ export default function Sponsors() {
                   ))}
                 </div>
 
-                {/* CPCA Section */}
-                <div 
-                  ref={cpcaRef}
-                  className="mt-12 flex flex-col items-center text-center opacity-0 translate-y-8 transition-all duration-700 ease-out"
-                >
-                  <div className="flex items-center gap-6 mb-6">
-                    <img
-                      src="/sponsors/cpca.svg"
-                      alt="CPCA"
-                      className="w-18 h-18"
-                    />
-                    <p className="text-gray-700 text-lg max-w-3xl">
-                      As a non-profit organization, our purpose is to bring together & educate the local tech community about the cloud and support our local community through charity.
-                    </p>
-                  </div>
-                </div>
               </div>
             </div>
           </div>
         </div>
-      </div>
-      {/* Bottom cloud cut horizontally in half */}
-      <div className="absolute rotate-180 -bottom-24 left-1/2 -translate-x-1/2 z-0 w-screen h-24 overflow-hidden">
-        <img 
-          src="/hero/bottom-cloud.svg" 
-          alt="Bottom cloud" 
-          className="w-full h-48 object-cover" 
-        />
       </div>
     </section>
   );
