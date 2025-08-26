@@ -8,12 +8,14 @@ export const SPONSORS = [
         "website": "https://aws.amazon.com/"
     },
     {
+        "name": "BCIT",
         "type": "Silver",
         "alt": "BCIT logo in blue",
         "imgSrc": "/sponsors/bcit.png",
         "website": "https://www.bcit.ca/"
     },
     {
+        "name": "GREYDATA",
         "type": "Silver",
         "alt": "GREYDATA",
         "imgSrc": "/sponsors/greydata.svg",

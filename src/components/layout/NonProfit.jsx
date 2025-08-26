@@ -32,13 +32,13 @@ export default function NonProfit() {
           ref={cpcaRef}
           className="mt-12 flex flex-col items-center text-center opacity-0 translate-y-8 transition-all duration-700 ease-out"
         >
-          <div className="flex items-center gap-6 mb-6">
+          <div className="flex flex-col sm:flex-row items-center gap-4 sm:gap-6 mb-6">
             <img
               src="/sponsors/cpca.svg"
               alt="CPCA"
-              className="w-18 h-18"
+              className="w-20 h-20 sm:w-16 sm:h-16 md:w-18 md:h-18"
             />
-            <p className="text-gray-700 text-lg max-w-3xl">
+            <p className="text-gray-700 text-lg max-w-3xl text-center sm:text-left">
               As a non-profit organization, our purpose is to bring together & educate the local tech community about the cloud and support our local community through charity.
             </p>
           </div>

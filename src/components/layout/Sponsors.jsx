@@ -71,13 +71,13 @@ export default function Sponsors() {
                           style={{
                             objectFit: "contain",
                             height: "250px",
-                            maxWidth: "500px",
+                            width: "500px",
                             paddingBottom: "20px",
                           }}
                         />
                       </a>
                       <div className="mt-4 text-center">
-                        <span className="text-muted-foreground text-lg">
+                        <span className="text-muted-foreground text-xl">
                           {mainSponsor?.type} Partner
                         </span>
                       </div>
@@ -88,7 +88,7 @@ export default function Sponsors() {
                 {/* Silver Sponsors */}
                 <div 
                   ref={silverSponsorsRef}
-                  className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 justify-items-center gap-4 sm:gap-2 mb-6 w-full sm:w-fit mx-auto opacity-0 translate-y-8 transition-all duration-700 ease-out"
+                  className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 justify-items-center gap-2 sm:gap-1 mb-6 w-full sm:w-fit mx-auto opacity-0 translate-y-8 transition-all duration-700 ease-out"
                 >
                   {silverSponsors?.map((sponsor, index) => (
                     <div key={index} className="rounded-lg p-4 col-span-1 w-min">
@@ -108,13 +108,13 @@ export default function Sponsors() {
                               style={{
                                 objectFit: "contain",
                                 height: "200px",
-                                maxWidth: "500px",
+                                width: "500px",
                               }}
                             />
                           </span>
                         </a>
-                        <div className="mt-1 text-center">
-                          <span className="text-muted-foreground text-lg">
+                        <div className="mt-4 text-center">
+                          <span className="text-muted-foreground text-xl">
                             {sponsor.type} Partner
                           </span>
                         </div>
@@ -145,12 +145,12 @@ export default function Sponsors() {
                             style={{
                               objectFit: "contain",
                               height: "80px",
-                              maxWidth: "200px",
+                              width: "200px",
                             }}
                           />
                         </a>
-                        <div className="mt-1 text-center">
-                          <span className="text-muted-foreground text-lg">
+                        <div className="mt-4 text-center">
+                          <span className="text-muted-foreground text-xl">
                             {sponsor.type} Partner
                           </span>
                         </div>

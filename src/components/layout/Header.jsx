@@ -38,22 +38,22 @@ export default function Header() {
                     </Link>
                     
                     {/* Desktop Menu */}
-                    <div className="hidden md:flex items-center gap-2 md:gap-3 lg:gap-6 xl:gap-8 2xl:gap-12">
-                        <a href="#recap" className="text-[10px] md:text-xs lg:text-sm xl:text-base 2xl:text-[16px] text-text-primary hover:text-text-primary font-heroDate font-extrabold whitespace-nowrap">
-                            2024 Recap
+                    <div className="hidden nav:flex items-center gap-2 md:gap-3 lg:gap-6 xl:gap-8 2xl:gap-12">
+                        <a href="#speakers" className="text-sm md:text-xs lg:text-sm xl:text-base 2xl:text-[16px] text-text-primary hover:text-text-primary font-heroDate font-extrabold whitespace-nowrap">
+                            Speakers
                         </a>
-                        <a href="#activities" className="text-[10px] md:text-xs lg:text-sm xl:text-base 2xl:text-[16px] text-text-primary hover:text-text-primary font-heroDate font-extrabold whitespace-nowrap">
+                        <a href="#activities" className="text-sm md:text-xs lg:text-sm xl:text-base 2xl:text-[16px] text-text-primary hover:text-text-primary font-heroDate font-extrabold whitespace-nowrap">
                             Activities
                         </a>
-                        <a href="#tickets" className="text-[10px] md:text-xs lg:text-sm xl:text-base 2xl:text-[16px] text-text-primary hover:text-text-primary font-heroDate font-extrabold whitespace-nowrap">
-                            Get Earlybird Tickets
+                        <a href="#about" className="text-sm md:text-xs lg:text-sm xl:text-base 2xl:text-[16px] text-text-primary hover:text-text-primary font-heroDate font-extrabold whitespace-nowrap">
+                            About
                         </a>
-                        <a href="#sponsors" className="text-[10px] md:text-xs lg:text-sm xl:text-base 2xl:text-[16px] text-text-primary hover:text-text-primary font-heroDate font-extrabold whitespace-nowrap">
+                        <a href="#sponsors" className="text-sm md:text-xs lg:text-sm xl:text-base 2xl:text-[16px] text-text-primary hover:text-text-primary font-heroDate font-extrabold whitespace-nowrap">
                             Our Sponsors
                         </a>
                         <Link 
                             href="/apply-speaker" 
-                            className="bg-[#FF9900] hover:bg-[#E88800] text-white text-[10px] md:text-xs lg:text-sm xl:text-base 2xl:text-[16px] font-heroDate font-extrabold px-2 py-1.5 md:px-3 md:py-2 lg:px-4 lg:py-2.5 xl:px-5 xl:py-3 rounded-lg transition-colors whitespace-nowrap"
+                            className="bg-[#FF9900] hover:bg-[#E88800] text-white text-sm md:text-xs lg:text-sm xl:text-base 2xl:text-[16px] font-heroDate font-extrabold px-2 py-1.5 md:px-3 md:py-2 lg:px-4 lg:py-2.5 xl:px-5 xl:py-3 rounded-lg transition-colors whitespace-nowrap"
                         >
                             Apply to be a Speaker
                         </Link>
@@ -62,7 +62,7 @@ export default function Header() {
                     {/* Mobile Menu Button */}
                     <button
                         onClick={() => setIsMenuOpen(!isMenuOpen)}
-                        className="md:hidden flex flex-col space-y-1.5 p-2"
+                        className="nav:hidden flex flex-col space-y-1.5 p-2"
                         aria-label="Toggle menu"
                     >
                         <span className={`block w-6 h-0.5 bg-text-primary transition-transform ${isMenuOpen ? 'rotate-45 translate-y-2' : ''}`}></span>
@@ -74,7 +74,7 @@ export default function Header() {
             </div>
 
             {/* Mobile Menu Overlay */}
-            <div className={`md:hidden fixed left-0 right-0 bottom-0 z-40 transition-all duration-300 ${isMenuOpen ? 'block' : 'hidden'} ${hasScrolled ? 'top-16 sm:top-18' : 'top-20 sm:top-24'}`}>
+            <div className={`nav:hidden fixed left-0 right-0 bottom-0 z-40 transition-all duration-300 ${isMenuOpen ? 'block' : 'hidden'} ${hasScrolled ? 'top-16 sm:top-18' : 'top-20 sm:top-24'}`}>
                 {/* Backdrop */}
                 <div 
                     className="absolute inset-0 bg-black bg-opacity-50" 
@@ -85,11 +85,11 @@ export default function Header() {
                 <div className="absolute top-0 left-0 right-0 bg-white">
                     <div className="flex flex-col space-y-4 py-4">
                         <a 
-                            href="#recap" 
+                            href="#speakers" 
                             className="text-[16px] text-text-primary hover:text-text-primary font-heroDate font-extrabold px-4"
                             onClick={() => setIsMenuOpen(false)}
                         >
-                            2024 Recap
+                            Speakers
                         </a>
                         <a 
                             href="#activities" 
@@ -99,11 +99,11 @@ export default function Header() {
                             Activities
                         </a>
                         <a 
-                            href="#tickets" 
+                            href="#about" 
                             className="text-[16px] text-text-primary hover:text-text-primary font-heroDate font-extrabold px-4"
                             onClick={() => setIsMenuOpen(false)}
                         >
-                            Get Earlybird Tickets
+                            About
                         </a>
                         <a 
                             href="#sponsors" 

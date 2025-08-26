@@ -26,10 +26,10 @@ export default function Hero() {
 
           {/* Buttons */}
           <div className="flex flex-col sm:flex-row gap-3 justify-center items-center mb-6">
-            <button className="bg-[#FF9900] hover:bg-[#E88800] text-white p-3 md:p-4 rounded-md font-heroDate font-extrabold text-sm md:text-[16px] leading-tight transition-colors">
+            <button className="bg-[#FF9900] hover:bg-[#E88800] text-white px-3 py-2 md:p-4 rounded-md font-heroDate font-extrabold text-sm md:text-[16px] leading-tight transition-colors">
               Apply to be a Speaker
             </button>
-            <button className="bg-white hover:bg-gray-100 text-text-primary p-3 md:p-4 rounded-md font-heroDate font-extrabold text-sm md:text-[16px] leading-tight transition-colors">
+            <button className="bg-white hover:bg-gray-100 text-text-primary px-3 py-2 md:p-4 rounded-md font-heroDate font-extrabold text-sm md:text-[16px] leading-tight transition-colors">
               Get Earlybird Tickets
             </button>
           </div>

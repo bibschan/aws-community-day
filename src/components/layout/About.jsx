@@ -7,6 +7,7 @@ export default function About() {
   return (
     <section
       className="w-full bg-muted p-8 md:py-20 bg-white"
+      id="about"
     >
       <div className="container px-4 md:px-6 m-auto">
         <div className="flex flex-col items-center justify-center space-y-4 text-center ">
