@@ -7,21 +7,30 @@ export default function HeroClouds() {
   const cityRef = useRef(null);
 
   useEffect(() => {
+    let ticking = false;
+    
     const handleScroll = () => {
-      const scrolled = window.pageYOffset;
-      const parallaxSpeed = 0.3;
-      const cityParallaxSpeed = 0.15;
+      if (!ticking) {
+        requestAnimationFrame(() => {
+          const scrolled = window.pageYOffset;
+          const parallaxSpeed = 0.3;
+          const cityParallaxSpeed = 0.15;
 
-      if (cloudsRef.current) {
-        cloudsRef.current.style.transform = `translateY(${scrolled * parallaxSpeed}px)`;
-      }
+          if (cloudsRef.current) {
+            cloudsRef.current.style.transform = `translateY(${scrolled * parallaxSpeed}px)`;
+          }
 
-      if (cityRef.current) {
-        cityRef.current.style.transform = `translate(-50%, ${4 + scrolled * cityParallaxSpeed}px)`;
+          if (cityRef.current) {
+            cityRef.current.style.transform = `translate(-50%, ${4 + scrolled * cityParallaxSpeed}px)`;
+          }
+          
+          ticking = false;
+        });
+        ticking = true;
       }
     };
 
-    window.addEventListener('scroll', handleScroll);
+    window.addEventListener('scroll', handleScroll, { passive: true });
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 

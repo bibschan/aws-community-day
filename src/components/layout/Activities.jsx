@@ -1,7 +1,29 @@
-import React from 'react'
+import React, { useEffect, useRef } from 'react'
 import Image from 'next/image'
 
 export default function Activities() {
+    const activitiesRef = useRef([]);
+    
+    useEffect(() => {
+        const observer = new IntersectionObserver(
+            (entries) => {
+                entries.forEach((entry) => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.remove('opacity-0', 'translate-y-8');
+                        entry.target.classList.add('opacity-100', 'translate-y-0');
+                    }
+                });
+            },
+            { threshold: 0.1, rootMargin: '50px' }
+        );
+
+        activitiesRef.current.forEach((el) => {
+            if (el) observer.observe(el);
+        });
+
+        return () => observer.disconnect();
+    }, []);
+
     const activities = [
         {
             icon: "/activities/activity-icon-1.svg",
@@ -58,7 +80,11 @@ export default function Activities() {
                     {/* Desktop Timeline */}
                     <div className="hidden md:block">
                         {activities.map((activity, index) => (
-                        <div key={index} className="relative">
+                        <div 
+                            key={index} 
+                            className="relative opacity-0 translate-y-8 transition-all duration-700 ease-out"
+                            ref={(el) => activitiesRef.current[index] = el}
+                        >
                                 <div className="grid grid-cols-[1fr_160px_1fr] gap-8 items-center mb-12">
                                     {/* Left content for even indexes */}
                                     {index % 2 === 0 ? (
@@ -112,7 +138,11 @@ export default function Activities() {
                     {/* Mobile Layout */}
                     <div className="md:hidden space-y-8">
                         {activities.map((activity, index) => (
-                            <div key={index} className="flex gap-4">
+                            <div 
+                                key={`mobile-${index}`}
+                                className="flex gap-4 opacity-0 translate-y-8 transition-all duration-700 ease-out"
+                                ref={(el) => activitiesRef.current[index + activities.length] = el}
+                            >
                                 <div className="flex-shrink-0">
                                     <div className="relative">
                                         <Image
