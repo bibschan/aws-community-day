@@ -1,10 +1,36 @@
 "use client";
 
-import React from "react";
+import React, { useEffect, useRef } from "react";
 import { SPONSORS } from "@/lib/sponsorsConstants";
 import { AWS_EVENT_CONFIG } from "@/lib/eventConstants";
 
 export default function Sponsors() {
+  const titleRef = useRef(null);
+  const mainSponsorRef = useRef(null);
+  const silverSponsorsRef = useRef(null);
+  const bronzeSponsorsRef = useRef(null);
+  const cpcaRef = useRef(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.remove('opacity-0', 'translate-y-8');
+            entry.target.classList.add('opacity-100', 'translate-y-0');
+          }
+        });
+      },
+      { threshold: 0.1, rootMargin: '50px' }
+    );
+
+    const elements = [titleRef, mainSponsorRef, silverSponsorsRef, bronzeSponsorsRef, cpcaRef];
+    elements.forEach((ref) => {
+      if (ref.current) observer.observe(ref.current);
+    });
+
+    return () => observer.disconnect();
+  }, []);
   // Filter sponsors by type
   const mainSponsor = SPONSORS.find((sponsor) => sponsor.type === "Primary");
   const silverSponsors = SPONSORS.filter((sponsor) => sponsor.type === "Silver");
@@ -18,14 +44,20 @@ export default function Sponsors() {
         <div className="flex flex-col items-center justify-center space-y-4 text-center">
           <div className="relative">
             <div className="relative space-y-2 z-10">
-              <h3 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-[48px] font-heroDate font-extrabold leading-none text-text-primary">
+              <h3 
+                ref={titleRef}
+                className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-[48px] font-heroDate font-extrabold leading-none text-text-primary opacity-0 translate-y-8 transition-all duration-700 ease-out"
+              >
                 {AWS_EVENT_CONFIG?.sections?.sponsors?.title?.toUpperCase() ?? "SPONSORS"}
               </h3>
 
               {/* Sponsor Content */}
               <div className="mx-auto max-w-5xl pt-12">
                 {/* Main Sponsor */}
-                <div className="grid grid-cols-1 justify-items-center gap-6 mb-6">
+                <div 
+                  ref={mainSponsorRef}
+                  className="grid grid-cols-1 justify-items-center gap-6 mb-6 opacity-0 translate-y-8 transition-all duration-700 ease-out"
+                >
                   <div className="rounded-lg p-4 col-span-1">
                     <div className="overflow-hidden rounded-lg">
                       <a
@@ -54,7 +86,10 @@ export default function Sponsors() {
                 </div>
 
                 {/* Silver Sponsors */}
-                <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-2 justify-items-center gap-2 mb-6 w-fit mx-auto">
+                <div 
+                  ref={silverSponsorsRef}
+                  className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-2 justify-items-center gap-2 mb-6 w-fit mx-auto opacity-0 translate-y-8 transition-all duration-700 ease-out"
+                >
                   {silverSponsors?.map((sponsor, index) => (
                     <div key={index} className="rounded-lg p-4 col-span-1 w-min">
                       <div className="overflow-hidden rounded-lg w-min">
@@ -89,7 +124,10 @@ export default function Sponsors() {
                 </div>
 
                 {/* Bronze Sponsors */}
-                <div className="grid grid-cols-2 justify-items-center gap-0">
+                <div 
+                  ref={bronzeSponsorsRef}
+                  className="grid grid-cols-2 justify-items-center gap-0 opacity-0 translate-y-8 transition-all duration-700 ease-out"
+                >
                   {bronzeSponsors.map((sponsor, index) => (
                     <div key={index} className={`rounded-lg py-2 col-span-1 w-full`}>
                       <div className="overflow-hidden rounded-lg">
@@ -122,7 +160,10 @@ export default function Sponsors() {
                 </div>
 
                 {/* CPCA Section */}
-                <div className="mt-12 flex flex-col items-center text-center">
+                <div 
+                  ref={cpcaRef}
+                  className="mt-12 flex flex-col items-center text-center opacity-0 translate-y-8 transition-all duration-700 ease-out"
+                >
                   <div className="flex items-center gap-6 mb-6">
                     <img
                       src="/sponsors/cpca.svg"
