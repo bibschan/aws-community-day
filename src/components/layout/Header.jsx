@@ -21,21 +21,21 @@ export default function Header() {
                     
                     {/* Desktop Menu */}
                     <div className="hidden md:flex items-center space-x-8">
-                        <Link href="/recap" className="text-sm text-gray-700 hover:text-gray-900 font-medium">
+                        <Link href="/recap" className="text-sm text-gray-700 hover:text-gray-900 font-heroDate font-extrabold">
                             2024 Recap
                         </Link>
-                        <Link href="/activities" className="text-sm text-gray-700 hover:text-gray-900 font-medium">
+                        <Link href="/activities" className="text-sm text-gray-700 hover:text-gray-900 font-heroDate font-extrabold">
                             Activities
                         </Link>
-                        <Link href="/tickets" className="text-sm text-gray-700 hover:text-gray-900 font-medium">
+                        <Link href="/tickets" className="text-sm text-gray-700 hover:text-gray-900 font-heroDate font-extrabold">
                             Get Earlybird Tickets
                         </Link>
-                        <Link href="/sponsors" className="text-sm text-gray-700 hover:text-gray-900 font-medium">
+                        <Link href="/sponsors" className="text-sm text-gray-700 hover:text-gray-900 font-heroDate font-extrabold">
                             Our Sponsors
                         </Link>
                         <Link 
                             href="/apply-speaker" 
-                            className="bg-orange-400 hover:bg-orange-500 text-white text-sm font-bold py-2 px-4 rounded-lg transition-colors"
+                            className="bg-[#FF9900] hover:bg-[#E88800] text-white text-sm font-heroDate font-extrabold py-2 px-4 rounded-lg transition-colors"
                         >
                             Apply to be a Speaker
                         </Link>
@@ -58,35 +58,35 @@ export default function Header() {
                     <div className="flex flex-col space-y-4">
                         <Link 
                             href="/recap" 
-                            className="text-sm text-gray-700 hover:text-gray-900 font-medium px-4"
+                            className="text-sm text-gray-700 hover:text-gray-900 font-heroDate font-extrabold px-4"
                             onClick={() => setIsMenuOpen(false)}
                         >
                             2024 Recap
                         </Link>
                         <Link 
                             href="/activities" 
-                            className="text-sm text-gray-700 hover:text-gray-900 font-medium px-4"
+                            className="text-sm text-gray-700 hover:text-gray-900 font-heroDate font-extrabold px-4"
                             onClick={() => setIsMenuOpen(false)}
                         >
                             Activities
                         </Link>
                         <Link 
                             href="/tickets" 
-                            className="text-sm text-gray-700 hover:text-gray-900 font-medium px-4"
+                            className="text-sm text-gray-700 hover:text-gray-900 font-heroDate font-extrabold px-4"
                             onClick={() => setIsMenuOpen(false)}
                         >
                             Get Earlybird Tickets
                         </Link>
                         <Link 
                             href="/sponsors" 
-                            className="text-sm text-gray-700 hover:text-gray-900 font-medium px-4"
+                            className="text-sm text-gray-700 hover:text-gray-900 font-heroDate font-extrabold px-4"
                             onClick={() => setIsMenuOpen(false)}
                         >
                             Our Sponsors
                         </Link>
                         <Link 
                             href="/apply-speaker" 
-                            className="bg-orange-400 hover:bg-orange-500 text-white text-sm font-bold py-2 px-4 mx-4 rounded-lg transition-colors text-center"
+                            className="bg-[#FF9900] hover:bg-[#E88800] text-white text-sm font-heroDate font-extrabold py-2 px-4 mx-4 rounded-lg transition-colors text-center"
                             onClick={() => setIsMenuOpen(false)}
                         >
                             Apply to be a Speaker

@@ -12,6 +12,8 @@ export default {
       fontFamily: {
         heading: ["var(--font-heading)", ...fontFamily.sans],
         body: ["var(--font-body)", ...fontFamily.sans],
+        heroDate: ["var(--font-hero-date)", ...fontFamily.sans],
+        heroRegular: ["var(--font-hero-regular)", ...fontFamily.sans],
       },
       colors: {
         border: "hsl(var(--border))",

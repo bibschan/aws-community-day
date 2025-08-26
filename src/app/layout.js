@@ -21,11 +21,25 @@ const fontBody = Inter({
   variable: "--font-body",
 });
 
+const fontHeroDate = Inter({
+  subsets: ["latin"],
+  weight: "800",
+  display: "swap",
+  variable: "--font-hero-date",
+});
+
+const fontHeroRegular = Inter({
+  subsets: ["latin"],
+  weight: "400",
+  display: "swap",
+  variable: "--font-hero-regular",
+});
+
 export default function Layout({ children }) {
   return (
     <html lang="en">
       <body
-        className={cn("antialiased", fontHeading.variable, fontBody.variable)}
+        className={cn("antialiased", fontHeading.variable, fontBody.variable, fontHeroDate.variable, fontHeroRegular.variable)}
       >
         {children}
       </body>
