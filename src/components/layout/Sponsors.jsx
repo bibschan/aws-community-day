@@ -13,14 +13,14 @@ export default function Sponsors() {
   );
 
   return (
-    <section className="w-full bg-muted py-12 md:py-20" id="sponsors">
-      <div className="container px-4 md:px-6 m-auto">
+    <section className="w-full bg-white pt-12 md:pt-20 relative" id="sponsors">
+      <div className="container px-4 md:px-6 m-auto relative z-20">
         <div className="flex flex-col items-center justify-center space-y-4 text-center">
           <div className="relative">
             <div className="relative space-y-2 z-10">
-              <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">
-                {AWS_EVENT_CONFIG?.sections?.sponsors?.title ?? "Sponsors"}
-              </h2>
+              <h3 className="text-[48px] font-heroDate font-extrabold leading-none text-text-primary">
+                {AWS_EVENT_CONFIG?.sections?.sponsors?.title?.toUpperCase() ?? "SPONSORS"}
+              </h3>
 
               {/* Sponsor Content */}
               <div className="mx-auto max-w-5xl pt-12">
@@ -125,6 +125,12 @@ export default function Sponsors() {
           </div>
         </div>
       </div>
+      {/* Bottom cloud positioned outside container, pointing downwards */}
+      <img 
+        src="/hero/bottom-cloud.svg" 
+        alt="Bottom cloud" 
+        className="absolute -bottom-24 left-1/2 -translate-x-1/2 z-0 w-screen rotate-180" 
+      />
     </section>
   );
 }

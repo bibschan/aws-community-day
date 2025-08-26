@@ -6,32 +6,38 @@ export default function Activities() {
         {
             icon: "/activities/activity-icon-1.svg",
             title: "Main Stage Speaker",
-            description: "Hear from top AWS experts and industry leaders"
+            description: "Hear from top AWS experts and industry leaders",
+            color: "#01A88D"
         },
         {
             icon: "/activities/activity-icon-2.svg",
             title: "Panel Talks",
-            description: "Explore real-world cloud stories and insights"
+            description: "Explore real-world cloud stories and insights",
+            color: "#C925D1"
         },
         {
             icon: "/activities/activity-icon-3.svg",
             title: "Builder Workshops",
-            description: "Get hands-on with AWS tools and services"
+            description: "Get hands-on with AWS tools and services",
+            color: "#7AA116"
         },
         {
             icon: "/activities/activity-icon-4.svg",
             title: "Breakout Tracks",
-            description: "Explore real-world cloud stories and insights"
+            description: "Explore real-world cloud stories and insights",
+            color: "#E7157B"
         },
         {
             icon: "/activities/activity-icon-5.svg",
             title: "E-Sports Hackathon",
-            description: "Witness high-energy coding competitions"
+            description: "Witness high-energy coding competitions",
+            color: "#ED7100"
         },
         {
             icon: "/activities/activity-icon-6.svg",
             title: "Chill & Connect Zone",
-            description: "Unwind and network with fellow builders"
+            description: "Unwind and network with fellow builders",
+            color: "#8C4FFF"
         }
     ];
 
@@ -59,7 +65,7 @@ export default function Activities() {
                                     {/* Left content for even indexes */}
                                     {index % 2 === 0 ? (
                                         <div className="text-right pr-12">
-                                            <h3 className="text-2xl font-bold text-text-primary mb-2">
+                                            <h3 className="text-[32px] font-heading font-extrabold mb-2" style={{ color: activity.color }}>
                                                 {activity.title}
                                             </h3>
                                             <p className="text-gray-600">
@@ -90,7 +96,7 @@ export default function Activities() {
                                     {/* Right content for odd indexes */}
                                     {index % 2 !== 0 ? (
                                         <div className="text-left pl-12">
-                                            <h3 className="text-2xl font-bold text-text-primary mb-2">
+                                            <h3 className="text-[32px] font-heading font-extrabold mb-2" style={{ color: activity.color }}>
                                                 {activity.title}
                                             </h3>
                                             <p className="text-gray-600">
@@ -125,7 +131,7 @@ export default function Activities() {
                                     </div>
                                 </div>
                                 <div className="flex-1">
-                                    <h3 className="text-xl font-bold text-text-primary mb-1">
+                                    <h3 className="text-[32px] font-heading font-extrabold mb-1" style={{ color: activity.color }}>
                                         {activity.title}
                                     </h3>
                                     <p className="text-gray-600 text-sm">
