@@ -7,9 +7,9 @@ import { AWS_EVENT_CONFIG } from "@/lib/eventConstants";
 export default function Sponsors() {
   // Filter sponsors by type
   const mainSponsor = SPONSORS.find((sponsor) => sponsor.type === "Primary");
-  const goldSponsors = SPONSORS.filter((sponsor) => sponsor.type === "Gold");
-  const silverSponsors = SPONSORS.filter(
-    (sponsor) => sponsor.type === "Silver"
+  const silverSponsors = SPONSORS.filter((sponsor) => sponsor.type === "Silver");
+  const bronzeSponsors = SPONSORS.filter(
+    (sponsor) => sponsor.type === "Bronze"
   );
 
   return (
@@ -39,13 +39,13 @@ export default function Sponsors() {
                           className="mx-auto object-contain"
                           style={{
                             objectFit: "contain",
-                            height: "200px",
+                            height: "250px",
                             paddingBottom: "20px",
                           }}
                         />
                       </a>
                       <div className="mt-4 text-center">
-                        <span className="text-muted-foreground text-sm">
+                        <span className="text-muted-foreground text-lg">
                           {mainSponsor?.type} Partner
                         </span>
                       </div>
@@ -53,9 +53,9 @@ export default function Sponsors() {
                   </div>
                 </div>
 
-                {/* Gold Sponsors */}
+                {/* Silver Sponsors */}
                 <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-2 justify-items-center gap-2 mb-6 w-fit mx-auto">
-                  {goldSponsors?.map((sponsor, index) => (
+                  {silverSponsors?.map((sponsor, index) => (
                     <div key={index} className="rounded-lg p-4 col-span-1 w-min">
                       <div className="overflow-hidden rounded-lg w-min">
                         <a
@@ -72,14 +72,14 @@ export default function Sponsors() {
                               }`}
                               style={{
                                 objectFit: "contain",
-                                height: "80px",
-                                maxWidth: "200px",
+                                height: "200px",
+                                maxWidth: "500px",
                               }}
                             />
                           </span>
                         </a>
                         <div className="mt-1 text-center">
-                          <span className="text-muted-foreground text-sm">
+                          <span className="text-muted-foreground text-lg">
                             {sponsor.type} Partner
                           </span>
                         </div>
@@ -88,9 +88,9 @@ export default function Sponsors() {
                   ))}
                 </div>
 
-                {/* Silver Sponsors */}
+                {/* Bronze Sponsors */}
                 <div className="grid grid-cols-2 justify-items-center gap-0">
-                  {silverSponsors.map((sponsor, index) => (
+                  {bronzeSponsors.map((sponsor, index) => (
                     <div key={index} className={`rounded-lg py-2 col-span-1 w-full`}>
                       <div className="overflow-hidden rounded-lg">
                         <a
@@ -106,19 +106,33 @@ export default function Sponsors() {
                             }`}
                             style={{
                               objectFit: "contain",
-                              height: "60px",
-                              maxWidth: "150px",
+                              height: "80px",
+                              maxWidth: "200px",
                             }}
                           />
                         </a>
                         <div className="mt-1 text-center">
-                          <span className="text-muted-foreground text-xs">
+                          <span className="text-muted-foreground text-lg">
                             {sponsor.type} Partner
                           </span>
                         </div>
                       </div>
                     </div>
                   ))}
+                </div>
+
+                {/* CPCA Section */}
+                <div className="mt-12 flex flex-col items-center text-center">
+                  <div className="flex items-center gap-6 mb-6">
+                    <img
+                      src="/sponsors/cpca.svg"
+                      alt="CPCA"
+                      className="w-18 h-18"
+                    />
+                    <p className="text-gray-700 text-lg max-w-3xl">
+                      As a non-profit organization, our purpose is to bring together & educate the local tech community about the cloud and support our local community through charity.
+                    </p>
+                  </div>
                 </div>
               </div>
             </div>
