@@ -1,14 +1,24 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
 
 export default function Header() {
     const [isMenuOpen, setIsMenuOpen] = useState(false)
+    const [hasScrolled, setHasScrolled] = useState(false)
+
+    useEffect(() => {
+        const handleScroll = () => {
+            setHasScrolled(window.scrollY > 0)
+        }
+
+        window.addEventListener('scroll', handleScroll)
+        return () => window.removeEventListener('scroll', handleScroll)
+    }, [])
 
     return (
-        <header className="bg-white sticky top-0 z-50 flex justify-center">
+        <header className={`bg-white sticky top-0 z-50 flex justify-center transition-shadow duration-300 ${hasScrolled ? 'shadow-md' : ''}`}>
             <div className="w-[95%]">
-                <nav className="flex items-center justify-between h-20 sm:h-24 md:h-28 lg:h-[115px]">
+                <nav className={`flex items-center justify-between transition-all duration-300 ${hasScrolled ? 'h-16 sm:h-18 md:h-20 lg:h-[80px]' : 'h-20 sm:h-24 md:h-28 lg:h-[115px]'}`}>
                     {/* Spacer for mobile centering */}
                     <div className="md:hidden w-10"></div>
                     
@@ -18,7 +28,7 @@ export default function Header() {
                             alt="AWS Community Day Vancouver" 
                             width={431} 
                             height={49}
-                            className="h-8 sm:h-10 md:h-11 lg:h-12 w-auto"
+                            className={`w-auto transition-all duration-300 ${hasScrolled ? 'h-6 sm:h-8 md:h-9 lg:h-10' : 'h-8 sm:h-10 md:h-11 lg:h-12'}`}
                         />
                     </Link>
                     
@@ -59,7 +69,7 @@ export default function Header() {
             </div>
 
             {/* Mobile Menu Overlay */}
-            <div className={`md:hidden fixed top-20 sm:top-24 left-0 right-0 bottom-0 z-40 ${isMenuOpen ? 'block' : 'hidden'}`}>
+            <div className={`md:hidden fixed left-0 right-0 bottom-0 z-40 transition-all duration-300 ${isMenuOpen ? 'block' : 'hidden'} ${hasScrolled ? 'top-16 sm:top-18' : 'top-20 sm:top-24'}`}>
                 {/* Backdrop */}
                 <div 
                     className="absolute inset-0 bg-black bg-opacity-50" 

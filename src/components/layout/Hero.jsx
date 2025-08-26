@@ -39,7 +39,7 @@ export default function Hero() {
         {/* More Details */}
         <div className="absolute bottom-1 md:bottom-2 lg:bottom-3 left-1/2 -translate-x-1/2 z-30">
           <p className="text-text-primary text-base md:text-xl lg:text-[24px] font-heroRegular font-normal leading-tight tracking-normal">
-            MORE DETAILS BELOW <span className="inline-block animate-bounce-arrow">↓</span>
+            MORE DETAILS BELOW <span className="inline-block animate-bounce-arrow -translate-y-0.5">↓</span>
           </p>
         </div>
       </div>
