@@ -48,7 +48,7 @@ export default function Activities() {
         >
             <div className="container px-4 md:px-6 m-auto max-w-6xl">
                 <div className="text-center mb-12 md:mb-16">
-                    <h2 className="text-[48px] font-heroDate font-extrabold leading-none text-text-primary mb-4">
+                    <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-[48px] font-heroDate font-extrabold leading-none text-text-primary mb-4">
                         2025 AWS COMMUNITY DAY<br/>
                         EVENT ACTIVITIES
                     </h2>
@@ -63,7 +63,7 @@ export default function Activities() {
                                     {/* Left content for even indexes */}
                                     {index % 2 === 0 ? (
                                         <div className="text-right pr-12">
-                                            <h3 className="text-[32px] font-heading font-extrabold mb-2" style={{ color: activity.color }}>
+                                            <h3 className="text-xl md:text-2xl lg:text-3xl xl:text-[32px] font-heading font-extrabold mb-2" style={{ color: activity.color }}>
                                                 {activity.title}
                                             </h3>
                                             <p className="text-gray-600">
@@ -94,7 +94,7 @@ export default function Activities() {
                                     {/* Right content for odd indexes */}
                                     {index % 2 !== 0 ? (
                                         <div className="text-left pl-12">
-                                            <h3 className="text-[32px] font-heading font-extrabold mb-2" style={{ color: activity.color }}>
+                                            <h3 className="text-xl md:text-2xl lg:text-3xl xl:text-[32px] font-heading font-extrabold mb-2" style={{ color: activity.color }}>
                                                 {activity.title}
                                             </h3>
                                             <p className="text-gray-600">
@@ -129,7 +129,7 @@ export default function Activities() {
                                     </div>
                                 </div>
                                 <div className="flex-1">
-                                    <h3 className="text-[32px] font-heading font-extrabold mb-1" style={{ color: activity.color }}>
+                                    <h3 className="text-lg sm:text-xl md:text-2xl font-heading font-extrabold mb-1" style={{ color: activity.color }}>
                                         {activity.title}
                                     </h3>
                                     <p className="text-gray-600 text-sm">

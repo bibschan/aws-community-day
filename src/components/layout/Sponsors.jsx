@@ -18,7 +18,7 @@ export default function Sponsors() {
         <div className="flex flex-col items-center justify-center space-y-4 text-center">
           <div className="relative">
             <div className="relative space-y-2 z-10">
-              <h3 className="text-[48px] font-heroDate font-extrabold leading-none text-text-primary">
+              <h3 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-[48px] font-heroDate font-extrabold leading-none text-text-primary">
                 {AWS_EVENT_CONFIG?.sections?.sponsors?.title?.toUpperCase() ?? "SPONSORS"}
               </h3>
 
