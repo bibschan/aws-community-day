@@ -2,9 +2,9 @@ import HeroClouds from './HeroClouds';
 
 export default function Hero() {
   return (
-    <section className="relative min-h-[80vh] md:min-h-screen flex flex-col items-center justify-center text-center overflow-hidden">
+    <section className="relative md:min-h-[80vh] flex flex-col items-center justify-center text-center overflow-hidden">
       {/* Content */}
-      <div className="h-[70vh] md:h-[85vh] lg:min-h-[900px] w-[95%] rounded-3xl pt-0 md:pt-[5vh] lg:pt-[10vh] relative overflow-hidden" style={{backgroundColor: '#BCDAFE'}}>
+      <div className="h-[70vh] md:h-[80vh] lg:min-h-[900px] w-[95%] rounded-3xl pt-0 md:pt-[5vh] lg:pt-[10vh] relative overflow-hidden" style={{backgroundColor: '#BCDAFE'}}>
         
         <HeroClouds />
 
