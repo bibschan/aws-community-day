@@ -29,7 +29,7 @@ export function InstagramCarousel() {
   ];
 
   return (
-    <div className="w-full max-w-5xl mx-auto px-4 md:py-6 py-4">
+    <div className="w-full max-w-4xl mx-auto px-8 md:py-6 py-4">
       <div className="relative">
         <Carousel
           className="w-full"
@@ -63,20 +63,7 @@ export function InstagramCarousel() {
           <CarouselPrevious className="absolute lg:-left-12 md:-left-8 -left-6 top-1/2 transform -translate-y-1/2 bg-primary/90 hover:bg-primary text-white border-none" />
           <CarouselNext className="absolute lg:-right-12  md:-right-8 -right-6 top-1/2 transform -translate-y-1/2 bg-primary/90 hover:bg-primary text-white border-none" />
         </Carousel>
-        <div className="text-center mt-3">
-          <p className="text-md text-muted-foreground">
-            click&nbsp;
-            <Link
-              href="https://www.instagram.com/canadiancloudninja/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="font-medium text-primary underline"
-            >
-              here
-            </Link>
-            &nbsp;for more photos from the day
-          </p>
-        </div>
+
       </div>
     </div>
   );
