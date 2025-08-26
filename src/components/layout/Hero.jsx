@@ -2,14 +2,14 @@ export default function Hero() {
   return (
     <section className="relative min-h-screen flex flex-col items-center justify-center text-center overflow-hidden">
       {/* Content */}
-      <div className="h-[95vh] min-h-[600px] w-[95%] bg-blue-200 rounded-3xl pt-[10vh] relative">
+      <div className="h-[95vh] lg:min-h-[900px] w-[95%] bg-blue-200 rounded-3xl pt-[10vh] relative">
         {/* Moving clouds */}
         <div className="absolute inset-0 overflow-hidden rounded-3xl">
-          <img src="/background/cloud-3.svg" alt="Cloud" className="absolute top-[60%] left-[5%] h-[80px] w-auto opacity-80 animate-slide-1" />
-          <img src="/background/cloud-3.svg" alt="Cloud" className="absolute top-[55%] left-[25%] h-[70px] w-auto opacity-70 animate-slide-2" />
-          <img src="/background/cloud-3.svg" alt="Cloud" className="absolute top-[45%] left-[45%] h-[60px] w-auto opacity-85 animate-slide-1" />
-          <img src="/background/cloud-3.svg" alt="Cloud" className="absolute top-[50%] left-[85%] h-[70px] w-auto opacity-65 animate-slide-1" />
-          <img src="/background/cloud-3.svg" alt="Cloud" className="absolute top-[65%] left-[65%] h-[80px] w-auto opacity-75 animate-slide-2" />
+          <img src="/background/cloud-3.svg" alt="Cloud" className="absolute top-[60%] left-[5%] h-[100px] w-auto animate-slide-1" />
+          <img src="/background/cloud-3.svg" alt="Cloud" className="absolute top-[55%] left-[25%] h-[100px] w-auto animate-slide-2" />
+          <img src="/background/cloud-3.svg" alt="Cloud" className="absolute top-[75%] left-[45%] h-[100px] w-auto animate-slide-1" />
+          <img src="/background/cloud-3.svg" alt="Cloud" className="absolute top-[50%] left-[50%] h-[100px] w-auto animate-slide-1" />
+          <img src="/background/cloud-3.svg" alt="Cloud" className="absolute top-[65%] left-[65%] h-[100px] w-auto animate-slide-2" />
         </div>
 
         {/* City background (behind cloud) */}
