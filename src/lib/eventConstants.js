@@ -196,7 +196,7 @@ export const AWS_EVENT_CONFIG = {
                     href: "https://tally.so/r/mR6zPQ",
                     external: true,
                 },
-                { name: "FAQ", href: "#", external: false },
+                // { name: "FAQ", href: "#", external: false },
             ],
             policies: [
                                 {
