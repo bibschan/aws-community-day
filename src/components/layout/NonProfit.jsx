@@ -49,7 +49,7 @@ export default function NonProfit() {
         <img 
           src="/hero/bottom-cloud.svg" 
           alt="Bottom cloud" 
-          className="w-full h-48 object-cover" 
+          className="w-full xl:h-auto h-48 object-cover" 
         />
       </div>
     </section>
