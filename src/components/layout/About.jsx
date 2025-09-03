@@ -48,7 +48,7 @@ export default function About() {
         <div className='flex flex-col items-center'>
           <h4 className='font-bold uppercase'>{AWS_EVENT_CONFIG.sections.about.motto}</h4>
           <p className='mb-4'>{AWS_EVENT_CONFIG.sections.about.cta.descrp}</p>
-          <Button className="bg-gray-700 hover:bg-[#FF9900]">{AWS_EVENT_CONFIG.sections.about.cta.button}</Button>
+          <a href="#sponsors" className="h-10 px-4 py-2 rounded text-primary-foreground text-white bg-gray-700 hover:bg-[#FF9900]" >{AWS_EVENT_CONFIG.sections.about.cta.button}</a>
 
         </div>
       </div>
