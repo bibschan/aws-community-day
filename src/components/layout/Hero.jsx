@@ -1,11 +1,23 @@
+
 import HeroClouds from './HeroClouds';
+import React, { useEffect } from 'react'
+import { AWS_EVENT_CONFIG } from '@/lib/eventConstants'
 
 export default function Hero() {
+  useEffect(() => {
+    // Load Tally script once
+    const script = document.createElement("script");
+    script.src = "https://tally.so/widgets/embed.js";
+    script.async = true;
+    document.body.appendChild(script);
+  }, []);
+
+
   return (
     <section className="relative md:min-h-[80vh] flex flex-col items-center justify-center text-center overflow-hidden">
       {/* Content */}
-      <div className="h-[70vh] md:h-[80vh] lg:min-h-[900px] w-[95%] rounded-3xl pt-0 md:pt-[5vh] lg:pt-[10vh] relative overflow-hidden" style={{backgroundColor: '#BCDAFE'}}>
-        
+      <div className="h-[70vh] md:h-[80vh] lg:min-h-[900px] w-[95%] rounded-3xl pt-0 md:pt-[5vh] lg:pt-[10vh] relative overflow-hidden" style={{ backgroundColor: '#BCDAFE' }}>
+
         <HeroClouds />
 
         <div className="relative z-20 px-1 max-w-8xl mx-auto pt-4 md:pt-8 pb-6">
@@ -26,12 +38,22 @@ export default function Hero() {
 
           {/* Buttons */}
           <div className="flex flex-col sm:flex-row gap-3 justify-center items-center mb-6">
-            <button className="bg-[#FF9900] hover:bg-[#E88800] text-white px-3 py-2 md:p-4 rounded-md font-heroDate font-extrabold text-sm md:text-[16px] leading-tight transition-colors">
+            <button
+              data-tally-open={AWS_EVENT_CONFIG.links.speakersApplicationCode}
+              data-tally-width="800"
+              data-tally-layout="modal"
+              className="bg-[#FF9900] hover:bg-[#E88800] text-white text-text-primary px-3 py-2 md:p-4 rounded-md font-heroDate font-extrabold text-sm md:text-[16px] leading-tight transition-colors inline-block text-center"
+            >
               Apply to be a Speaker
             </button>
-            <button className="bg-white hover:bg-gray-100 text-text-primary px-3 py-2 md:p-4 rounded-md font-heroDate font-extrabold text-sm md:text-[16px] leading-tight transition-colors">
+            <a
+              href="https://lu.ma/kw8u2byz"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="bg-white hover:bg-gray-100 text-text-primary px-3 py-2 md:p-4 rounded-md font-heroDate font-extrabold text-sm md:text-[16px] leading-tight transition-colors inline-block text-center"
+            >
               Get Earlybird Tickets
-            </button>
+            </a>
           </div>
 
         </div>

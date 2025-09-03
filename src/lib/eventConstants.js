@@ -17,7 +17,9 @@ export const AWS_EVENT_CONFIG = {
     slogan: "By the community, for the community",
     links: {
         tickets: "https://lu.ma/kw8u2byz",
+        ticketsCode: "kw8u2byz",
         speakersApplication: "https://tally.so/r/mVBZYy",
+        speakersApplicationCode: "mVBZYy",
         volunteerApplication: "https://tally.so/r/waPdMy",
         sponsors: "https://tally.so/r/mR6zPQ",
         awsUserGroup: "https://www.awsusergroups.com/",

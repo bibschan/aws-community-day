@@ -41,7 +41,7 @@ export default function Home() {
     <div className="">
       <Header />
       <Hero />
-      <main className="flex-1 bg-[#87CEEB] -z-10" id="speakers">
+      <main className="flex-1 bg-[#87CEEB] -z-10">
         <About />
         <Activities />
         <Speakers width={width} />
