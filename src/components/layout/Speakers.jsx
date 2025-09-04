@@ -17,7 +17,7 @@ export default function Speakers(width) {
     return (
         <section className="w-full p-8 md:p-24 relative overflow-hidden bg-white" id='speakers'>
             <div className="container px-4 md:px-6 m-auto h-full relative">
-                <div className='flex flex-col md:flex-row gap-4 rounded-2xl border-2 border-dashed py-10 px-6'>
+                <div className='flex flex-col md:flex-row gap-4 rounded-2xl border-2 border-dashed py-10 px-6 mx-auto px-auto '>
                     <div className='w-1/3 md:w-auto mx-auto max-w-40 '>
                         <Image
                             src='./speakers/speakers-icon.svg'
@@ -27,7 +27,7 @@ export default function Speakers(width) {
 
                         />
                     </div>
-                    <div className="flex flex-col gap-2 place-content-evenly text-center">
+                    <div className="flex flex-col gap-2 place-content-evenly text-center max-w-5xl">
                         <h2 className="text-left text-3xl md:text-4xl font-bold tracking-tighter uppercase text-[#DD344C]">
                             {AWS_EVENT_CONFIG.sections.speakers.title}
                         </h2>

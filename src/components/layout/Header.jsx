@@ -100,11 +100,14 @@ export default function Header() {
                 <div className="absolute top-0 left-0 right-0 bg-white">
                     <div className="flex flex-col space-y-4 py-4">
                         <a
-                            href="#speakers"
+                            href="/past-events/2024/"
+
+                            target="_blank"
+                            rel="noopener noreferrer"
                             className="text-[16px] text-text-primary hover:text-text-primary font-heroDate font-extrabold px-4"
                             onClick={() => setIsMenuOpen(false)}
                         >
-                            Speakers
+                            2024 Recap
                         </a>
                         <a
                             href="#activities"
@@ -114,11 +117,11 @@ export default function Header() {
                             Activities
                         </a>
                         <a
-                            href="#about"
+                            href={AWS_EVENT_CONFIG.links.tickets} target='_blank'
                             className="text-[16px] text-text-primary hover:text-text-primary font-heroDate font-extrabold px-4"
                             onClick={() => setIsMenuOpen(false)}
                         >
-                            About
+                            Get Earlybird Tickets
                         </a>
                         <a
                             href="#sponsors"
