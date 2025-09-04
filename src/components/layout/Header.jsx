@@ -48,14 +48,18 @@ export default function Header() {
 
                     {/* Desktop Menu */}
                     <div className="hidden nav:flex items-center gap-2 md:gap-3 lg:gap-6 xl:gap-8 2xl:gap-12">
-                        <a href="#speakers" className="text-sm md:text-xs lg:text-sm xl:text-base 2xl:text-[16px] text-text-primary hover:text-text-primary font-heroDate font-extrabold whitespace-nowrap">
-                            Speakers
+                        <a href="/past-events/2024/"
+                            className="text-sm md:text-xs lg:text-sm xl:text-base 2xl:text-[16px] text-text-primary hover:text-text-primary font-heroDate font-extrabold whitespace-nowrap"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            2024 Recap
                         </a>
                         <a href="#activities" className="text-sm md:text-xs lg:text-sm xl:text-base 2xl:text-[16px] text-text-primary hover:text-text-primary font-heroDate font-extrabold whitespace-nowrap">
                             Activities
                         </a>
-                        <a href="#about" className="text-sm md:text-xs lg:text-sm xl:text-base 2xl:text-[16px] text-text-primary hover:text-text-primary font-heroDate font-extrabold whitespace-nowrap">
-                            About
+                        <a href={AWS_EVENT_CONFIG.links.tickets} target='_blank' className="text-sm md:text-xs lg:text-sm xl:text-base 2xl:text-[16px] text-text-primary hover:text-text-primary font-heroDate font-extrabold whitespace-nowrap">
+                            Get Earlybird Tickets
                         </a>
                         <a href="#sponsors" className="text-sm md:text-xs lg:text-sm xl:text-base 2xl:text-[16px] text-text-primary hover:text-text-primary font-heroDate font-extrabold whitespace-nowrap">
                             Our Sponsors
