@@ -56,8 +56,9 @@ export const AWS_EVENT_CONFIG = {
             cta:
             {
                 type: "phase1",
-                descrp: "Interested in sponsoring AWS Community Day",
-                button: "Learn More about Sponsoring"
+                descrp: "Interested in volunteering for AWS Community Day",
+                button: "Learn More about Volunteer Opportunities",
+                link:"https://tally.so/r/waPdMy"
             },
         },
         sponsors: {
@@ -98,14 +99,14 @@ export const AWS_EVENT_CONFIG = {
             title: "Join Our Community",
         },
         speakers: {
-            title: "Call for Speakers",
+            title: "Our Event Speakers",
             description: "Share your expertise with our community",
             content:
-                "We're excited to announce that our Call for Speakers is now open! AWS Community Day is looking for passionate speakers to share their knowledge and experiences with our community. We'd love to hear your story!",
+                "Hear from top AWS experts and industry leaders",
             cta:
             {
-                type: "phase1",
-                button: "Apply to be a Speaker"
+                type: "phase2",
+                button: "See All Speakers"
             },
         },
         volunteers: {

@@ -3,6 +3,7 @@
 import React, { useEffect, useRef } from "react";
 import { SPONSORS } from "@/lib/sponsorsConstants";
 import { AWS_EVENT_CONFIG } from "@/lib/eventConstants";
+import { Button } from "../ui/button";
 
 export default function Sponsors() {
   const titleRef = useRef(null);
@@ -31,7 +32,7 @@ export default function Sponsors() {
     return () => observer.disconnect();
   }, []);
   // Filter sponsors by type
-  const mainSponsor = SPONSORS.find((sponsor) => sponsor.type === "Primary");
+  const goldSponsors = SPONSORS.filter((sponsor) => sponsor.type === "Gold");
   const silverSponsors = SPONSORS.filter((sponsor) => sponsor.type === "Silver");
   const bronzeSponsors = SPONSORS.filter(
     (sponsor) => sponsor.type === "Bronze"
@@ -43,9 +44,9 @@ export default function Sponsors() {
         <div className="flex flex-col items-center justify-center space-y-4 text-center">
           <div className="relative">
             <div className="relative space-y-2 z-10">
-              <h3 
+              <h3
                 ref={titleRef}
-                className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-[48px] font-heroDate font-extrabold leading-none text-text-primary opacity-0 translate-y-8 transition-all duration-700 ease-out"
+                className="text-center text-3xl md:text-4xl lg:text-5xl xl:text-[48px] font-heroDate font-extrabold leading-none text-text-primary opacity-0 translate-y-8 transition-all duration-700 ease-out"
               >
                 {AWS_EVENT_CONFIG?.sections?.sponsors?.title?.toUpperCase() ?? "SPONSORS"}
               </h3>
@@ -53,42 +54,44 @@ export default function Sponsors() {
               {/* Sponsor Content */}
               <div className="mx-auto max-w-5xl pt-12 sm:px-0">
                 {/* Main Sponsor */}
-                <div 
+                <div
                   ref={mainSponsorRef}
-                  className="grid grid-cols-1 justify-items-center gap-6 mb-6 opacity-0 translate-y-8 transition-all duration-700 ease-out"
+                  className="grid grid-cols-1  justify-items-center gap-6 mb-6 opacity-0 translate-y-8 transition-all duration-700 ease-out"
                 >
-                  <div className="rounded-lg p-4 col-span-1">
-                    <div className="overflow-hidden rounded-lg">
-                      <a
-                        href={mainSponsor?.website}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                      >
-                        <img
-                          src={mainSponsor?.imgSrc}
-                          alt={mainSponsor?.alt}
-                          className="mx-auto object-contain w-full h-auto max-w-[300px] sm:max-w-[500px]"
-                          style={{
-                            objectFit: "contain",
-                            height: "250px",
-                            width: "500px",
-                            paddingBottom: "20px",
-                          }}
-                        />
-                      </a>
-                      <div className="mt-4 text-center">
-                        <span className="text-muted-foreground text-xl">
-                          {mainSponsor?.type} Partner
-                        </span>
+                  {goldSponsors.map((sponsor, index) => (
+                    <div key={sponsor.name || index} className="rounded-lg p-4 col-span-1">
+                      <div className="overflow-hidden rounded-lg">
+                        <a
+                          href={sponsor?.website}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
+                          <img
+                            src={sponsor?.imgSrc}
+                            alt={sponsor?.alt}
+                            className="mx-auto object-contain w-full h-auto max-w-[300px] sm:max-w-[500px]"
+                            style={{
+                              objectFit: "contain",
+                              height: "250px",
+                              width: "500px",
+                              paddingBottom: "20px",
+                            }}
+                          />
+                        </a>
+                        <div className="mt-4 text-center">
+                          <span className="text-muted-foreground text-xl">
+                            {sponsor?.type} Partner
+                          </span>
+                        </div>
                       </div>
                     </div>
-                  </div>
+                  ))}
                 </div>
 
                 {/* Silver Sponsors */}
-                <div 
+                <div
                   ref={silverSponsorsRef}
-                  className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 justify-items-center gap-2 sm:gap-1 mb-6 w-full sm:w-fit mx-auto opacity-0 translate-y-8 transition-all duration-700 ease-out"
+                  className="grid grid-cols-2 lg:grid-cols-2 justify-items-center gap-2 sm:gap-1 mb-6 w-full sm:w-fit mx-auto opacity-0 translate-y-8 transition-all duration-700 ease-out"
                 >
                   {silverSponsors?.map((sponsor, index) => (
                     <div key={index} className="rounded-lg p-4 col-span-1 w-min">
@@ -102,19 +105,18 @@ export default function Sponsors() {
                             <img
                               src={sponsor.imgSrc}
                               alt={sponsor.alt}
-                              className={`mx-auto object-contain w-full h-auto max-w-[220px] sm:max-w-[500px] ${
-                                sponsor.name === "Atono" ? "p-5" : ""
-                              }`}
+                              className={`mx-auto object-contain w-full h-auto max-w-[220px] sm:max-w-[500px] ${sponsor.name === "Atono" ? "p-5" : ""
+                                }`}
                               style={{
                                 objectFit: "contain",
-                                height: "200px",
-                                width: "500px",
+                                height: "150px",
+                                width: "300px",
                               }}
                             />
                           </span>
                         </a>
                         <div className="mt-4 text-center">
-                          <span className="text-muted-foreground text-xl">
+                          <span className="text-muted-foreground text-lg">
                             {sponsor.type} Partner
                           </span>
                         </div>
@@ -124,7 +126,7 @@ export default function Sponsors() {
                 </div>
 
                 {/* Bronze Sponsors */}
-                <div 
+                <div
                   ref={bronzeSponsorsRef}
                   className="grid grid-cols-2 justify-items-center gap-0 opacity-0 translate-y-8 transition-all duration-700 ease-out"
                 >
@@ -139,9 +141,8 @@ export default function Sponsors() {
                           <img
                             src={sponsor.imgSrc}
                             alt={sponsor.alt}
-                            className={`mx-auto object-contain w-full h-auto max-w-[140px] sm:max-w-[200px] ${
-                              sponsor.name === "SUSE" ? "p-5" : ""
-                            }`}
+                            className={`mx-auto object-contain w-full h-auto max-w-[140px] sm:max-w-[200px] ${sponsor.name === "SUSE" ? "p-5" : ""
+                              }`}
                             style={{
                               objectFit: "contain",
                               height: "80px",
@@ -158,12 +159,15 @@ export default function Sponsors() {
                     </div>
                   ))}
                 </div>
-
+              </div>
+              <div className="flex flex-col gap-6 items-center">
+                <h4 className="uppercase text-xl md:text-3xl text-[#333E48]">Interested in sponsoring this event<span className="block">& support our community?</span></h4>
+                <a href="mailto:Info@awsday.ca" className="h-10 px-4 py-2 rounded text-primary-foreground text-white bg-[#333E48] hover:bg-[#FF9900] max-w-64" >Learn About Sponsoring</a>
               </div>
             </div>
           </div>
         </div>
       </div>
-    </section>
+    </section >
   );
 }
