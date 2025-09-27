@@ -1,11 +1,19 @@
 export const SPONSORS = [
     {
         "name": "AWS",
-        "type": "Primary",
-        "alt": "Main Sponsor Video Thumbnail",
+        "type": "Gold",
+        "alt": "Main Sponsor",
         "imgSrc": "/sponsors/aws.png",
         "span": "md:col-span-2 lg:col-span-4",
         "website": "https://aws.amazon.com/"
+    },
+        {
+        "name": "Freshslice Pizza",
+        "type": "Gold",
+        "alt": "Gold Sponsor Freshslice Pizza logo",
+        "imgSrc": "/sponsors/freshslice.png",
+        "span": "md:col-span-2 lg:col-span-4",
+        "website": "https://www.freshslice.com/"
     },
     {
         "name": "BCIT",

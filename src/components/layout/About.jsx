@@ -1,5 +1,5 @@
 import React from 'react'
-import { InstagramCarousel } from '../ui/instagram-carousel'
+
 import { AWS_EVENT_CONFIG } from '@/lib/eventConstants'
 import { Button } from '../ui/button'
 
@@ -19,7 +19,8 @@ export default function About() {
               <p className="max-w-[900px] text-gray-700 align-center text-center  text-lg mb-4 md:mb-12">
                 {AWS_EVENT_CONFIG.sections.about.description}
               </p>
-              <div className="grid grid-cols-1 md:grid-cols-4 gap-8 text-center mb-12">
+              <h3 className='uppercase mb-5'>Last year we had</h3>
+              <div className="grid grid-cols-1 md:grid-cols-4 gap-4 text-center mb-12">
                 {AWS_EVENT_CONFIG.sections.about.facts.map((fact, index) => (
                   <div
                     key={index}
@@ -35,7 +36,7 @@ export default function About() {
             </div>
           </div>
         </div>
-        <div className="w-full flex flex-col items-center mt-0">
+        {/* <div className="w-full flex flex-col items-center mt-0">
           <video
             src="/videos/highlight-video.mp4"
             controls
@@ -43,14 +44,8 @@ export default function About() {
             autoPlay
             className="w-full max-w-[900px] mb-6"
           />
-          <InstagramCarousel />
-        </div>
-        <div className='flex flex-col items-center'>
-          <h4 className='font-bold uppercase'>{AWS_EVENT_CONFIG.sections.about.motto}</h4>
-          <p className='mb-4'>{AWS_EVENT_CONFIG.sections.about.cta.descrp}</p>
-          <a href="#sponsors" className="h-10 px-4 py-2 rounded text-primary-foreground text-white bg-gray-700 hover:bg-[#FF9900]" >{AWS_EVENT_CONFIG.sections.about.cta.button}</a>
 
-        </div>
+        </div> */}
       </div>
     </section >
   )

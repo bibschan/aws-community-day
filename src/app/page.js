@@ -9,6 +9,7 @@ import Sponsors from "@/components/layout/Sponsors";
 import Footer from "@/components/layout/Footer";
 import About from "@/components/layout/About";
 import NonProfit from "@/components/layout/NonProfit";
+import Charity from "@/components/layout/Charity";
 
 
 const useWindowSize = () => {
@@ -41,10 +42,10 @@ export default function Home() {
     <div className="">
       <Header />
       <Hero />
-      <main className="flex-1 bg-[#87CEEB] -z-10">
-        <About />
+      <main className="flex-1 bg-white -z-10">
         <Activities />
-        <Speakers width={width} />
+        <Speakers/>
+        <Charity />
         <Sponsors />
         <NonProfit />
       </main>

@@ -37,6 +37,7 @@ const fontHeroRegular = localFont({
   variable: "--font-hero-regular",
 });
 
+
 export default function Layout({ children }) {
   return (
     <html lang="en">
