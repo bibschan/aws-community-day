@@ -44,7 +44,7 @@ export default function Home() {
       <Hero />
       <main className="flex-1 bg-white -z-10">
         <Activities />
-        <Speakers/>
+        {/* <Speakers/> */}
         <Charity />
         <Sponsors />
         <NonProfit />
