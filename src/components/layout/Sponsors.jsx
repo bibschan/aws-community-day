@@ -72,8 +72,8 @@ export default function Sponsors() {
                             className="mx-auto object-contain w-full h-auto max-w-[300px] sm:max-w-[500px]"
                             style={{
                               objectFit: "contain",
-                              height: "250px",
-                              width: "500px",
+                              height: "200px",
+                              width: "400px",
                               paddingBottom: "20px",
                             }}
                           />
@@ -91,7 +91,7 @@ export default function Sponsors() {
                 {/* Silver Sponsors */}
                 <div
                   ref={silverSponsorsRef}
-                  className="grid grid-cols-2 lg:grid-cols-2 justify-items-center gap-2 sm:gap-1 mb-6 w-full sm:w-fit mx-auto opacity-0 translate-y-8 transition-all duration-700 ease-out"
+                  className="grid grid-cols-2 lg:grid-cols-2 justify-items-center gap-0 sm:gap-1 md:gap-4 mb-6 w-full sm:w-fit mx-auto opacity-0 translate-y-8 transition-all duration-700 ease-out"
                 >
                   {silverSponsors?.map((sponsor, index) => (
                     <div key={index} className="rounded-lg p-4 col-span-1 w-min">
@@ -100,13 +100,13 @@ export default function Sponsors() {
                           href={sponsor.website}
                           target="_blank"
                           rel="noopener noreferrer"
+                          className="w-1/2 md:w-auto"
                         >
                           <span className={sponsor.span}>
                             <img
                               src={sponsor.imgSrc}
                               alt={sponsor.alt}
-                              className={`mx-auto object-contain w-full h-auto max-w-[220px] sm:max-w-[500px] ${sponsor.name === "Atono" ? "p-5" : ""
-                                }`}
+                              className={`mx-auto object-contain h-auto max-w-[320px] sm:max-w-[100px] w-1/2 md:w-full`}
                               style={{
                                 objectFit: "contain",
                                 height: "150px",
