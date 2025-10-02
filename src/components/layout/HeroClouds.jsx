@@ -75,14 +75,14 @@ export default function HeroClouds() {
         ref={cityRef}
         src="/hero/hero-city.png"
         alt="City skyline"
-        className="absolute bottom-4 z-10 left-1/2 w-[95%] xs:w-[90%] sm:w-[85%] md:w-[75%] lg:w-[65%] xl:w-[60%]"
+        className="absolute bottom-4 z-10 left-1/2 -translate-x-1/2 w-[95%] xs:w-[90%] sm:w-[85%] md:w-[75%] lg:w-[65%] xl:w-[60%]"
       />
 
       {/* Bottom cloud - NO parallax */}
       <img
         src="/hero/bottom-cloud.svg"
         alt="Bottom cloud"
-        className="absolute bottom-2 translate-y-1/2 z-10 w-[110%] xs:w-[105%] sm:w-[100%] md:w-[95%] lg:w-[85%] xl:w-[80%] left-1/2 -translate-x-1/2"
+        className="absolute bottom-2 translate-y-1/2 z-10 w-[100%] xs:w-[100%] sm:w-[100%] md:w-[95%] lg:w-[85%] xl:w-[80%] left-1/2 -translate-x-1/2"
       />
     </>
   );

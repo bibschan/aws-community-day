@@ -83,7 +83,7 @@ export default function Header() {
             </div>
 
             {/* Mobile Menu Overlay */}
-            <div className={`nav:hidden fixed left-0 right-0 bottom-0 z-40 transition-all duration-300 ${isMenuOpen ? 'block' : 'hidden'} ${hasScrolled ? 'top-16 sm:top-18' : 'top-20 sm:top-24'}`}>
+            <div className={`nav:hidden fixed inset-x-0 bottom-0 z-40 w-screen overflow-hidden transition-all duration-300 ${isMenuOpen ? 'block' : 'hidden'} ${hasScrolled ? 'top-16 sm:top-18' : 'top-20 sm:top-24'}`}>
                 {/* Backdrop */}
                 <div
                     className="absolute inset-0 bg-black bg-opacity-50"
@@ -91,39 +91,39 @@ export default function Header() {
                 ></div>
 
                 {/* Menu Content */}
-                <div className="absolute top-0 left-0 right-0 bg-white">
-                    <div className="flex flex-col space-y-4 py-4">
+                <div className="absolute top-0 inset-x-0 bg-white z-50 w-full overflow-hidden">
+                    <div className="flex flex-col space-y-3 py-4 px-6 w-full box-border">
                         <Link
                             href="#about"
-                            className="text-[16px] text-text-primary hover:text-text-primary font-heroDate font-extrabold px-4"
+                            className="text-sm text-text-primary hover:text-text-primary font-heroDate font-extrabold"
                             onClick={() => setIsMenuOpen(false)}
                         >
                             About Event
                         </Link>
                         <a
                             href="#activities"
-                            className="text-[16px] text-text-primary hover:text-text-primary font-heroDate font-extrabold px-4"
+                            className="text-sm text-text-primary hover:text-text-primary font-heroDate font-extrabold"
                             onClick={() => setIsMenuOpen(false)}
                         >
                             Activities
                         </a>
                         {/* <Link
                             href="/speakers"
-                            className="text-[16px] text-text-primary hover:text-text-primary font-heroDate font-extrabold px-4"
+                            className="text-sm text-text-primary hover:text-text-primary font-heroDate font-extrabold"
                             onClick={() => setIsMenuOpen(false)}
                         >
                             Speakers
                         </Link> */}
                         <a
                             href="#sponsors"
-                            className="text-[16px] text-text-primary hover:text-text-primary font-heroDate font-extrabold px-4"
+                            className="text-sm text-text-primary hover:text-text-primary font-heroDate font-extrabold"
                             onClick={() => setIsMenuOpen(false)}
                         >
                             Our Sponsors
                         </a>
                         <a
                             href={AWS_EVENT_CONFIG.links.tickets} target='_blank'
-                            className="mx-2 bg-[#FF9900] hover:bg-[#E88800] text-white text-sm md:text-xs lg:text-sm xl:text-base 2xl:text-[16px] font-heroDate font-extrabold px-4 sm:mx-4 md:mx-0 py-1.5 md:px-3 md:py-2 lg:px-4 lg:py-2.5 xl:px-5 xl:py-3 rounded-lg transition-colors whitespace-nowrap"
+                            className="bg-[#FF9900] hover:bg-[#E88800] text-white text-sm font-heroDate font-extrabold px-4 py-2 rounded-lg transition-colors text-center block"
                             onClick={() => setIsMenuOpen(false)}
                         >
                             Get Earlybird Tickets
