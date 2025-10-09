@@ -38,21 +38,16 @@ export default function Hero() {
 
           {/* Buttons */}
           <div className="flex flex-col sm:flex-row gap-3 justify-center items-center mb-6">
-            <button
-              data-tally-open={AWS_EVENT_CONFIG.links.speakersApplicationCode}
-              data-tally-width="800"
-              data-tally-layout="modal"
-              className="bg-[#FF9900] hover:bg-[#E88800] text-white text-text-primary px-3 py-2 md:p-4 rounded-md font-heroDate font-extrabold text-sm md:text-[16px] leading-tight transition-colors inline-block text-center"
-            >
-              Apply to be a Speaker
-            </button>
+            <a href={AWS_EVENT_CONFIG.links.tickets} target='_blank'
+              className="bg-[#FF9900] hover:bg-[#E88800] text-white text-sm md:text-xs lg:text-sm xl:text-base 2xl:text-[16px] font-heroDate font-extrabold px-2 py-1.5 md:px-3 md:py-2 lg:px-4 lg:py-2.5 xl:px-5 xl:py-3 rounded-lg transition-colors whitespace-nowrap">
+              Get Earlybird Tickets
+            </a>
             <a
-              href="https://lu.ma/kw8u2byz"
-              target="_blank"
+              href="/about"
               rel="noopener noreferrer"
               className="bg-white hover:bg-gray-100 text-text-primary px-3 py-2 md:p-4 rounded-md font-heroDate font-extrabold text-sm md:text-[16px] leading-tight transition-colors inline-block text-center"
             >
-              Get Earlybird Tickets
+              See Event Details
             </a>
           </div>
 

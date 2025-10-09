@@ -45,12 +45,12 @@ export default function Header() {
                     {/* Desktop Menu */}
                     <div className="hidden nav:flex items-center gap-2 md:gap-3 lg:gap-6 xl:gap-8 2xl:gap-12">
                         <Link
-                            href="#about"
+                            href="/#about"
                             className="text-sm md:text-xs lg:text-sm xl:text-base 2xl:text-[16px] text-text-primary hover:text-text-primary font-heroDate font-extrabold whitespace-nowrap"
                         >
                             About Event
                         </Link>
-                        <a href="#activities" className="text-sm md:text-xs lg:text-sm xl:text-base 2xl:text-[16px] text-text-primary hover:text-text-primary font-heroDate font-extrabold whitespace-nowrap">
+                        <a href="/#activities" className="text-sm md:text-xs lg:text-sm xl:text-base 2xl:text-[16px] text-text-primary hover:text-text-primary font-heroDate font-extrabold whitespace-nowrap">
                             Activities
                         </a>
                         {/* <Link
@@ -59,7 +59,7 @@ export default function Header() {
                         >
                             Speakers
                         </Link> */}
-                        <a href="#sponsors" className="text-sm md:text-xs lg:text-sm xl:text-base 2xl:text-[16px] text-text-primary hover:text-text-primary font-heroDate font-extrabold whitespace-nowrap">
+                        <a href="/#sponsors" className="text-sm md:text-xs lg:text-sm xl:text-base 2xl:text-[16px] text-text-primary hover:text-text-primary font-heroDate font-extrabold whitespace-nowrap">
                             Our Sponsors
                         </a>
                         <a href={AWS_EVENT_CONFIG.links.tickets} target='_blank'
@@ -94,14 +94,14 @@ export default function Header() {
                 <div className="absolute top-0 inset-x-0 bg-white z-50 w-full overflow-hidden">
                     <div className="flex flex-col space-y-3 py-4 px-6 w-full box-border">
                         <Link
-                            href="#about"
+                            href="/#about"
                             className="text-sm text-text-primary hover:text-text-primary font-heroDate font-extrabold"
                             onClick={() => setIsMenuOpen(false)}
                         >
                             About Event
                         </Link>
                         <a
-                            href="#activities"
+                            href="/#activities"
                             className="text-sm text-text-primary hover:text-text-primary font-heroDate font-extrabold"
                             onClick={() => setIsMenuOpen(false)}
                         >
@@ -115,7 +115,7 @@ export default function Header() {
                             Speakers
                         </Link> */}
                         <a
-                            href="#sponsors"
+                            href="/#sponsors"
                             className="text-sm text-text-primary hover:text-text-primary font-heroDate font-extrabold"
                             onClick={() => setIsMenuOpen(false)}
                         >
