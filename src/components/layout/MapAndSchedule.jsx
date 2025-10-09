@@ -112,7 +112,7 @@ export default function MapAndSchedule() {
                 </div>
 
                 {/* Desktop Layout - Map and Schedule Side by Side */}
-                <div className="hidden md:grid md:grid-cols-3 md:gap-8 mb-12">
+                <div className="container hidden md:grid md:grid-cols-3 md:gap-8 mb-12 mx-auto">
                     {/* Map Section - Takes 2 columns */}
                     <div className="flex flex-col md:col-span-2">
                         <h3 className="text-2xl font-bold text-[#FF9900] mb-4 text-center">Venue Map</h3>
