@@ -97,15 +97,8 @@ export default function SpeakersPage() {
                           </p>
                         </div>
                       </div>
-
-                      {speaker.bio && (
-                        <p className="text-gray-600 mt-4 mb-4 text-sm leading-relaxed">
-                          {speaker.bio}
-                        </p>
-                      )}
-
                       {speaker.talk_title && (
-                        <div className="mt-4 pt-4 border-t border-gray-200">
+                        <div className="mt-4 pt-4 ">
                           <h4 className="text-md font-bold text-[#01A88D] mb-2">
                             Session: {speaker.talk_title}
                           </h4>
@@ -114,6 +107,13 @@ export default function SpeakersPage() {
                           )}
                         </div>
                       )}
+                      {speaker.bio && (
+                        <p className="text-gray-600 mt-4 mb-4 text-sm leading-relaxed border-t  border-gray-200">
+                          {speaker.bio}
+                        </p>
+                      )}
+
+
                     </div>
                   </div>
                 ))}

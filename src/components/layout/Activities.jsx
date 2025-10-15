@@ -39,21 +39,9 @@ export default function Activities() {
         },
         {
             icon: "/activities/activity-icon-2.svg",
-            title: "Panel Talks",
+            title: "Talks",
             description: "Explore real-world cloud stories and insights",
             color: "#C925D1"
-        },
-        {
-            icon: "/activities/activity-icon-3.svg",
-            title: "Builder Workshops",
-            description: "Get hands-on with AWS tools and services",
-            color: "#7AA116"
-        },
-        {
-            icon: "/activities/activity-icon-4.svg",
-            title: "Breakout Tracks",
-            description: "Explore real-world cloud stories and insights",
-            color: "#E7157B"
         },
         {
             icon: "/activities/activity-icon-5.svg",
@@ -79,16 +67,7 @@ export default function Activities() {
                     <h2 className="text-center text-7xl sm:text-3xl md:text-4xl lg:text-[81px] font-extrabold leading-none text-[#333E48] mb-4">Our Event Activities</h2>
                     <p className='text-[#666E76] text-center'>There's a bit of something for everyone!</p>
                 </div>
-                <div className="relative w-full h-0 pb-[56.25%]"> {/* 16:9 aspect ratio */}
-                    <iframe
-                        className="absolute top-0 left-0 w-full h-full"
-                        src="https://www.youtube.com/embed/F3PXdQSDmro"
-                        title="AWS Community Day Vancouver - Message from Jeff Barr"
-                        frameBorder="0"
-                        allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                        allowFullScreen
-                    />
-                </div>
+
             </div>
 
             <About />

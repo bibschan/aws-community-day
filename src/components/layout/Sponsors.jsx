@@ -91,7 +91,7 @@ export default function Sponsors() {
                 {/* Silver Sponsors */}
                 <div
                   ref={silverSponsorsRef}
-                  className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 justify-items-center gap-0 sm:gap-1 md:gap-4 mb-6 w-full sm:w-fit mx-auto opacity-0 translate-y-8 transition-all duration-700 ease-out"
+                  className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 justify-items-center gap-0 sm:gap-1 md:gap-4 mb-6 w-full sm:w-fit mx-auto opacity-0 translate-y-8 transition-all duration-700 ease-out"
                 >
                   {silverSponsors?.map((sponsor, index) => (
                     <div key={index} className="rounded-lg p-4 col-span-1 w-min">

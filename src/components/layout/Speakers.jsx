@@ -32,15 +32,20 @@ export default function Speakers(width) {
                 </div>
 
                 <div className='max-w-2xl mx-auto flex flex-col md:flex-row justify-center items-center gap-4 md:gap-20'>
-                    <img src='/speakers/jeffBarr.svg' alt='image of Jeff Barr with blue outline' />
+                    <div className="w-40 md:w-1/2 h-auto rounded-full border-4 border-[#01A88D] p-1 bg-white">
+                        <div className="w-full h-full rounded-full bg-gray-200 overflow-hidden">
+                            <img src='/speakers/usmanKhalid.jpeg' alt='image of Usman Khalid ' className='' />
+                        </div>
+
+                    </div>
                     <div className='text-center'>
-                        <h3 className='text-4xl '>Jeff Bar</h3>
-                        <p className='italic text-lg font-thin'>VP & Chief Evangelist at AWS</p>
+                        <h3 className='text-4xl '>Usman Khalid</h3>
+                        <p className='italic text-lg font-thin'>General Manager, Amazon Web Services (AWS)</p>
                         <p className='text-sm font-semibold italic'>Keynote Speaker</p>
                     </div>
                 </div>
 
-                <div className="grid grid-cols-2 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
+                <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
                     {SPEAKERS.filter(speaker => speaker.tag === 'featured' || speaker.tag === 'speaker').slice(0, 3).map((speaker, index) => (
                         <SpeakerCard key={speaker.id || index} speaker={speaker} />
                     ))}

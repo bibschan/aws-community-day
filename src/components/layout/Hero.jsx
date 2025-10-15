@@ -39,8 +39,8 @@ export default function Hero() {
           {/* Buttons */}
           <div className="flex flex-col sm:flex-row gap-3 justify-center items-center mb-6">
             <a href={AWS_EVENT_CONFIG.links.tickets} target='_blank'
-              className="bg-[#FF9900] hover:bg-[#E88800] text-white text-sm md:text-xs lg:text-sm xl:text-base 2xl:text-[16px] font-heroDate font-extrabold px-2 py-1.5 md:px-3 md:py-2 lg:px-4 lg:py-2.5 xl:px-5 xl:py-3 rounded-lg transition-colors whitespace-nowrap">
-              Get Earlybird Tickets
+              className="bg-[#FF9900] hover:bg-[#E88800] text-white text-sm md:text-xs lg:text-sm xl:text-base 2xl:text-[16px] font-heroDate font-extrabold p px-3 py-2 md:p-4 rounded-lg transition-colors whitespace-nowrap">
+              Get Tickets
             </a>
             <a
               href="/about"
