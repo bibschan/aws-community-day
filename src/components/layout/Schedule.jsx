@@ -19,20 +19,6 @@ export default function Schedule({ selectedStageFromMap = null }) {
         return adjustedHours * 60 + minutes
     }
 
-    const calculateEventHeight = (startTime, endTime) => {
-        const startMinutes = timeToMinutes(startTime)
-        const endMinutes = timeToMinutes(endTime)
-        const duration = endMinutes - startMinutes
-        return Math.max(duration / 15 * 20, 40) // 20px per 15 minutes, minimum 40px
-    }
-
-    const calculateEventTop = (startTime) => {
-        const firstEventTime = timeToMinutes("11:00 AM")
-        const currentEventTime = timeToMinutes(startTime)
-        const minutesSinceStart = currentEventTime - firstEventTime
-        return (minutesSinceStart / 15) * 20 + 60 // 20px per 15 minutes, 60px offset for header
-    }
-
     const getStageEvents = (stageId) => {
         return scheduleEvents
             .filter(event => event.stage === stageId)
@@ -41,9 +27,6 @@ export default function Schedule({ selectedStageFromMap = null }) {
 
     const isBreak = (title) => {
         return title.toLowerCase().includes('break') || title.toLowerCase().includes('lunch')
-    }
-    const isLiveStream = (title) => {
-        return title.toLowerCase().includes('live')
     }
 
     return (
@@ -58,8 +41,8 @@ export default function Schedule({ selectedStageFromMap = null }) {
                     </p>
                 </div>
 
-                {/* Mobile Stage Selector */}
-                <div className="md:hidden mb-6">
+                {/* Stage Selector */}
+                <div className="mb-6">
                     <div className="flex overflow-x-auto gap-2 pb-2">
                         {stages.map((stage) => (
                             <button
@@ -76,73 +59,8 @@ export default function Schedule({ selectedStageFromMap = null }) {
                     </div>
                 </div>
 
-                {/* Desktop Grid Layout */}
-                <div className="hidden md:block">
-                    <div className={`grid gap-4 ${selectedStageFromMap ? 'grid-cols-2' : 'grid-cols-6'}`}>
-                        {/* Time Column */}
-                        <div className="col-span-1">
-                            <div className="h-16 flex items-center justify-center font-bold text-[#FF9900] border-b-2 border-gray-700">
-                                Time
-                            </div>
-                            <div className="relative" style={{ height: '800px' }}>
-                                {Array.from({ length: 13 }, (_, i) => {
-                                    const hour = i + 11
-                                    const displayHour = hour > 12 ? hour - 12 : hour
-                                    const period = hour >= 12 ? 'PM' : 'AM'
-                                    return (
-                                        <div
-                                            key={i}
-                                            className="absolute text-sm text-gray-400 font-medium"
-                                            style={{ top: `${i * 60}px` }}
-                                        >
-                                            {displayHour}:00 {period}
-                                        </div>
-                                    )
-                                })}
-                            </div>
-                        </div>
-
-                        {/* Stage Columns */}
-                        {stages
-                            .filter(stage => selectedStageFromMap === null || stage.id === selectedStageFromMap)
-                            .map((stage) => (
-                            <div key={stage.id} className="col-span-1">
-                                <div className="h-16 flex items-center justify-center font-bold text-[#FF9900] border-b-2 border-gray-700 text-center px-2">
-                                    {stage.name}
-                                </div>
-                                <div className="relative" style={{ height: '800px' }}>
-                                    {getStageEvents(stage.id).map((event) => (
-                                        <div
-                                            key={event.id}
-                                            className={`absolute left-1 right-1 py-1 px-2 rounded text-xs transition-colors  ${isBreak(event.title)
-                                                    ? 'bg-gray-600 text-gray-300'
-                                                    : isLiveStream(event.title)
-                                                        ? 'bg-[#01A88D] text-white'
-                                                        : 'bg-[#BCDAFE] text-black '
-                                                }
-                                                `}
-                                            style={{
-                                                top: `${calculateEventTop(event.startTime)}px`,
-                                                height: `${calculateEventHeight(event.startTime, event.endTime)}px`,
-                                            }}
-                                            title={`${event.startTime} - ${event.endTime}\n${event.location}\n${event.notes}`}
-                                        >
-                                            <div className="font-semibold  text-xs leading-tight">
-                                                {event.title}
-                                            </div>
-                                            <div className="text-xs opacity-90">
-                                                {event.startTime} - {event.endTime}
-                                            </div>
-                                        </div>
-                                    ))}
-                                </div>
-                            </div>
-                        ))}
-                    </div>
-                </div>
-
-                {/* Mobile Layout */}
-                <div className="md:hidden">
+                {/* Schedule Layout */}
+                <div>
                     <div className="bg-white rounded-lg overflow-hidden">
                         <div className="bg-[#FF9900] text-white p-4 text-center">
                             <h3 className="font-bold text-lg">{stages.find(s => s.id === activeStage)?.name}</h3>
@@ -165,9 +83,9 @@ export default function Schedule({ selectedStageFromMap = null }) {
                                     <div className="text-xs text-gray-400">
                                         {event.location}
                                     </div>
-                                    {event.notes && (
+                                    {event.talkTitle && (
                                         <div className="text-xs text-gray-500 mt-1">
-                                            {event.notes}
+                                            {event.talkTitle}
                                         </div>
                                     )}
                                 </div>

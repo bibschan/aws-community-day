@@ -19,20 +19,7 @@ export default function About() {
               <p className="max-w-[900px] text-gray-700 align-center text-center  text-lg mb-4 md:mb-12">
                 {AWS_EVENT_CONFIG.sections.about.description}
               </p>
-              <h3 className='uppercase mb-5'>Last year we had</h3>
-              <div className="grid grid-cols-1 md:grid-cols-4 gap-4 text-center mb-12">
-                {AWS_EVENT_CONFIG.sections.about.facts.map((fact, index) => (
-                  <div
-                    key={index}
-                    className="bg-white py-2 md:p-6 rounded-lg border-2 border-dashed border-gray-400"
-                  >
-                    <div className="text-4xl font-bold text-[#FF9900]">
-                      {fact.stat}
-                    </div>
-                    <div className="text-lg text-gray-700">{fact.feature}</div>
-                  </div>
-                ))}
-              </div>
+
             </div>
           </div>
         </div>

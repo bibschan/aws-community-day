@@ -7,14 +7,6 @@ export const SPONSORS = [
         "span": "md:col-span-2 lg:col-span-4",
         "website": "https://aws.amazon.com/"
     },
-        {
-        "name": "Freshslice Pizza",
-        "type": "Gold",
-        "alt": "Gold Sponsor Freshslice Pizza logo",
-        "imgSrc": "/sponsors/freshslice.png",
-        "span": "md:col-span-2 lg:col-span-4",
-        "website": "https://www.freshslice.com/"
-    },
     {
         "name": "BCIT",
         "type": "Silver",
@@ -22,6 +14,23 @@ export const SPONSORS = [
         "imgSrc": "/sponsors/bcit.png",
         "website": "https://www.bcit.ca/"
     },
+
+    {
+        "name": "Couchbase",
+        "type": "Silver",
+        "alt": "Couchbase logo",
+        "imgSrc": "/sponsors/couchbase.png",
+        "website": "http://couchbase.com/"
+    },
+    {
+        "name": "Freshslice Pizza",
+        "type": "Silver",
+        "alt": "Silver Sponsor Freshslice Pizza logo",
+        "imgSrc": "/sponsors/freshslice.png",
+        "span": "md:col-span-2 lg:col-span-4",
+        "website": "https://www.freshslice.com/"
+    },
+
     {
         "name": "GREYDATA",
         "type": "Silver",

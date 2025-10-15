@@ -45,10 +45,10 @@ export default function Header() {
                     {/* Desktop Menu */}
                     <div className="hidden nav:flex items-center gap-2 md:gap-3 lg:gap-6 xl:gap-8 2xl:gap-12">
                         <Link
-                            href="/#about"
+                            href="/about"
                             className="text-sm md:text-xs lg:text-sm xl:text-base 2xl:text-[16px] text-text-primary hover:text-text-primary font-heroDate font-extrabold whitespace-nowrap"
                         >
-                            About Event
+                            Event Schedule
                         </Link>
                         <a href="/#activities" className="text-sm md:text-xs lg:text-sm xl:text-base 2xl:text-[16px] text-text-primary hover:text-text-primary font-heroDate font-extrabold whitespace-nowrap">
                             Activities
@@ -64,7 +64,7 @@ export default function Header() {
                         </a>
                         <a href={AWS_EVENT_CONFIG.links.tickets} target='_blank'
                             className="bg-[#FF9900] hover:bg-[#E88800] text-white text-sm md:text-xs lg:text-sm xl:text-base 2xl:text-[16px] font-heroDate font-extrabold px-2 py-1.5 md:px-3 md:py-2 lg:px-4 lg:py-2.5 xl:px-5 xl:py-3 rounded-lg transition-colors whitespace-nowrap">
-                            Get Earlybird Tickets
+                            Get Tickets
                         </a>
                     </div>
 
@@ -94,11 +94,11 @@ export default function Header() {
                 <div className="absolute top-0 inset-x-0 bg-white z-50 w-full overflow-hidden">
                     <div className="flex flex-col space-y-3 py-4 px-6 w-full box-border">
                         <Link
-                            href="/#about"
+                            href="/about"
                             className="text-sm text-text-primary hover:text-text-primary font-heroDate font-extrabold"
                             onClick={() => setIsMenuOpen(false)}
                         >
-                            About Event
+                            Event Schedule
                         </Link>
                         <a
                             href="/#activities"
@@ -126,7 +126,7 @@ export default function Header() {
                             className="bg-[#FF9900] hover:bg-[#E88800] text-white text-sm font-heroDate font-extrabold px-4 py-2 rounded-lg transition-colors text-center block"
                             onClick={() => setIsMenuOpen(false)}
                         >
-                            Get Earlybird Tickets
+                            Get Tickets
                         </a>
                     </div>
                 </div>
