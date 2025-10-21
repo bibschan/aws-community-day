@@ -2,7 +2,6 @@
 
 export default function InteractiveMap({ onStageSelect, selectedStage }) {
     const stageButtons = [
-        { id: 1, name: "Main Stage", position: "top-[20%] left-[30%]" },
         { id: 2, name: "2nd Stage", position: "top-[60%] left-[30%]" },
         { id: 3, name: "Workshop Room", position: "top-[20%] right-[25%]" },
         { id: 4, name: "Breakout Room 1", position: "top-[45%] right-[25%]" },

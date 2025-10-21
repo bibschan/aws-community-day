@@ -311,7 +311,6 @@ export const AWS_EVENT_CONFIG = {
         ],
         webMembers: [
             { name: "Bibi", link: "https://github.com/bibschan", type: "software engineer" },
-            { name: "Catalina", link: "https://www.linkedin.com/in/catalinatorresbe/", type: "designer"  },
             { name: "Jackie", link: "https://jackieho.ca/", type: "designer"  },
             { name: "Luis", link: "https://github.com/luisher98", type: "software engineer"  },
             { name: "Sophia", link: "https://github.com/Sophia-G-Chan", type: "software engineer"  },

@@ -9,7 +9,7 @@ const SpeakerCard = ({ name, imgSrc, alt, company, linkedin }) => (
           width="200"
           height="200"
           alt={alt}
-          className="object-cover hover:opacity-80 transition-opacity"
+          className="object-cover hover:opacity-70 transition-opacity"
         />
       </a>
     </div>

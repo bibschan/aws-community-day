@@ -28,11 +28,11 @@ export const scheduleEvents = [
   { id: 2, title: "Keynote - Usman Khalid", startTime: "11:15 AM", endTime: "11:45 AM", stage: 1, location: "Main Stage (Level 2)", talkTitle: "" },
   { id: 3, title: "Break", startTime: "11:45 AM", endTime: "12:00 PM", stage: 1, location: "Main Stage (Level 2)", talkTitle: "" },
   { id: 4, title: "Amit Bajaj", startTime: "12:00 PM", endTime: "12:30 PM", stage: 1, location: "Main Stage (Level 2)", talkTitle: "" },
-  { id: 5, title: "Extra Break", startTime: "12:30 PM", endTime: "1:00 PM", stage: 1, location: "Main Stage (Level 2)", talkTitle: "" },
+  { id: 5, title: "Long Break (Hackathon Level 5)", startTime: "12:30 PM", endTime: "1:00 PM", stage: 1, location: "Main Stage (Level 2)", talkTitle: "" },
   { id: 6, title: "Nurdan Almazbekov", startTime: "1:00 PM", endTime: "1:30 PM", stage: 1, location: "Main Stage (Level 2)", talkTitle: "" },
   { id: 7, title: "Break", startTime: "1:30 PM", endTime: "1:45 PM", stage: 1, location: "Main Stage (Level 2)", talkTitle: "" },
   { id: 8, title: "Laura Salinas (AWS)", startTime: "1:45 PM", endTime: "2:15 PM", stage: 1, location: "Main Stage (Level 2)", talkTitle: "" },
-  { id: 9, title: "Extra Break (Hackathon Round 2)", startTime: "2:15 PM", endTime: "2:45 PM", stage: 1, location: "Main Stage (Level 2)", talkTitle: "" },
+  { id: 9, title: "Long Break (Hackathon Level 5)", startTime: "2:15 PM", endTime: "2:45 PM", stage: 1, location: "Main Stage (Level 2)", talkTitle: "" },
   { id: 10, title: "Denis Astahov", startTime: "2:45 PM", endTime: "3:15 PM", stage: 1, location: "Main Stage (Level 2)", talkTitle: "" },
   { id: 11, title: "Break", startTime: "3:15 PM", endTime: "3:30 PM", stage: 1, location: "Main Stage (Level 2)", talkTitle: "" },
   { id: 12, title: "Humberto Gonçalves", startTime: "3:30 PM", endTime: "4:00 PM", stage: 1, location: "Main Stage (Level 2)", talkTitle: "" },
@@ -65,7 +65,6 @@ export const scheduleEvents = [
 // All-day activities
 export const allDayActivities = [
   { id: 45, title: "Registration/Pass Check", startTime: "11:00 AM", endTime: "5:00 PM", location: "Level 2/5 Entry Areas", notes: "All day" },
-  { id: 46, title: "Community/Sponsor Booths", startTime: "11:00 AM", endTime: "5:00 PM", location: "Hallways", notes: "All day" },
   { id: 47, title: "Networking Chill Zone", startTime: "11:00 AM", endTime: "5:00 PM", location: "Lounge", notes: "All day" },
-  { id: 48, title: "Attendee Interview Clips", startTime: "11:45 AM", endTime: "4:45 PM", location: "Attendee Interview Room", notes: "30-second videos throughout the day" }
+  { id: 49, title: "All Day Food", startTime: "11:00 AM", endTime: "5:00 PM", location: "Food Court", notes: "Pizza, Water and Pop" }
 ];
