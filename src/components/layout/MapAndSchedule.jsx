@@ -1,10 +1,15 @@
 "use client"
 import { useState } from 'react'
 import { scheduleEvents, stages, allDayActivities } from '@/lib/scheduleConstants'
+import { SPEAKERS } from '@/lib/speakersConstants'
+import { ChevronDown, ChevronUp } from 'lucide-react'
 
 export default function MapAndSchedule() {
     const [selectedFloor, setSelectedFloor] = useState(2) // 2 for 2nd floor, 5 for 5th floor
     const [selectedStage, setSelectedStage] = useState(null) // For highlighting individual stages
+    const [expandedEvents, setExpandedEvents] = useState({}) // For mobile toggle
+    const [hoveredEvent, setHoveredEvent] = useState(null) // For desktop hover
+    const [popoverPosition, setPopoverPosition] = useState({ top: 0, left: 0, width: 0, showAbove: false })
 
     const timeToMinutes = (time) => {
         const [timeStr, period] = time.split(' ')
@@ -32,10 +37,132 @@ export default function MapAndSchedule() {
         return title.toLowerCase().includes('break') || title.toLowerCase().includes('lunch')
     }
 
+    // Find speaker by matching schedule event title
+    const getSpeakerByEventTitle = (eventTitle) => {
+        if (!eventTitle || isBreak(eventTitle)) return null
+
+        // Remove common prefixes
+        const cleanTitle = eventTitle
+            .replace(/^Live Stream - /i, '')
+            .replace(/^Keynote - /i, '')
+            .trim()
+
+        // Find speaker by name (handle partial matches like "Laura Salinas (AWS)" -> "Laura Salinas")
+        return SPEAKERS.find(speaker => {
+            const speakerName = speaker.name.toLowerCase()
+            const eventName = cleanTitle.toLowerCase()
+            return eventName.includes(speakerName) || speakerName.includes(eventName.split('(')[0].trim())
+        })
+    }
+
+    const toggleEventExpanded = (eventId) => {
+        setExpandedEvents(prev => ({ ...prev, [eventId]: !prev[eventId] }))
+    }
+
+    // Render event card with speaker info (desktop: hover, mobile: toggle)
+    const renderEventCard = (event, isMobile = false) => {
+        const speaker = getSpeakerByEventTitle(event.title)
+        const hasSpeakerInfo = speaker && (speaker.talk_title || speaker.talk_summary)
+        const isExpanded = expandedEvents[event.id]
+
+        const handleMouseEnter = (e) => {
+            if (!isMobile && hasSpeakerInfo) {
+                const rect = e.currentTarget.getBoundingClientRect()
+                const viewportHeight = window.innerHeight
+                const spaceBelow = viewportHeight - rect.bottom
+                const showAbove = spaceBelow < 300
+
+                // Calculate fixed position coordinates
+                setPopoverPosition({
+                    top: showAbove ? rect.top : rect.bottom,
+                    left: rect.left,
+                    width: rect.width,
+                    showAbove
+                })
+                setHoveredEvent(event.id)
+            }
+        }
+
+        return (
+            <div
+                key={event.id}
+                className={`p-3 rounded-lg relative ${
+                    isBreak(event.title)
+                        ? 'bg-white text-[#333E48]'
+                        : 'bg-white text-[#333E48] border-l-4 border-[#BCDAFE]'
+                } ${hasSpeakerInfo ? 'cursor-pointer' : ''}`}
+                onMouseEnter={handleMouseEnter}
+                onMouseLeave={() => !isMobile && setHoveredEvent(null)}
+                onClick={() => isMobile && hasSpeakerInfo && toggleEventExpanded(event.id)}
+            >
+                <div className="flex justify-between items-start mb-2">
+                    <div className="flex items-center gap-2 flex-1">
+                        <h4 className="font-semibold text-sm">{event.title}</h4>
+                        {hasSpeakerInfo && isMobile && (
+                            <span className="text-[#01A88D]">
+                                {isExpanded ? <ChevronUp size={16} /> : <ChevronDown size={16} />}
+                            </span>
+                        )}
+                    </div>
+                    <span className="text-xs text-[#333E48] ml-2 whitespace-nowrap">
+                        {event.startTime} - {event.endTime}
+                    </span>
+                </div>
+                <div className="text-xs text-gray-400">
+                    {event.location}
+                </div>
+
+                {/* Desktop hover popover - using fixed positioning to escape overflow container */}
+                {!isMobile && hasSpeakerInfo && hoveredEvent === event.id && (
+                    <div
+                        className="fixed z-[9999] bg-white border-2 border-[#01A88D] rounded-lg p-4 shadow-xl max-w-md"
+                        style={{
+                            top: popoverPosition.showAbove ? `${popoverPosition.top - 10}px` : `${popoverPosition.top + 10}px`,
+                            left: `${popoverPosition.left}px`,
+                            width: `${popoverPosition.width}px`,
+                            transform: popoverPosition.showAbove ? 'translateY(-100%)' : 'none'
+                        }}
+                    >
+                        {speaker.talk_title && (
+                            <div className="mb-2">
+                                <h5 className="font-bold text-sm text-[#01A88D] mb-1">Session:</h5>
+                                <p className="text-sm text-[#333E48]">{speaker.talk_title}</p>
+                            </div>
+                        )}
+                        {speaker.talk_summary && (
+                            <div>
+                                <h5 className="font-bold text-sm text-[#01A88D] mb-1">Summary:</h5>
+                                <p className="text-xs text-gray-600">{speaker.talk_summary}</p>
+                            </div>
+                        )}
+                    </div>
+                )}
+
+                {/* Mobile toggle content */}
+                {isMobile && hasSpeakerInfo && isExpanded && (
+                    <div className="mt-3 pt-3 border-t border-gray-200">
+                        {speaker.talk_title && (
+                            <div className="mb-2">
+                                <h5 className="font-bold text-sm text-[#01A88D] mb-1">Session:</h5>
+                                <p className="text-sm text-[#333E48]">{speaker.talk_title}</p>
+                            </div>
+                        )}
+                        {speaker.talk_summary && (
+                            <div>
+                                <h5 className="font-bold text-sm text-[#01A88D] mb-1">Summary:</h5>
+                                <p className="text-xs text-gray-600">{speaker.talk_summary}</p>
+                            </div>
+                        )}
+                    </div>
+                )}
+            </div>
+        )
+    }
+
     // Define which stages are on which floor
     const stageButtons = [
-        { id: 1, name: "Main Stage", position: "top-[50%] left-[69%]", floor: 2 },
-        { id: 2, name: "2nd Stage", position: "top-[60%] left-[80%]", floor: 5 },
+        { id: 1, name: "Main Stage", position: "top-[45%] left-[69%]", floor: 2 },
+        { id: 2, name: "2nd Stage", position: "top-[55%] left-[81%]", floor: 5 },
         { id: 4, name: "Hackathon Workspace 1", position: "top-[70%] right-[20%]", floor: 5 },
         { id: 5, name: "Hackathon Workspace 2", position: "top-[60%] right-[30%]", floor: 5 }
     ]
@@ -153,30 +280,7 @@ export default function MapAndSchedule() {
                             {selectedStage ? (
                                 <div className="bg-white rounded-lg overflow-hidden">
                                     <div className="p-2 space-y-3">
-                                        {getStageEvents(selectedStage).map((event) => (
-                                            <div
-                                                key={event.id}
-                                                className={`p-3 rounded-lg ${isBreak(event.title)
-                                                    ? 'bg-white text-[#333E48]'
-                                                    : 'bg-white text-[#333E48] border-l-4 border-[#BCDAFE]'
-                                                    }`}
-                                            >
-                                                <div className="flex justify-between items-start mb-2">
-                                                    <h4 className="font-semibold text-sm">{event.title}</h4>
-                                                    <span className="text-xs text-[#333E48] ml-2 whitespace-nowrap">
-                                                        {event.startTime} - {event.endTime}
-                                                    </span>
-                                                </div>
-                                                <div className="text-xs text-gray-400">
-                                                    {event.location}
-                                                </div>
-                                                {event.talkTitle && (
-                                                    <div className="text-xs text-gray-500 mt-1">
-                                                        {event.talkTitle}
-                                                    </div>
-                                                )}
-                                            </div>
-                                        ))}
+                                        {getStageEvents(selectedStage).map((event) => renderEventCard(event, false))}
                                     </div>
                                 </div>
                             ) : (
@@ -184,30 +288,7 @@ export default function MapAndSchedule() {
                                     {stagesOnFloor.map((stageButton) => (
                                         <div key={stageButton.id} className="bg-white rounded-lg overflow-hidden border-2 border-gray-200">
                                             <div className="p-2 space-y-2">
-                                                {getStageEvents(stageButton.id).map((event) => (
-                                                    <div
-                                                        key={event.id}
-                                                        className={`p-2 rounded-lg ${isBreak(event.title)
-                                                            ? 'bg-white text-[#333E48]'
-                                                            : 'bg-white text-[#333E48] border-l-4 border-[#BCDAFE]'
-                                                            }`}
-                                                    >
-                                                        <div className="flex justify-between items-start mb-1">
-                                                            <h4 className="font-semibold text-sm">{event.title}</h4>
-                                                            <span className="text-xs text-[#333E48] ml-2 whitespace-nowrap">
-                                                                {event.startTime} - {event.endTime}
-                                                            </span>
-                                                        </div>
-                                                        <div className="text-xs text-gray-400">
-                                                            {event.location}
-                                                        </div>
-                                                        {event.talkTitle && (
-                                                            <div className="text-xs text-gray-500 mt-1">
-                                                                {event.talkTitle}
-                                                            </div>
-                                                        )}
-                                                    </div>
-                                                ))}
+                                                {getStageEvents(stageButton.id).map((event) => renderEventCard(event, false))}
                                             </div>
                                         </div>
                                     ))}
@@ -249,30 +330,7 @@ export default function MapAndSchedule() {
                                 <h3 className="font-bold text-lg">{getStageForDisplay(selectedStage)?.name}</h3>
                             </div>
                             <div className="p-2 space-y-3">
-                                {getStageEvents(selectedStage).map((event) => (
-                                    <div
-                                        key={event.id}
-                                        className={`p-3 rounded-lg ${isBreak(event.title)
-                                            ? 'bg-white text-[#333E48]'
-                                            : 'bg-white text-[#333E48] border-l-4 border-[#BCDAFE]'
-                                            }`}
-                                    >
-                                        <div className="flex justify-between items-start mb-2">
-                                            <h4 className="font-semibold text-sm">{event.title}</h4>
-                                            <span className="text-xs text-[#333E48] ml-2 whitespace-nowrap">
-                                                {event.startTime} - {event.endTime}
-                                            </span>
-                                        </div>
-                                        <div className="text-xs text-gray-400">
-                                            {event.location}
-                                        </div>
-                                        {event.talkTitle && (
-                                            <div className="text-xs text-gray-500 mt-1">
-                                                {event.talkTitle}
-                                            </div>
-                                        )}
-                                    </div>
-                                ))}
+                                {getStageEvents(selectedStage).map((event) => renderEventCard(event, true))}
                             </div>
                         </div>
                     ) : (
@@ -283,30 +341,7 @@ export default function MapAndSchedule() {
                                         <h3 className="font-bold text-base">{stageButton.name}</h3>
                                     </div>
                                     <div className="p-2 space-y-2">
-                                        {getStageEvents(stageButton.id).map((event) => (
-                                            <div
-                                                key={event.id}
-                                                className={`p-2 rounded-lg ${isBreak(event.title)
-                                                    ? 'bg-white text-[#333E48]'
-                                                    : 'bg-white text-[#333E48] border-l-4 border-[#BCDAFE]'
-                                                    }`}
-                                            >
-                                                <div className="flex justify-between items-start mb-1">
-                                                    <h4 className="font-semibold text-sm">{event.title}</h4>
-                                                    <span className="text-xs text-[#333E48] ml-2 whitespace-nowrap">
-                                                        {event.startTime} - {event.endTime}
-                                                    </span>
-                                                </div>
-                                                <div className="text-xs text-gray-400">
-                                                    {event.location}
-                                                </div>
-                                                {event.talkTitle && (
-                                                    <div className="text-xs text-gray-500 mt-1">
-                                                        {event.talkTitle}
-                                                    </div>
-                                                )}
-                                            </div>
-                                        ))}
+                                        {getStageEvents(stageButton.id).map((event) => renderEventCard(event, true))}
                                     </div>
                                 </div>
                             ))}
