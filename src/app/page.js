@@ -4,14 +4,12 @@ import dynamic from "next/dynamic";
 import Header from "@/components/layout/Header";
 import Hero from "@/components/layout/Hero";
 import Activities from "@/components/layout/Activities";
-import Speakers from "@/components/layout/Speakers";
 import HackerRivals from "@/components/layout/HackerRivals";
 import Sponsors from "@/components/layout/Sponsors";
 import Footer from "@/components/layout/Footer";
 import About from "@/components/layout/About";
 import NonProfit from "@/components/layout/NonProfit";
 import Charity from "@/components/layout/Charity";
-import YoutubeVideo from "@/components/layout/YoutubeVideo";
 
 
 const useWindowSize = () => {
@@ -46,10 +44,8 @@ export default function Home() {
       <Hero />
       <main className="flex-1 bg-white -z-10">
         <Activities />
-        <Speakers/>
         <HackerRivals />
         <Charity />
-        <YoutubeVideo/>
         <Sponsors />
         <NonProfit />
       </main>

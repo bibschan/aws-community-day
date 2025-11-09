@@ -99,26 +99,50 @@ const Footer = () => {
             </ul>
 
             <h4 className="text-lg font-semibold mb-4">Previous Years</h4>
-            <a
-              href="/past-events/2024/"
-              className="text-[#FF9900] hover:underline inline-flex items-center"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              2024 Event
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                className="h-4 w-4 ml-1"
-                viewBox="0 0 20 20"
-                fill="currentColor"
+            <div className="space-y-2">
+              <a
+                href="/past-events/2024/"
+                className="text-[#FF9900] hover:underline inline-flex items-center block"
+                target="_blank"
+                rel="noopener noreferrer"
               >
-                <path
-                  fillRule="evenodd"
-                  d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z"
-                  clipRule="evenodd"
-                />
-              </svg>
-            </a>
+                2024 Event
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  className="h-4 w-4 ml-1"
+                  viewBox="0 0 20 20"
+                  fill="currentColor"
+                >
+                  <path
+                    fillRule="evenodd"
+                    d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z"
+                    clipRule="evenodd"
+                  />
+                </svg>
+              </a>
+            </div>
+            <div className="space-y-2">
+              <a
+                href="/past-events/2025/"
+                className="text-[#FF9900] hover:underline inline-flex items-center block"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                2025 Event
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  className="h-4 w-4 ml-1"
+                  viewBox="0 0 20 20"
+                  fill="currentColor"
+                >
+                  <path
+                    fillRule="evenodd"
+                    d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z"
+                    clipRule="evenodd"
+                  />
+                </svg>
+              </a>
+            </div>
           </div>
         </div>
 
@@ -251,9 +275,54 @@ const ReusableModal = ({ triggerLabel, content }) => {
           <div className="text-black relative bg-white rounded-2xl max-w-2xl w-full p-6 shadow-lg z-10">
             <h2 className="text-xl font-semibold mb-4 ">{content.title}</h2>
             <div className=" text-sm space-y-3 max-h-[60vh] overflow-y-auto">
-              {content.body.map((para, idx) => (
+              {content.body && content.body.length > 0 && content.body.map((para, idx) => (
                 <p key={idx}>{para}</p>
               ))}
+
+              {/* Committee & Volunteers special rendering */}
+              {content.committee && (
+                <div className="space-y-4">
+                  <div>
+                    <h3 className="font-bold text-base mb-2">Committee Members:</h3>
+                    <ul className="space-y-2">
+                      {[...content.committee].sort((a, b) => a.name.localeCompare(b.name)).map((member, idx) => (
+                        <li key={idx} className="flex items-center">
+                          <span className="w-1.5 h-1.5 bg-[#FF9900] rounded-full mr-2 flex-shrink-0"></span>
+                          <a
+                            href={member.linkedin}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="text-[#0077B5] hover:underline"
+                          >
+                            {member.name}
+                          </a>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+
+                  <div>
+                    <h3 className="font-bold text-base mb-2">Volunteers:</h3>
+                    <ul className="grid grid-cols-2 gap-x-4 gap-y-2">
+                      {[...content.volunteers].sort((a, b) => a.name.localeCompare(b.name)).map((volunteer, idx) => (
+                        <li key={idx} className="flex items-center">
+                          <span className="w-1.5 h-1.5 bg-[#FF9900] rounded-full mr-2 flex-shrink-0"></span>
+                          <a
+                            href={volunteer.linkedin}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="text-[#0077B5] hover:underline"
+                          >
+                            {volunteer.name}
+                          </a>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+
+                  <p className="text-center font-semibold mt-4">Thank you to everyone who made AWS Community Day 2025 possible!</p>
+                </div>
+              )}
             </div>
 
             <div className="flex justify-end mt-6">
