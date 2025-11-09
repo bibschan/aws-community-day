@@ -20,6 +20,11 @@ export default function Hero() {
 
         <HeroClouds />
 
+        <div>
+          <h2 className="text-4xl md:text-6xl lg:text-8xl  font-heroDate font-extrabold mb-3 leading-none text-text-primary">
+            2025 SOLD OUT!
+          </h2>
+        </div>
         <div className="relative z-20 px-1 max-w-8xl mx-auto pt-4 md:pt-8 pb-6">
           {/* Save The Date */}
           <p className="text-lg md:text-2xl lg:text-[32px] font-heroDate font-extrabold mb-2 tracking-normal text-text-primary leading-tight">
@@ -27,13 +32,13 @@ export default function Hero() {
           </p>
 
           {/* Main Date */}
-          <h1 className="text-4xl md:text-6xl lg:text-8xl xl:text-[128px] font-heroDate font-extrabold mb-3 leading-none text-text-primary">
-            OCTOBER 25, 2025
+          <h1 className="text-4xl md:text-4xl lg:text-6xl font-heroDate font-extrabold mb-3 leading-none text-text-primary">
+            MAY 1, 2025
           </h1>
 
           {/* Location */}
           <p className="text-base md:text-xl lg:text-2xl xl:text-[32px] mb-4 font-heroRegular font-normal text-text-primary max-w-4xl mx-auto leading-relaxed lg:leading-[64px]">
-            @ BCIT DOWNTOWN CAMPUS TECH COLLIDER
+            @ SCIENCE WORLD
           </p>
 
           {/* Buttons */}
@@ -41,13 +46,6 @@ export default function Hero() {
             <a href={AWS_EVENT_CONFIG.links.tickets} target='_blank'
               className="bg-[#FF9900] hover:bg-[#E88800] text-white text-sm md:text-xs lg:text-sm xl:text-base 2xl:text-[16px] font-heroDate font-extrabold p px-3 py-2 md:p-4 rounded-lg transition-colors whitespace-nowrap">
               Get Tickets
-            </a>
-            <a
-              href="/about"
-              rel="noopener noreferrer"
-              className="bg-white hover:bg-gray-100 text-text-primary px-3 py-2 md:p-4 rounded-md font-heroDate font-extrabold text-sm md:text-[16px] leading-tight transition-colors inline-block text-center"
-            >
-              See Event Details
             </a>
           </div>
 

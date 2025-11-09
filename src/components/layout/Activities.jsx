@@ -75,7 +75,7 @@ export default function Activities() {
             <div className="container px-4 md:px-6 m-auto max-w-6xl">
                 <div className="text-center mb-12 md:mb-16">
                     <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-[48px] font-heroDate font-extrabold leading-none text-text-primary mb-4">
-                        2025 ACTIVITIES
+                        2026 ACTIVITIES
                     </h2>
                 </div>
 
