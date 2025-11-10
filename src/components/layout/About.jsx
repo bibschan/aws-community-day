@@ -23,7 +23,7 @@ export default function About() {
             </div>
           </div>
         </div>
-        {/* <div className="w-full flex flex-col items-center mt-0">
+        <div className="w-full flex flex-col items-center mt-0">
           <video
             src="/videos/highlight-video.mp4"
             controls
@@ -32,7 +32,7 @@ export default function About() {
             className="w-full max-w-[900px] mb-6"
           />
 
-        </div> */}
+        </div>
       </div>
     </section >
   )
